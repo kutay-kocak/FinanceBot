@@ -23,16 +23,8 @@ except Exception:
 
 class handler(BaseHTTPRequestHandler):
     def is_authorized(self):
-        parsed = urllib.parse.urlparse(self.path)
-        query = urllib.parse.parse_qs(parsed.query)
-        if "key" in query and query["key"][0] == SECRET_KEY:
-            return True
-        cookie_header = self.headers.get("Cookie", "")
-        if cookie_header:
-            c = cookies.SimpleCookie(cookie_header)
-            if "trade_key" in c and c["trade_key"].value == SECRET_KEY:
-                return True
-        return False
+        # Güvenlik duvarı kaldırıldı, doğrudan linksiz de 7/24 engelsiz erişim
+        return True
 
     def send_auth_cookie(self):
         self.send_header("Set-Cookie", f"trade_key={SECRET_KEY}; Path=/; Max-Age=2592000; SameSite=Lax")
@@ -88,10 +80,6 @@ class handler(BaseHTTPRequestHandler):
 
         self.send_response(404)
         self.end_headers()
-
-# Vercel entrypoint exports
-app = handler
-application = handler
 
     def do_POST(self):
         if not self.is_authorized():
