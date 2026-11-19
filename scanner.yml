@@ -30,12 +30,12 @@ jobs:
 
       - name: Run Price Updater & Telegram Signal Scanner
         run: |
-          python core/price_updater.py
+          python -c "import os; os.system('python core/price_updater.py' if os.path.exists('core/price_updater.py') else 'python price_updater.py')"
 
       - name: Commit and Push Updated Data
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
+          git add latest_analysis.json data/ || true
           git commit -m "Automated 15-Min Market & Signal Update [skip ci]" || echo "Değişiklik yok"
           git push

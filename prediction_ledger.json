@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-01",
-    "last_verified": "2026-11-19 13:48:06",
+    "last_verified": "2026-11-19 18:20:39",
     "core_mission": "Piyasa gürültüsünden arındırılmış, güvenilir ve tutarlı tahminler yapmak.",
-    "total_simulation_runs": 19
+    "total_simulation_runs": 29
   },
   "stats": {
     "total_evaluated": 31,
@@ -63,7 +63,7 @@
   "recent_15_learnings": [
     {
       "id": "LOG-15",
-      "date": "2026-11-19 13:48",
+      "date": "2026-11-19 18:20",
       "symbol": "TUPRS",
       "market": "BIST",
       "currency": "₺",
@@ -320,7 +320,7 @@
   "post_mortems": [
     {
       "id": "LOG-15",
-      "date": "2026-11-19 13:48",
+      "date": "2026-11-19 18:20",
       "symbol": "TUPRS",
       "market": "BIST",
       "currency": "₺",

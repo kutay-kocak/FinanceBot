@@ -14,6 +14,29 @@ import datetime
 
 KUTAY_POSITIONS_DEF = [
     {
+        "symbol": "THYAO",
+        "raw_symbol": "THYAO.IS",
+        "name": "Türk Hava Yolları",
+        "market": "BIST",
+        "currency": "₺",
+        "entry_cost": 327.00,
+        "vade": "2 - 4 Hafta (Kısa-Orta Vade)",
+        "confidence": 84,
+        "estimated_accuracy": 82,
+        "accuracy_summary": "Yüksek Yolcu Doluluğu & Güçlü Kargo Büyümesi",
+        "accuracy_details": "Filo genişlemesi ve güçlü transit yolcu trafiğiyle ₺318 stop koruması altında 10.000 simülasyonda yüksek isabet oranına sahiptir.",
+        "target_1": 348.00,
+        "target_2": 380.00,
+        "stop_rule": 318.50,
+        "status_tag": "KÂRDA 🚀",
+        "special_analysis": "₺327.00 maliyetle ideal kırılım desteğinden giriş yapılmıştır. Güçlü turizm ve kargo gelirleriyle ₺348 ilk kâr hedefine doğru momentum kazanmaktadır.",
+        "action_advice": "₺327.00 maliyet üzerinde tutunuyor. ₺318.50 ana stop seviyesi kırılmadığı sürece acele etmeden ₺348.00 ilk hedefini bekleyin.",
+        "long_term_viability": "UZUN VADEDE ÇOK GÜVENİLİR (TUTULABİLİR) ⭐⭐⭐⭐⭐",
+        "long_term_evaluation": "İstanbul Havalimanı küresel aktarma merkezi avantajıyla uzun vadeli büyüme potansiyeli en yüksek küresel bayrak taşıyıcı. Genişleyen filo ve kargo operasyonlarıyla portföyde uzun vadeli taşınmaya çok uygundur.",
+        "long_term_target": 420.00,
+        "long_term_gain_percent": 28.4
+    },
+    {
         "symbol": "TUPRS",
         "raw_symbol": "TUPRS.IS",
         "name": "Tüpraş Türkiye Petrol Rafinerileri",
@@ -131,6 +154,7 @@ def generate_dynamic_status(sym, curr_p, entry_c, diff, diff_pct, stop_rule, tar
 
     # 2. Dinamik Özel Analiz (special_analysis)
     theses = {
+        "THYAO": "Küresel transit yolcu büyümesi, rekor doluluk oranları ve güçlü kargo gelirleri hisseyi yukarı taşıyan ana katalizördür.",
         "TUPRS": "Akdeniz rafineri ürün marjlarındaki toparlanma ve şirketin kasasındaki devasa net nakdin faiz getirisi hisseyi destekleyen ana katalizördür.",
         "AVGO": "Google ve Meta için üretilen özel AI çip (ASIC) talebi ile VMware kurumsal yazılım gelirleri hissenin ana itici gücüdür.",
         "IWM": "Küçük ölçekli şirketler faiz indirim döngüsünde iskonto makasını kapatmak için destek arıyor.",

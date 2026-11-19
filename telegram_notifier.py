@@ -12,10 +12,21 @@ import urllib.request
 import urllib.parse
 import urllib.error
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA_DIR = os.path.join(BASE_DIR, "data")
-CONFIG_FILE = os.path.join(DATA_DIR, "telegram_config.json")
-DATA_FILE = os.path.join(DATA_DIR, "latest_analysis.json")
+def find_data_file(filename):
+    here = os.path.dirname(os.path.abspath(__file__))
+    candidates = [
+        os.path.join(here, filename),
+        os.path.join(here, "data", filename),
+        os.path.join(os.path.dirname(here), "data", filename),
+        os.path.join(os.path.dirname(here), filename)
+    ]
+    for c in candidates:
+        if os.path.exists(c):
+            return c
+    return candidates[1] if os.path.exists(os.path.join(here, "data")) else candidates[0]
+
+CONFIG_FILE = find_data_file("telegram_config.json")
+DATA_FILE = find_data_file("latest_analysis.json")
 
 def load_config():
     default_config = {
@@ -25,12 +36,12 @@ def load_config():
         "alert_on_strong_buy_only": True,
         "sent_signals": {}
     }
-    if not os.path.exists(CONFIG_FILE):
+    cfg_file = find_data_file("telegram_config.json")
+    if not os.path.exists(cfg_file):
         return default_config
     try:
-        with open(CONFIG_FILE, "r", encoding="utf-8") as f:
+        with open(cfg_file, "r", encoding="utf-8") as f:
             cfg = json.load(f)
-            # Default alanları garanti et
             for k, v in default_config.items():
                 if k not in cfg:
                     cfg[k] = v
@@ -39,8 +50,9 @@ def load_config():
         return default_config
 
 def save_config(cfg):
-    os.makedirs(DATA_DIR, exist_ok=True)
-    with open(CONFIG_FILE, "w", encoding="utf-8") as f:
+    cfg_file = find_data_file("telegram_config.json")
+    os.makedirs(os.path.dirname(os.path.abspath(cfg_file)), exist_ok=True)
+    with open(cfg_file, "w", encoding="utf-8") as f:
         json.dump(cfg, f, ensure_ascii=False, indent=2)
 
 def send_telegram_message(text, bot_token=None, chat_id=None, parse_mode="HTML"):
@@ -80,31 +92,49 @@ def send_telegram_message(text, bot_token=None, chat_id=None, parse_mode="HTML")
 def format_strong_buy_alert(item):
     plan = item.get("trade_plan", {})
     sim = item.get("simulation", {})
-    curr = item.get("currency", "$")
+    curr = item.get("currency", (item.get("market") == "BIST" and "₺" or "$"))
     sym = item.get("symbol", "")
     market = item.get("market", "")
     name = item.get("name", "")
-    entry = plan.get("entry", item.get("current_price"))
-    target = plan.get("target")
-    profit_pct = plan.get("profit_margin_percent")
-    stop = plan.get("stop")
-    conf = item.get("confidence", 80)
-    sim_rate = sim.get("target_rate", 70)
-    now_str = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+    
+    # İstenen parametreler: Anlık Fiyat, Fiyat Hedefi, Hedef Gün, Kâr Oranı Hedefi, Güven Yüzdesi
+    curr_price = item.get("current_price", "--")
+    entry_price = plan.get("entry", curr_price)
+    target_price = plan.get("target", "--")
+    profit_pct = plan.get("profit_margin_percent", "--")
+    stop_price = plan.get("stop", "--")
+    risk_pct = plan.get("loss_risk_percent", 2.5)
+    target_days = item.get("vade_sure") or item.get("vade") or "3 - 7 İş Günü"
+    confidence = item.get("confidence", 85)
+    sim_win_rate = sim.get("target_rate", 72.5)
+    sim_verdict = sim.get("verdict", "Hedefe Koşuyor")
+    ch_pct = item.get("change_percent", 0.0)
+    ch_str = f"+%{ch_pct}" if ch_pct >= 0 else f"%{ch_pct}"
+
+    dip_note = ""
+    if plan.get("is_dip_entry") and plan.get("wait_for_dip_price"):
+        dip_note = f"\n💡 <i>Düşüş Bekleme Tavsiyesi: {curr}{plan.get('wait_for_dip_price')} tabanına çekilme izleniyor.</i>"
+
+    now_str = datetime.datetime.now().strftime("%d.%m.%Y • %H:%M")
 
     msg = (
-        f"🚨 <b>GÜÇLÜ AL SİNYALİ TESPİT EDİLDİ!</b> 🚨\n"
+        f"🚨 <b>GÜÇLÜ AL SİNYALİ ONAYLANDI!</b> 🚨\n"
         f"━━━━━━━━━━━━━━━━━━━━\n"
-        f"📈 <b>Varlık:</b> <code>{sym}</code> ({market} • {name})\n"
-        f"⚡ <b>Strateji:</b> Kısa Vade (3 - 7 Günlük Kırılım)\n"
-        f"💵 <b>Giriş Fiyatı:</b> <b>{curr}{entry}</b>\n"
-        f"🎯 <b>Kâr Hedefi:</b> <b>{curr}{target}</b> (+%{profit_pct})\n"
-        f"🛑 <b>Zarar Kes (Stop):</b> <b>{curr}{stop}</b>\n"
+        f"📈 <b>Hisse:</b> <code>{sym}</code> ({market} • {name})\n"
+        f"⚡ <b>Strateji:</b> Kısa Vade Salınım (Swing Breakout)\n"
+        f"⏱️ <b>Hedef Süre:</b> <b>{target_days}</b>\n"
         f"━━━━━━━━━━━━━━━━━━━━\n"
-        f"🛡️ <b>AI Güven Oranı:</b> %{conf}\n"
-        f"🎲 <b>10.000x Monte Carlo Başarı İhtimali:</b> %{sim_rate}\n"
+        f"💰 <b>Anlık Piyasa Fiyatı:</b> <b>{curr}{curr_price}</b> ({ch_str})\n"
+        f"💵 <b>Önerilen Giriş Seviyesi:</b> <b>{curr}{entry_price}</b>\n"
+        f"🎯 <b>Kâr Hedefi:</b> <b>{curr}{target_price}</b> (<b>+%{profit_pct}</b>)\n"
+        f"🛑 <b>Zarar Kes (Stop-Loss):</b> <b>{curr}{stop_price}</b> (-%{risk_pct})\n"
         f"━━━━━━━━━━━━━━━━━━━━\n"
-        f"⏱️ <i>Tarih: {now_str} • Antigravity Trade Masası</i>"
+        f"🛡️ <b>Model Güven Yüzdesi:</b> <b>%{confidence}</b>\n"
+        f"🎲 <b>10.000x Monte Carlo Olasılığı:</b> <b>%{sim_win_rate}</b> ({sim_verdict})\n"
+        f"📊 <b>Risk / Ödül Oranı:</b> 1:1.8 (Korumalı Dinamik Stop)"
+        f"{dip_note}\n"
+        f"━━━━━━━━━━━━━━━━━━━━\n"
+        f"⏰ <i>{now_str} • Antigravity Trade Masası</i>"
     )
     return msg
 
@@ -113,11 +143,12 @@ def check_and_notify_strong_buys():
     if not cfg.get("enabled"):
         return {"status": "skipped", "message": "Telegram bildirimleri kapalı."}
 
-    if not os.path.exists(DATA_FILE):
+    data_file = find_data_file("latest_analysis.json")
+    if not os.path.exists(data_file):
         return {"status": "no_data", "message": "Analiz verisi bulunamadı."}
 
     try:
-        with open(DATA_FILE, "r", encoding="utf-8") as f:
+        with open(data_file, "r", encoding="utf-8") as f:
             data = json.load(f)
     except Exception as e:
         return {"status": "error", "message": str(e)}

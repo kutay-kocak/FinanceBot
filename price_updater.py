@@ -11,12 +11,36 @@ import json
 import datetime
 import urllib.request
 import urllib.parse
+import types
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA_FILE = os.path.join(BASE_DIR, "data", "latest_analysis.json")
+here = os.path.dirname(os.path.abspath(__file__))
+if "core" not in sys.modules:
+    core_pkg = types.ModuleType("core")
+    core_dir = os.path.join(here, "core") if not here.endswith("core") else here
+    core_pkg.__path__ = [core_dir]
+    sys.modules["core"] = core_pkg
 
-sys.path.insert(0, BASE_DIR)
-from core import kutay_portfolio
+sys.path.insert(0, here)
+sys.path.insert(0, os.path.dirname(here))
+
+try:
+    import kutay_portfolio
+except ImportError:
+    from core import kutay_portfolio
+
+def find_data_file(filename):
+    candidates = [
+        os.path.join(here, filename),
+        os.path.join(here, "data", filename),
+        os.path.join(os.path.dirname(here), "data", filename),
+        os.path.join(os.path.dirname(here), filename)
+    ]
+    for c in candidates:
+        if os.path.exists(c):
+            return c
+    return candidates[1] if os.path.exists(os.path.join(here, "data")) else candidates[0]
+
+DATA_FILE = find_data_file("latest_analysis.json")
 
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 
@@ -111,11 +135,25 @@ def update_prices_only():
 
     data["metadata"]["last_price_update"] = now_str
 
+    save_targets = {DATA_FILE}
+    root_target = os.path.join(os.path.dirname(here), "latest_analysis.json") if here.endswith("core") else os.path.join(here, "latest_analysis.json")
+    save_targets.add(root_target)
+    for target_path in save_targets:
+        try:
+            with open(target_path, "w", encoding="utf-8") as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+        except Exception as e:
+            print(f"Uyarı: {target_path} dosyasına yazılamadı: {e}")
+
+    # Kısa vadeli GÜÇLÜ AL sinyallerini kontrol et ve Telegram bildirimi gönder
     try:
-        with open(DATA_FILE, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+        try:
+            import telegram_notifier
+        except ImportError:
+            from core import telegram_notifier
+        telegram_notifier.check_and_notify_strong_buys()
     except Exception as e:
-        print(f"Uyarı: Dosyaya yazılamadı (Salt-okunur bulut ortamı): {e}")
+        print(f"Telegram bildirim kontrolü hatası: {e}")
 
     print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] [OK] Fiyatlar ve kâr oranları güncellendi!")
     return data
