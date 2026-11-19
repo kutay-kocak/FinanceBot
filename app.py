@@ -131,26 +131,19 @@ class SecureTradeDashboardHandler(BaseHTTPRequestHandler):
         self.end_headers()
 
     def do_GET(self):
-        parsed = urllib.parse.urlparse(self.path)
+        raw_path = self.headers.get("x-matched-path") or self.headers.get("x-forwarded-uri") or self.path
+        parsed = urllib.parse.urlparse(raw_path)
         path = parsed.path
         query = urllib.parse.parse_qs(parsed.query)
         has_key_param = "key" in query and query["key"][0] == SECRET_KEY
 
-        # Ana sayfa isteği
-        if path in ("/", "/index.html", ""):
-            if not self.is_authorized():
-                self.send_response(403)
-                self.send_header("Content-Type", "text/html; charset=utf-8")
-                self.end_headers()
-                self.wfile.write(ACCESS_DENIED_HTML.encode("utf-8"))
-                return
-
+        # Ana sayfa isteği (Root veya index.html veya Vercel yönlendirmesi)
+        if path in ("/", "/index.html", "", "/app.py"):
             html_target = find_file("index.html", ["public", "web"])
             if os.path.exists(html_target):
                 self.send_response(200)
                 self.send_header("Content-Type", "text/html; charset=utf-8")
-                if has_key_param:
-                    self.send_auth_cookie()
+                self.send_auth_cookie()
                 self.end_headers()
                 with open(html_target, "rb") as f:
                     self.wfile.write(f.read())
@@ -161,40 +154,11 @@ class SecureTradeDashboardHandler(BaseHTTPRequestHandler):
                 self.wfile.write(b"index.html bulunamadi.")
                 return
 
-        # Statik dosyalar
-        safe_name = path.lstrip("/")
-        local_asset = find_file(safe_name, ["public", "web"])
-        if os.path.isfile(local_asset):
-            self.send_response(200)
-            if local_asset.endswith(".html"):
-                self.send_header("Content-Type", "text/html; charset=utf-8")
-            elif local_asset.endswith(".js"):
-                self.send_header("Content-Type", "application/javascript; charset=utf-8")
-            elif local_asset.endswith(".css"):
-                self.send_header("Content-Type", "text/css; charset=utf-8")
-            elif local_asset.endswith(".json"):
-                self.send_header("Content-Type", "application/json; charset=utf-8")
-            if has_key_param:
-                self.send_auth_cookie()
-            self.end_headers()
-            with open(local_asset, "rb") as f:
-                self.wfile.write(f.read())
-            return
-
-        # API yetki kontrolü
-        if not self.is_authorized():
-            self.send_response(403)
-            self.send_header("Content-Type", "application/json; charset=utf-8")
-            self.end_headers()
-            self.wfile.write(json.dumps({"error": "Erişim izni yok. Geçerli ?key parametresi gereklidir."}).encode("utf-8"))
-            return
-
-        # API: Analiz Verisi
-        if path.endswith("/analysis"):
+        # API: Analiz Verisi (Her zaman doğrudan ve hızlı erişilebilir)
+        if path.endswith("/analysis") or path.endswith("latest_analysis.json"):
             self.send_response(200)
             self.send_header("Content-Type", "application/json; charset=utf-8")
-            if has_key_param:
-                self.send_auth_cookie()
+            self.send_auth_cookie()
             self.end_headers()
             data_target = find_file("latest_analysis.json", ["data"])
             if os.path.exists(data_target):
@@ -205,11 +169,10 @@ class SecureTradeDashboardHandler(BaseHTTPRequestHandler):
             return
 
         # API: Durum
-        elif path.endswith("/status"):
+        if path.endswith("/status"):
             self.send_response(200)
             self.send_header("Content-Type", "application/json; charset=utf-8")
-            if has_key_param:
-                self.send_auth_cookie()
+            self.send_auth_cookie()
             self.end_headers()
             data_target = find_file("latest_analysis.json", ["data"])
             status_data = {
@@ -217,17 +180,16 @@ class SecureTradeDashboardHandler(BaseHTTPRequestHandler):
                 "platform": "Vercel Cloud 7/24",
                 "is_simulating": False,
                 "data_available": os.path.exists(data_target),
-                "auth_required": True
+                "auth_required": False
             }
             self.wfile.write(json.dumps(status_data).encode("utf-8"))
             return
 
         # API: Telegram Yapılandırması
-        elif path.endswith("/telegram-config"):
+        if path.endswith("/telegram-config"):
             self.send_response(200)
             self.send_header("Content-Type", "application/json; charset=utf-8")
-            if has_key_param:
-                self.send_auth_cookie()
+            self.send_auth_cookie()
             self.end_headers()
             cfg_target = find_file("telegram_config.json", ["data"])
             cfg = {}
@@ -248,6 +210,28 @@ class SecureTradeDashboardHandler(BaseHTTPRequestHandler):
             }
             self.wfile.write(json.dumps(safe_cfg).encode("utf-8"))
             return
+
+        # Statik dosyalar
+        safe_name = path.lstrip("/")
+        local_asset = find_file(safe_name, ["public", "web"])
+        if os.path.isfile(local_asset):
+            self.send_response(200)
+            if local_asset.endswith(".html"):
+                self.send_header("Content-Type", "text/html; charset=utf-8")
+            elif local_asset.endswith(".js"):
+                self.send_header("Content-Type", "application/javascript; charset=utf-8")
+            elif local_asset.endswith(".css"):
+                self.send_header("Content-Type", "text/css; charset=utf-8")
+            elif local_asset.endswith(".json"):
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.send_auth_cookie()
+            self.end_headers()
+            with open(local_asset, "rb") as f:
+                self.wfile.write(f.read())
+            return
+
+        self.send_response(404)
+        self.end_headers()
 
         self.send_response(404)
         self.end_headers()

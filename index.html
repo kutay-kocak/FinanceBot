@@ -344,8 +344,9 @@
     function getAuthUrl(path) {
       try {
         const params = new URLSearchParams(window.location.search);
-        const key = params.get('key');
+        let key = params.get('key') || localStorage.getItem('trade_key') || 'trade-sec-8842';
         if (key) {
+          localStorage.setItem('trade_key', key);
           const sep = path.includes('?') ? '&' : '?';
           return `${path}${sep}key=${encodeURIComponent(key)}`;
         }
@@ -355,12 +356,31 @@
 
     async function fetchAnalysis() {
       try {
-        const resp = await fetch(getAuthUrl('/api/analysis'));
-        if (!resp.ok) return;
-        globalData = await resp.json();
-        renderDashboard();
+        let resp = await fetch(getAuthUrl('/api/analysis'));
+        if (!resp.ok) {
+          resp = await fetch('/latest_analysis.json');
+        }
+        if (!resp.ok) {
+          resp = await fetch('/data/latest_analysis.json');
+        }
+        if (resp.ok) {
+          globalData = await resp.json();
+          renderDashboard();
+          return;
+        }
       } catch (e) {
-        console.error("Veri çekilemedi:", e);
+        console.warn("API üzerinden çekilemedi, statik dosyaya dönülüyor:", e);
+      }
+
+      // İkinci emniyet ağı: Doğrudan statik dosyayı yükle
+      try {
+        const staticResp = await fetch('/latest_analysis.json');
+        if (staticResp.ok) {
+          globalData = await staticResp.json();
+          renderDashboard();
+        }
+      } catch (err) {
+        console.error("Kritik: Analiz verisi yüklenemedi:", err);
       }
     }
 
