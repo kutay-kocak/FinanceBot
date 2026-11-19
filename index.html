@@ -337,6 +337,88 @@
     <p>🎯 <strong>Antigravity Karar Destek Sistemi:</strong> Ana hedefimiz güvenilir, tutarlı ve hesap verebilir tahminler sunmaktır.</p>
   </footer>
 
+  <!-- Telegram Bot Ayarları Modalı -->
+  <div id="telegram-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="glass-card max-w-lg w-full rounded-2xl p-6 sm:p-7 border border-sky-500/40 shadow-2xl space-y-5 relative">
+      
+      <!-- Kapat Butonu -->
+      <button onclick="closeTelegramModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-1 rounded-lg bg-slate-900 border border-slate-800">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Modal Başlığı -->
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="w-10 h-10 rounded-xl bg-sky-500/20 border border-sky-500/40 text-sky-400 flex items-center justify-center">
+          <i data-lucide="send" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-black text-white">Telegram Güçlü Al Sinyal Botu</h3>
+          <p class="text-xs text-slate-400">Kısa vadede Güçlü Al sinyali oluşan hisseleri anında telefonunuza iletir.</p>
+        </div>
+      </div>
+
+      <!-- Ayarlar Formu -->
+      <div class="space-y-4 text-xs">
+        <!-- Aktif / Pasif Seçimi -->
+        <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900 border border-slate-800">
+          <div>
+            <strong class="text-white block">Sinyal Bildirimlerini Etkinleştir</strong>
+            <span class="text-[11px] text-slate-400">15 dakikalık taramalarda Güçlü Al tespiti halinde anlık mesaj atar.</span>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" id="tg-enabled" class="sr-only peer">
+            <div class="w-11 h-6 bg-slate-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-sky-500"></div>
+          </label>
+        </div>
+
+        <!-- Bot Token -->
+        <div class="space-y-1">
+          <label class="text-slate-300 font-bold flex items-center justify-between">
+            <span>Telegram Bot Token:</span>
+            <span class="text-[10px] text-slate-400 font-normal">@BotFather'dan alınan token</span>
+          </label>
+          <input type="text" id="tg-token" placeholder="Örn: 123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-white font-mono focus:border-sky-500 focus:outline-none">
+        </div>
+
+        <!-- Chat ID -->
+        <div class="space-y-1">
+          <label class="text-slate-300 font-bold flex items-center justify-between">
+            <span>Telegram Chat ID (Sizin ID'niz):</span>
+            <span class="text-[10px] text-slate-400 font-normal">@userinfobot'tan öğrenilen numara</span>
+          </label>
+          <input type="text" id="tg-chatid" placeholder="Örn: 987654321" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-white font-mono focus:border-sky-500 focus:outline-none">
+        </div>
+
+        <!-- 3 Adımda Kurulum Rehberi -->
+        <div class="p-3.5 rounded-xl bg-sky-950/20 border border-sky-500/30 text-[11px] space-y-1.5 text-slate-300">
+          <div class="font-bold text-sky-400 flex items-center gap-1.5">
+            <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+            <span>1 Dakikada Ücretsiz Bot Kurulumu:</span>
+          </div>
+          <ol class="list-decimal list-inside space-y-1 text-slate-300">
+            <li>Telegram'da <strong>@BotFather</strong> hesabına gidin, <code>/newbot</code> yazıp botunuza bir isim verin ve verilen Token'ı yukarıya yapıştırın.</li>
+            <li>Telegram'da <strong>@userinfobot</strong> hesabına mesaj atarak kendi <code>Id</code> numaranızı alın ve Chat ID alanına girin.</li>
+            <li>Oluşturduğunuz bota Telegram'dan girip <strong>/start</strong> deyin ve aşağıdaki "Test Bildirimi Gönder"e basın!</li>
+          </ol>
+        </div>
+
+        <!-- Bildirim Durum Mesajı -->
+        <div id="tg-feedback" class="hidden p-2.5 rounded-xl text-center text-xs font-semibold"></div>
+
+        <!-- Eylem Butonları -->
+        <div class="flex items-center gap-2.5 pt-2">
+          <button type="button" onclick="sendTelegramTest()" id="btn-tg-test" class="flex-1 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-semibold transition-all">
+            Test Bildirimi Gönder
+          </button>
+          <button type="button" onclick="saveTelegramSettings()" id="btn-tg-save" class="flex-1 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold transition-all shadow-md shadow-sky-500/20">
+            Kaydet & Aktif Et
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <script id="embedded-analysis-data" type="application/json">
 {
   "metadata": {
@@ -6635,90 +6717,7 @@
       }
     }
 
-  <!-- Telegram Bot Ayarları Modalı -->
-  <div id="telegram-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
-    <div class="glass-card max-w-lg w-full rounded-2xl p-6 sm:p-7 border border-sky-500/40 shadow-2xl space-y-5 relative">
-      
-      <!-- Kapat Butonu -->
-      <button onclick="closeTelegramModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-1 rounded-lg bg-slate-900 border border-slate-800">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
-
-      <!-- Modal Başlığı -->
-      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
-        <div class="w-10 h-10 rounded-xl bg-sky-500/20 border border-sky-500/40 text-sky-400 flex items-center justify-center">
-          <i data-lucide="send" class="w-5 h-5"></i>
-        </div>
-        <div>
-          <h3 class="text-lg font-black text-white">Telegram Güçlü Al Sinyal Botu</h3>
-          <p class="text-xs text-slate-400">Kısa vadede Güçlü Al sinyali oluşan hisseleri anında telefonunuza iletir.</p>
-        </div>
-      </div>
-
-      <!-- Ayarlar Formu -->
-      <div class="space-y-4 text-xs">
-        <!-- Aktif / Pasif Seçimi -->
-        <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900 border border-slate-800">
-          <div>
-            <strong class="text-white block">Sinyal Bildirimlerini Etkinleştir</strong>
-            <span class="text-[11px] text-slate-400">15 dakikalık taramalarda Güçlü Al tespiti halinde anlık mesaj atar.</span>
-          </div>
-          <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" id="tg-enabled" class="sr-only peer">
-            <div class="w-11 h-6 bg-slate-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-sky-500"></div>
-          </label>
-        </div>
-
-        <!-- Bot Token -->
-        <div class="space-y-1">
-          <label class="text-slate-300 font-bold flex items-center justify-between">
-            <span>Telegram Bot Token:</span>
-            <span class="text-[10px] text-slate-400 font-normal">@BotFather'dan alınan token</span>
-          </label>
-          <input type="text" id="tg-token" placeholder="Örn: 123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-white font-mono focus:border-sky-500 focus:outline-none">
-        </div>
-
-        <!-- Chat ID -->
-        <div class="space-y-1">
-          <label class="text-slate-300 font-bold flex items-center justify-between">
-            <span>Telegram Chat ID (Sizin ID'niz):</span>
-            <span class="text-[10px] text-slate-400 font-normal">@userinfobot'tan öğrenilen numara</span>
-          </label>
-          <input type="text" id="tg-chatid" placeholder="Örn: 987654321" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-white font-mono focus:border-sky-500 focus:outline-none">
-        </div>
-
-        <!-- 3 Adımda Kurulum Rehberi -->
-        <div class="p-3.5 rounded-xl bg-sky-950/20 border border-sky-500/30 text-[11px] space-y-1.5 text-slate-300">
-          <div class="font-bold text-sky-400 flex items-center gap-1.5">
-            <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
-            <span>1 Dakikada Ücretsiz Bot Kurulumu:</span>
-          </div>
-          <ol class="list-decimal list-inside space-y-1 text-slate-300">
-            <li>Telegram'da <strong>@BotFather</strong> hesabına gidin, <code>/newbot</code> yazıp botunuza bir isim verin ve verilen Token'ı yukarıya yapıştırın.</li>
-            <li>Telegram'da <strong>@userinfobot</strong> hesabına mesaj atarak kendi <code>Id</code> numaranızı alın ve Chat ID alanına girin.</li>
-            <li>Oluşturduğunuz bota Telegram'dan girip <strong>/start</strong> deyin ve aşağıdaki "Test Bildirimi Gönder"e basın!</li>
-          </ol>
-        </div>
-
-        <!-- Bildirim Durum Mesajı -->
-        <div id="tg-feedback" class="hidden p-2.5 rounded-xl text-center text-xs font-semibold"></div>
-
-        <!-- Eylem Butonları -->
-        <div class="flex items-center gap-2.5 pt-2">
-          <button type="button" onclick="sendTelegramTest()" id="btn-tg-test" class="flex-1 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-semibold transition-all">
-            Test Bildirimi Gönder
-          </button>
-          <button type="button" onclick="saveTelegramSettings()" id="btn-tg-save" class="flex-1 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold transition-all shadow-md shadow-sky-500/20">
-            Kaydet & Aktif Et
-          </button>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- JavaScript Kodları Sonu -->
-  <script>
+  
     async function openTelegramModal() {
       const modal = document.getElementById('telegram-modal');
       modal.classList.remove('hidden');
