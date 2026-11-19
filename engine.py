@@ -226,7 +226,16 @@ def run_monte_carlo_timemachine(five_min_bars, daily_bars, entry, stop, target, 
                     daily_bars[i]["close"] / c0
                 ))
     else:
-        ratios = [(0.985, 1.018, 1.003)]
+        # Yeterli bar yoksa ASLA yapay yukarı drift üretme!
+        return {
+            "target_rate": 0.0,
+            "stop_rate": 0.0,
+            "open_rate": 100.0,
+            "historical_setup_count": 0,
+            "historical_win_count": 0,
+            "replays": replays,
+            "verdict": "Yetersiz Veri (Simülasyon Yapılamadı)"
+        }
 
     sim_steps = 78 if "Kısa" in vade else (220 if "Orta" in vade else 500)
 
@@ -519,18 +528,53 @@ def analyze_ticker(ticker_info, is_bist=False):
     chart_res = fetch_chart(symbol, range_str="60d", interval="5m")
     daily_bars = fetch_daily(symbol)
     
-    if not chart_res or not chart_res.get("bars"):
-        curr_price = 100.0
-        change_p = 0.5
-        five_bars = []
-        currency = "TRY" if is_bist else "USD"
-    else:
-        meta = chart_res["meta"]
+    five_bars = []
+    curr_price = None
+    change_p = 0.0
+    currency = "TRY" if is_bist else "USD"
+
+    if chart_res and chart_res.get("bars"):
+        meta = chart_res.get("meta", {})
         five_bars = chart_res["bars"]
         curr_price = round(meta.get("regularMarketPrice") or five_bars[-1]["close"], 2)
         prev_close = meta.get("chartPreviousClose") or (daily_bars[-2]["close"] if len(daily_bars) > 1 else curr_price)
-        change_p = round(((curr_price - prev_close) / prev_close) * 100, 2)
+        change_p = round(((curr_price - prev_close) / prev_close) * 100, 2) if prev_close else 0.0
         currency = meta.get("currency", "TRY" if is_bist else "USD")
+    elif daily_bars:
+        curr_price = round(daily_bars[-1]["close"], 2)
+        prev_close = daily_bars[-2]["close"] if len(daily_bars) > 1 else curr_price
+        change_p = round(((curr_price - prev_close) / prev_close) * 100, 2) if prev_close else 0.0
+    else:
+        # Son başarılı analiz dosyasından gerçek fiyatı kurtarmayı dene
+        try:
+            here_dir = os.path.dirname(os.path.abspath(__file__))
+            cand_files = [
+                os.path.join(here_dir, "latest_analysis.json"),
+                os.path.join(here_dir, "data", "latest_analysis.json"),
+                os.path.join(os.path.dirname(here_dir), "data", "latest_analysis.json"),
+                os.path.join(os.path.dirname(here_dir), "latest_analysis.json")
+            ]
+            for cf in cand_files:
+                if os.path.exists(cf):
+                    with open(cf, "r", encoding="utf-8") as fp:
+                        old_d = json.load(fp)
+                    for cat in ["us_market", "bist_market"]:
+                        for it in old_d.get(cat, []):
+                            if it.get("symbol") == symbol or it.get("raw_symbol") == symbol:
+                                op = it.get("current_price")
+                                if op and op != 100.0 and op > 0:
+                                    curr_price = op
+                                    change_p = it.get("change_percent", 0.0)
+                                    break
+                    if curr_price:
+                        break
+        except Exception:
+            pass
+
+    # KESİN GÜVENLİK KURALI: Asla 100.0 uydurma! Piyasa verisi yoksa analizi üretme!
+    if curr_price is None or curr_price <= 0 or curr_price == 100.0:
+        print(f"UYARI: {symbol} için gerçek piyasa fiyatı alınamadı. Güvenlik gereği analiz üretilmedi.")
+        return None
 
     daily_closes = [b["close"] for b in daily_bars] if daily_bars else [curr_price]
     
@@ -593,7 +637,15 @@ def analyze_ticker(ticker_info, is_bist=False):
     confidence = int((sim_comp * 0.35) + (tech_comp * 0.25) + (avg_macro_score * 0.25) + (f_score_pct * 0.15))
     confidence = max(58, min(97, confidence))
     
-    if confidence >= 82 and sim_result["target_rate"] >= 58 and rsi < 65:
+    if sim_result["target_rate"] == 0 or len(daily_closes) < 14:
+        action = "VERİ YETERSİZ / İZLE"
+        confidence = 35
+        is_dip_entry = False
+        dip_price = curr_price
+        dip_discount_pct = 0.0
+        rule_text = "Yetersiz piyasa verisi; pozisyon açılmamalıdır"
+        dip_note = "Piyasa verisi tamamlanana kadar beklemede kalın."
+    elif confidence >= 82 and sim_result["target_rate"] >= 58 and rsi < 65:
         action = "GÜÇLÜ AL"
         is_dip_entry = False
         dip_price = curr_price
@@ -677,7 +729,8 @@ def run_full_pipeline():
         print(f"Analiz ediliyor: {t['symbol']}...")
         try:
             res = analyze_ticker(t, is_bist=False)
-            us_results.append(res)
+            if res:
+                us_results.append(res)
         except Exception as e:
             print(f"Hata {t['symbol']}: {e}")
 
@@ -687,7 +740,8 @@ def run_full_pipeline():
         print(f"Analiz ediliyor: {t['display']}...")
         try:
             res = analyze_ticker(t, is_bist=True)
-            bist_results.append(res)
+            if res:
+                bist_results.append(res)
         except Exception as e:
             print(f"Hata {t['display']}: {e}")
 

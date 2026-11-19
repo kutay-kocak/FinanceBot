@@ -90,6 +90,11 @@ def send_telegram_message(text, bot_token=None, chat_id=None, parse_mode="HTML")
         return False, f"Bağlantı hatası: {str(e)}"
 
 def format_strong_buy_alert(item):
+    action_clean = str(item.get("action", "")).strip().upper()
+    # KESİN VE TAVİZSİZ KURAL: Yalnızca ve sadece GÜÇLÜ AL sinyalleri formatlanır
+    if action_clean != "GÜÇLÜ AL":
+        return None
+
     plan = item.get("trade_plan", {})
     sim = item.get("simulation", {})
     curr = item.get("currency", (item.get("market") == "BIST" and "₺" or "$"))
@@ -98,7 +103,7 @@ def format_strong_buy_alert(item):
     name = item.get("name", "")
     
     # İstenen parametreler: Anlık Fiyat, Fiyat Hedefi, Hedef Gün, Kâr Oranı Hedefi, Güven Yüzdesi
-    curr_price = item.get("current_price", "--")
+    curr_price = item.get("current_price")
     entry_price = plan.get("entry", curr_price)
     target_price = plan.get("target", "--")
     profit_pct = plan.get("profit_margin_percent", "--")
@@ -110,6 +115,10 @@ def format_strong_buy_alert(item):
     sim_verdict = sim.get("verdict", "Hedefe Koşuyor")
     ch_pct = item.get("change_percent", 0.0)
     ch_str = f"+%{ch_pct}" if ch_pct >= 0 else f"%{ch_pct}"
+
+    # Güvenlik Zırhı: Sahte 100.0 veya tanımsız fiyatlı mesaj üretme
+    if curr_price is None or entry_price is None or curr_price == 100.0 or entry_price == 100.0 or curr_price <= 0:
+        return None
 
     dip_note = ""
     if plan.get("is_dip_entry") and plan.get("wait_for_dip_price"):
@@ -164,27 +173,60 @@ def check_and_notify_strong_buys():
     alerts_sent = []
 
     for item in candidates:
-        action = item.get("action", "")
         sym = item.get("symbol", "")
+        plan = item.get("trade_plan", {})
+        sim = item.get("simulation", {})
 
-        # Yalnızca GÜÇLÜ AL sinyalleri
-        if "GÜÇLÜ" in action and "AL" in action:
-            # Son 12 saat içinde bu hisse için bildirim gönderildi mi?
-            last_sent_str = sent_signals.get(sym)
-            if last_sent_str:
-                try:
-                    last_sent = datetime.datetime.strptime(last_sent_str, "%Y-%m-%d %H:%M:%S")
-                    if (now - last_sent).total_seconds() < 43200:  # 12 saat
-                        continue
-                except Exception:
-                    pass
+        # KESİN VE NET KURAL: Sadece ve sadece 'GÜÇLÜ AL' sinyalleri kabul edilir!
+        # Normal 'AL', 'AL (Düşüşü Bekle)', 'İZLE', 'TUT' vb. ara sinyaller KESİNLİKLE GÖNDERİLMEZ!
+        action_clean = str(item.get("action", "")).strip().upper()
+        if action_clean != "GÜÇLÜ AL":
+            continue
 
-            text = format_strong_buy_alert(item)
-            ok, resp_msg = send_telegram_message(text)
-            if ok:
-                sent_signals[sym] = now.strftime("%Y-%m-%d %H:%M:%S")
-                alerts_sent.append(sym)
-                print(f"[Telegram Bildirimi İletildi]: {sym} GÜÇLÜ AL!")
+        # 1. GÜVENLİK FİLTRESİ: Sahte 100.0 veya 0/negatif fiyat kontrolü
+        try:
+            curr_p = float(item.get("current_price") or 0.0)
+            entry_p = float(plan.get("entry") or 0.0)
+            target_p = float(plan.get("target") or 0.0)
+            stop_p = float(plan.get("stop") or 0.0)
+        except (ValueError, TypeError):
+            continue
+
+        if curr_p <= 0 or entry_p <= 0 or curr_p == 100.0 or entry_p == 100.0:
+            print(f"[Telegram Güvenlik Filtresi] {sym} için geçersiz/sahte 100.0 fiyat tespit edildi, bildirim ENGELLENDİ.")
+            continue
+
+        # Mantık Testi: Stop Loss < Giriş Fiyatı < Kâr Hedefi
+        if not (stop_p < entry_p < target_p):
+            print(f"[Telegram Güvenlik Filtresi] {sym} için hatalı stop/hedef hiyerarşisi ({stop_p} / {entry_p} / {target_p}), bildirim ENGELLENDİ.")
+            continue
+
+        # 2. KALİTE FİLTRESİ: Minimum Yapay Zeka Güveni ve Monte Carlo İsabet Eşiği
+        conf = int(item.get("confidence") or 0)
+        target_rate = float(sim.get("target_rate") or 0.0)
+        if conf < 80 or target_rate < 55.0:
+            print(f"[Telegram Güvenlik Filtresi] {sym} kalite eşiğini aşamadı (Güven: %{conf}, Simülasyon: %{target_rate}), bildirim ENGELLENDİ.")
+            continue
+
+        # 3. SPAM ÖNLEME: Son 12 saat içinde bu hisse için bildirim gönderildi mi?
+        last_sent_str = sent_signals.get(sym)
+        if last_sent_str:
+            try:
+                last_sent = datetime.datetime.strptime(last_sent_str, "%Y-%m-%d %H:%M:%S")
+                if (now - last_sent).total_seconds() < 43200:  # 12 saat soğuma süresi
+                    continue
+            except Exception:
+                pass
+
+        text = format_strong_buy_alert(item)
+        if not text:
+            continue
+
+        ok, resp_msg = send_telegram_message(text)
+        if ok:
+            sent_signals[sym] = now.strftime("%Y-%m-%d %H:%M:%S")
+            alerts_sent.append(sym)
+            print(f"[Telegram Bildirimi İletildi]: {sym} GÜÇLÜ AL!")
 
     cfg["sent_signals"] = sent_signals
     save_config(cfg)
