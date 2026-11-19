@@ -1,0 +1,2 @@
+# Native Python standard libraries are used (urllib, json, http.server)
+# No external pip packages strictly required, ensuring instant zero-dependency builds on Vercel!
