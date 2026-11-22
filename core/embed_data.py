@@ -37,7 +37,7 @@ def embed():
             content = f.read()
 
         if pattern.search(content):
-            new_content = pattern.sub(rf'\g<1>\n{json_str}\n\g<3>', content)
+            new_content = pattern.sub(lambda m: f'{m.group(1)}\n{json_str}\n{m.group(3)}', content)
         else:
             # Etiket henüz yoksa </body> öncesine ekle
             replacement = f'\n  <script id="embedded-analysis-data" type="application/json">\n{json_str}\n  </script>\n</body>'

@@ -145,6 +145,16 @@ def update_prices_only():
         except Exception as e:
             print(f"Uyarı: {target_path} dosyasına yazılamadı: {e}")
 
+    # 0ms Gömülü Veri Zırhı: latest_analysis.json'ı tüm HTML dosyalarına göm
+    try:
+        try:
+            import embed_data
+        except ImportError:
+            from core import embed_data
+        embed_data.embed()
+    except Exception as e:
+        print(f"Gömülü veri zırhı hatası: {e}")
+
     # Kısa vadeli GÜÇLÜ AL sinyallerini kontrol et ve Telegram bildirimi gönder
     try:
         try:
@@ -155,7 +165,7 @@ def update_prices_only():
     except Exception as e:
         print(f"Telegram bildirim kontrolü hatası: {e}")
 
-    print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] [OK] Fiyatlar ve kâr oranları güncellendi!")
+    print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] [OK] Fiyatlar, kâr oranları ve gömülü HTML verileri güncellendi!")
     return data
 
 if __name__ == "__main__":

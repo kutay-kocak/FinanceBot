@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_run": "2026-11-19 18:20:39",
-    "last_simulation_run": "2026-11-19 18:20:39",
-    "last_price_update": "2026-11-19 18:45:40",
+    "last_run": "2026-11-22 23:01:23",
+    "last_simulation_run": "2026-11-22 23:01:23",
+    "last_price_update": "2026-11-23 00:29:54",
     "status": "Aktif",
     "total_analyzed": 19,
     "simulations_per_asset": 10000,
@@ -13,13 +13,13 @@
   "kutay_portfolio": {
     "metadata": {
       "owner": "Kutay",
-      "last_evaluated": "2026-11-19 18:46:00",
+      "last_evaluated": "2026-11-23 00:29:59",
       "total_positions": 5,
-      "profitable_count": 3,
-      "pullback_count": 2,
-      "portfolio_health": "3 Kârda • 2 Destek/Zararda",
-      "leader_title": "AVGO Kâr Lideri",
-      "leader_val": "+%0.83 🚀",
+      "profitable_count": 1,
+      "pullback_count": 4,
+      "portfolio_health": "1 Kârda • 4 Destek/Zararda",
+      "leader_title": "THYAO Kâr Lideri",
+      "leader_val": "+%0.61 🚀",
       "leader_color": "emerald"
     },
     "positions": [
@@ -38,16 +38,16 @@
         "target_1": 348.0,
         "target_2": 380.0,
         "stop_rule": 318.5,
-        "status_tag": "KÂRDA (+%0.38) 📈",
-        "special_analysis": "Pozisyonunuz anlık olarak +%0.38 kârda (+₺1.25 / hisse). Cari fiyat (₺328.25) maliyetinizin (₺327.00) üzerinde seyrediyor. Küresel transit yolcu büyümesi, rekor doluluk oranları ve güçlü kargo gelirleri hisseyi yukarı taşıyan ana katalizördür.",
+        "status_tag": "KÂRDA (+%0.61) 📈",
+        "special_analysis": "Pozisyonunuz anlık olarak +%0.61 kârda (+₺2.0 / hisse). Cari fiyat (₺329.00) maliyetinizin (₺327.00) üzerinde seyrediyor. Küresel transit yolcu büyümesi, rekor doluluk oranları ve güçlü kargo gelirleri hisseyi yukarı taşıyan ana katalizördür.",
         "action_advice": "Pozisyon kârda ilerliyor. Stop seviyenizi maliyetiniz olan ₺327.00 seviyesine çekerek bu işlemi tamamen 'Sıfır Riskli' (Risk-Free) hale getirebilirsiniz.",
         "long_term_viability": "UZUN VADEDE ÇOK GÜVENİLİR (TUTULABİLİR) ⭐⭐⭐⭐⭐",
         "long_term_evaluation": "İstanbul Havalimanı küresel aktarma merkezi avantajıyla uzun vadeli büyüme potansiyeli en yüksek küresel bayrak taşıyıcı. Genişleyen filo ve kargo operasyonlarıyla portföyde uzun vadeli taşınmaya çok uygundur.",
         "long_term_target": 420.0,
         "long_term_gain_percent": 28.4,
-        "current_price": 328.25,
-        "pnl_amount": 1.25,
-        "pnl_percent": 0.38,
+        "current_price": 329.0,
+        "pnl_amount": 2.0,
+        "pnl_percent": 0.61,
         "is_profitable": true,
         "status_type": "profit",
         "target_1_gain_percent": 6.42,
@@ -69,16 +69,16 @@
         "target_2": 425.0,
         "stop_rule": 348.0,
         "status_tag": "STOP ALARMI! (Zarar Kes) 🛑",
-        "special_analysis": "Pozisyonunuz anlık olarak +%0.07 kârda (+₺0.25 / hisse). Cari fiyat (₺334.75) maliyetinizin (₺334.50) üzerinde seyrediyor. Akdeniz rafineri ürün marjlarındaki toparlanma ve şirketin kasasındaki devasa net nakdin faiz getirisi hisseyi destekleyen ana katalizördür.",
-        "action_advice": "DİKKAT: Fiyat ₺334.75 seviyesine inerek belirlenen kritik stop seviyesini (₺348.00) kırdı/test ediyor! Risk kuralı gereği pozisyonu kapatıp zararı durdurmayı değerlendirin.",
+        "special_analysis": "Pozisyonunuz maliyetinizin altında -%3.51 zararda (-₺11.75 / hisse). Cari fiyat (₺322.75) seviyesinde destek testi sürüyor. Akdeniz rafineri ürün marjlarındaki toparlanma ve şirketin kasasındaki devasa net nakdin faiz getirisi hisseyi destekleyen ana katalizördür.",
+        "action_advice": "DİKKAT: Fiyat ₺322.75 seviyesine inerek belirlenen kritik stop seviyesini (₺348.00) kırdı/test ediyor! Risk kuralı gereği pozisyonu kapatıp zararı durdurmayı değerlendirin.",
         "long_term_viability": "UZUN VADEDE ÇOK GÜVENİLİR (TUTULABİLİR) ⭐⭐⭐⭐⭐",
         "long_term_evaluation": "Türkiye'nin tek ham petrol rafinerisidir ve alternatifi yoktur. Yüksek nakit temettü verimi, yeşil hidrojen ve biyoyakıt dönüşüm yatırımlarıyla portföyde 1-3 yıl tutulabilecek en sağlam BIST sanayi devi.",
         "long_term_target": 450.0,
         "long_term_gain_percent": 34.5,
-        "current_price": 334.75,
-        "pnl_amount": 0.25,
-        "pnl_percent": 0.07,
-        "is_profitable": true,
+        "current_price": 322.75,
+        "pnl_amount": -11.75,
+        "pnl_percent": -3.51,
+        "is_profitable": false,
         "status_type": "danger",
         "target_1_gain_percent": 18.09,
         "target_2_gain_percent": 27.06
@@ -97,18 +97,18 @@
         "target_1": 385.0,
         "target_2": 410.0,
         "stop_rule": 354.0,
-        "status_tag": "KÂRDA (+%0.83) 📈",
-        "special_analysis": "Pozisyonunuz anlık olarak +%0.83 kârda (+$2.94 / hisse). Cari fiyat ($356.81) maliyetinizin ($353.87) üzerinde seyrediyor. Google ve Meta için üretilen özel AI çip (ASIC) talebi ile VMware kurumsal yazılım gelirleri hissenin ana itici gücüdür.",
-        "action_advice": "Pozisyon kârda ilerliyor. Stop seviyenizi maliyetiniz olan $353.87 seviyesine çekerek bu işlemi tamamen 'Sıfır Riskli' (Risk-Free) hale getirebilirsiniz.",
+        "status_tag": "STOP ALARMI! (Zarar Kes) 🛑",
+        "special_analysis": "Pozisyonunuz maliyetinizin altında -%13.98 zararda (-$49.46 / hisse). Cari fiyat ($304.41) seviyesinde destek testi sürüyor. Google ve Meta için üretilen özel AI çip (ASIC) talebi ile VMware kurumsal yazılım gelirleri hissenin ana itici gücüdür.",
+        "action_advice": "DİKKAT: Fiyat $304.41 seviyesine inerek belirlenen kritik stop seviyesini ($354.00) kırdı/test ediyor! Risk kuralı gereği pozisyonu kapatıp zararı durdurmayı değerlendirin.",
         "long_term_viability": "UZUN VADEDE ÇOK GÜVENİLİR (TUTULABİLİR) ⭐⭐⭐⭐⭐",
         "long_term_evaluation": "Google, Meta ve ByteDance'in özel AI çiplerinde tekel üreticidir. Yıllık $20B+ serbest nakit akışı ve her yıl artan temettüsüyle portföyün teknoloji omurgası olarak uzun yıllar tutulmaya uygundur.",
         "long_term_target": 440.0,
         "long_term_gain_percent": 24.3,
-        "current_price": 356.81,
-        "pnl_amount": 2.94,
-        "pnl_percent": 0.83,
-        "is_profitable": true,
-        "status_type": "profit",
+        "current_price": 304.41,
+        "pnl_amount": -49.46,
+        "pnl_percent": -13.98,
+        "is_profitable": false,
+        "status_type": "danger",
         "target_1_gain_percent": 8.8,
         "target_2_gain_percent": 15.86
       },
@@ -126,18 +126,18 @@
         "target_1": 305.0,
         "target_2": 320.0,
         "stop_rule": 268.0,
-        "status_tag": "DÜZELTMEDE / ZARARDA (-%6.9) 📉",
-        "special_analysis": "Pozisyonunuz maliyetinizin altında -%6.9 zararda (-$19.87 / hisse). Cari fiyat ($268.13) seviyesinde destek testi sürüyor. Küçük ölçekli şirketler faiz indirim döngüsünde iskonto makasını kapatmak için destek arıyor.",
-        "action_advice": "Maliyetin altında ancak $268.00 ana stop seviyesi üzerinde tutunuyor. Panik satışı yapmadan desteği izleyin; $305.00 tepki hedefi geçerliliğini koruyor.",
+        "status_tag": "STOP ALARMI! (Zarar Kes) 🛑",
+        "special_analysis": "Pozisyonunuz maliyetinizin altında -%10.9 zararda (-$31.39 / hisse). Cari fiyat ($256.61) seviyesinde destek testi sürüyor. Küçük ölçekli şirketler faiz indirim döngüsünde iskonto makasını kapatmak için destek arıyor.",
+        "action_advice": "DİKKAT: Fiyat $256.61 seviyesine inerek belirlenen kritik stop seviyesini ($268.00) kırdı/test ediyor! Risk kuralı gereği pozisyonu kapatıp zararı durdurmayı değerlendirin.",
         "long_term_viability": "DÖNGÜSEL (UZUN VADE YERİNE ORTA VADELİ KÂR REALİZASYONU UYGUN) ⭐⭐⭐",
         "long_term_evaluation": "Küçük ölçekli şirketler faiz indirim döngülerinde 3-6 aylık güçlü sıçrama yapar ancak 3-5 yıllık vadede büyük ölçekli tekel teknoloji devlerine (S&P 500) kıyasla daha zayıf kalır. Kâr hedefinde çıkıp ana hisselere dönmek daha kârlıdır.",
         "long_term_target": 320.0,
         "long_term_gain_percent": 11.1,
-        "current_price": 268.13,
-        "pnl_amount": -19.87,
-        "pnl_percent": -6.9,
+        "current_price": 256.61,
+        "pnl_amount": -31.39,
+        "pnl_percent": -10.9,
         "is_profitable": false,
-        "status_type": "loss",
+        "status_type": "danger",
         "target_1_gain_percent": 5.9,
         "target_2_gain_percent": 11.11
       },
@@ -155,18 +155,18 @@
         "target_1": 172.0,
         "target_2": 184.0,
         "stop_rule": 144.5,
-        "status_tag": "DÜZELTMEDE / ZARARDA (-%8.23) 📉",
-        "special_analysis": "Pozisyonunuz maliyetinizin altında -%8.23 zararda (-$12.96 / hisse). Cari fiyat ($144.54) seviyesinde destek testi sürüyor. Biyoteknoloji sektörü 10Y tahvil faizlerindeki dalgalanmalara karşı yüksek beta gösteriyor; klinik faz haber akışları takip ediliyor.",
-        "action_advice": "Maliyetin altında ancak $144.50 ana stop seviyesi üzerinde tutunuyor. Panik satışı yapmadan desteği izleyin; $172.00 tepki hedefi geçerliliğini koruyor.",
+        "status_tag": "STOP ALARMI! (Zarar Kes) 🛑",
+        "special_analysis": "Pozisyonunuz maliyetinizin altında -%11.0 zararda (-$17.32 / hisse). Cari fiyat ($140.18) seviyesinde destek testi sürüyor. Biyoteknoloji sektörü 10Y tahvil faizlerindeki dalgalanmalara karşı yüksek beta gösteriyor; klinik faz haber akışları takip ediliyor.",
+        "action_advice": "DİKKAT: Fiyat $140.18 seviyesine inerek belirlenen kritik stop seviyesini ($144.50) kırdı/test ediyor! Risk kuralı gereği pozisyonu kapatıp zararı durdurmayı değerlendirin.",
         "long_term_viability": "YÜKSEK RİSKLİ DÖNGÜSEL (UZUN VADE TUTULMAMALI, TREND KÂRI ALINMALI) ⭐⭐",
         "long_term_evaluation": "Erken aşama biyoteknolojiler klinik faz riskleri ve nakit yakımı taşır. Tahvil faizi gevşediğinde gelen %20-30'luk sert yükseliş dalgasında kârı alıp çıkmak gerekir; uzun yıllar tutmak yüksek yıpranma riski yaratır.",
         "long_term_target": 184.0,
         "long_term_gain_percent": 16.8,
-        "current_price": 144.54,
-        "pnl_amount": -12.96,
-        "pnl_percent": -8.23,
+        "current_price": 140.18,
+        "pnl_amount": -17.32,
+        "pnl_percent": -11.0,
         "is_profitable": false,
-        "status_type": "loss",
+        "status_type": "danger",
         "target_1_gain_percent": 9.21,
         "target_2_gain_percent": 16.83
       }
@@ -175,9 +175,9 @@
   "learning_report": {
     "metadata": {
       "created_at": "2026-11-01",
-      "last_verified": "2026-11-19 18:33:46",
+      "last_verified": "2026-11-23 00:14:54",
       "core_mission": "Piyasa gürültüsünden arındırılmış, güvenilir ve tutarlı tahminler yapmak.",
-      "total_simulation_runs": 30
+      "total_simulation_runs": 136
     },
     "stats": {
       "total_evaluated": 31,
@@ -237,7 +237,7 @@
     "recent_15_learnings": [
       {
         "id": "LOG-15",
-        "date": "2026-11-19 18:33",
+        "date": "2026-11-23 00:14",
         "symbol": "TUPRS",
         "market": "BIST",
         "currency": "₺",
@@ -494,7 +494,7 @@
     "post_mortems": [
       {
         "id": "LOG-15",
-        "date": "2026-11-19 18:33",
+        "date": "2026-11-23 00:14",
         "symbol": "TUPRS",
         "market": "BIST",
         "currency": "₺",
@@ -759,7 +759,7 @@
   "market_outlook": {
     "bist": {
       "market": "BIST",
-      "last_updated": "2026-11-19 18:46",
+      "last_updated": "2026-11-23 00:29",
       "current_regime": {
         "title": "Sıkı Para Politikası & Seçici Yabancı Girişi",
         "mood": "TEMKİNLİ İYİMSER (BULLISH CONSOLIDATION)",
@@ -813,7 +813,7 @@
     },
     "us": {
       "market": "US",
-      "last_updated": "2026-11-19 18:46",
+      "last_updated": "2026-11-23 00:29",
       "current_regime": {
         "title": "FED Faiz İndirim Döngüsü & AI Yatırım Rallisi",
         "mood": "GÜÇLÜ BOĞA (YUMUŞAK İNİŞ SENARYOSU)",
@@ -866,11 +866,11 @@
       },
       "fed_rate_decision": {
         "status": "active",
-        "last_updated": "2026-11-19 18:46",
+        "last_updated": "2026-11-23 00:29",
         "decision_info": {
           "title": "FED Faiz Kararı & FOMC Toplantısı",
           "target_date_str": "16 Aralık 2026 (Çarşamba) • 22:00 TSİ",
-          "days_remaining": 27,
+          "days_remaining": 23,
           "current_rate_range": "%4.50 - %4.75",
           "expected_rate_range": "%4.25 - %4.50 (-25 bps)",
           "cme_fedwatch_probability": "%74.2 İndirim (25 bps) • %25.8 Sabit"
@@ -1121,11 +1121,11 @@
   },
   "fed_rate_decision": {
     "status": "active",
-    "last_updated": "2026-11-19 18:46",
+    "last_updated": "2026-11-23 00:29",
     "decision_info": {
       "title": "FED Faiz Kararı & FOMC Toplantısı",
       "target_date_str": "16 Aralık 2026 (Çarşamba) • 22:00 TSİ",
-      "days_remaining": 27,
+      "days_remaining": 23,
       "current_rate_range": "%4.50 - %4.75",
       "expected_rate_range": "%4.25 - %4.50 (-25 bps)",
       "cme_fedwatch_probability": "%74.2 İndirim (25 bps) • %25.8 Sabit"
@@ -1375,112 +1375,6 @@
   "hierarchy": {
     "kisa_vade": [
       {
-        "symbol": "GARAN",
-        "raw_symbol": "GARAN.IS",
-        "name": "Türkiye Garanti Bankası",
-        "category": "Bankacılık",
-        "type": "Hisse",
-        "market": "BIST",
-        "currency": "₺",
-        "current_price": 146.4,
-        "change_percent": 0.48,
-        "action": "AL (Düşüşü Bekle)",
-        "confidence": 72,
-        "vade": "Kısa Vade (3 - 7 Gün)",
-        "vade_group": "Kısa Vade",
-        "vade_sure": "3-7 Gün",
-        "trade_plan": {
-          "entry": 146.4,
-          "target": 153.01,
-          "stop": 142.73,
-          "risk_reward": "1:1.8",
-          "profit_margin_percent": 4.52,
-          "loss_risk_percent": 2.51,
-          "rule": "142.01 seviyesine çekilmesini BEKLE ve AL, 153.01 seviyesinde KÂR AL, 142.73 altına inerse ZARAR KES",
-          "is_dip_entry": true,
-          "wait_for_dip_price": 142.01,
-          "dip_discount_percent": 3.0,
-          "dip_note": "Tepeden almamak için TRY142.01 destek seviyesine gevşemesi beklenmelidir (-%3.0 daha ucuz)."
-        },
-        "technicals": {
-          "rsi": 59.1,
-          "ema20": 142.85,
-          "ema50": 137.05,
-          "ema200": 136.93,
-          "atr": 4.59,
-          "trend": "Yükseliş Trendi (Boğa)"
-        },
-        "simulation": {
-          "target_rate": 51.2,
-          "stop_rate": 17.6,
-          "open_rate": 31.2,
-          "historical_setup_count": 24,
-          "historical_win_count": 12,
-          "replays": 10000,
-          "verdict": "Stopa Meyilli (Yüksek Risk)"
-        },
-        "historical_15y": "Son 15 yılda sektörünün döngüsel dalgalanmalarına paralel seyretti; kriz dönemlerinde pazar payını koruyan şirketler faiz ve talep toparlanmasında öncü rol oynadı.",
-        "side_tools": {
-          "tool1_debt_interest": {
-            "score": 80,
-            "status": "DENGELİ",
-            "detail": "Borçluluk sektörel normlar dahilinde; faiz karşılama oranı pozitif."
-          },
-          "tool2_tariffs": {
-            "score": 82,
-            "status": "ORTA ETKİ",
-            "detail": "Ticari tarifeler ve jeopolitik gelişmeler yakından izleniyor."
-          },
-          "tool3_commodity": {
-            "score": 80,
-            "status": "NÖTR",
-            "detail": "Girdi maliyetleri sözleşmelerle yönetiliyor."
-          },
-          "tool4_us10y": {
-            "score": 78,
-            "status": "PİYASA İLE UYUMLU",
-            "detail": "Tahvil faizlerindeki yönelim çarpanları dengeliyor."
-          },
-          "tool5_dxy_cds": {
-            "score": 82,
-            "status": "DENGELİ",
-            "detail": "Makro risk primine duyarlı fiyatlama."
-          },
-          "tool6_insider": {
-            "score": 84,
-            "status": "KURUMSAL İLGİ",
-            "detail": "Kurumsal yatırımcıların takip listesinde."
-          },
-          "tool7_kap_sec": {
-            "score": 88,
-            "status": "DÜZENLİ BİLDİRİM",
-            "detail": "Operasyonel kârlılık ve büyüme bildirimleri takipte."
-          },
-          "tool8_options": {
-            "score": 80,
-            "status": "DENGELİ",
-            "detail": "Türev piyasalarda nötr-pozitif pozisyonlanma."
-          },
-          "tool9_moneyflow": {
-            "score": 84,
-            "status": "NET GİRİŞ",
-            "detail": "Sektörel rotasyondan pay alıyor."
-          },
-          "tool10_inflation": {
-            "score": 85,
-            "status": "KORUMALI",
-            "detail": "Fiyatlama gücü maliyet artışlarını dengeleyecek düzeyde."
-          },
-          "tool11_piotroski": {
-            "score": 7,
-            "status": "İYİ (7/9)",
-            "detail": "Finansal sağlık kriterlerinin çoğunu karşılıyor."
-          }
-        },
-        "macro_avg_score": 75.5,
-        "updated_at": "2026-11-19 18:20:31"
-      },
-      {
         "symbol": "THYAO",
         "raw_symbol": "THYAO.IS",
         "name": "Türk Hava Yolları",
@@ -1488,38 +1382,38 @@
         "type": "Hisse",
         "market": "BIST",
         "currency": "₺",
-        "current_price": 328.25,
-        "change_percent": 1.39,
+        "current_price": 329.0,
+        "change_percent": 0.23,
         "action": "AL (Düşüşü Bekle)",
         "confidence": 72,
         "vade": "Kısa Vade (3 - 7 Gün)",
         "vade_group": "Kısa Vade",
         "vade_sure": "3-7 Gün",
         "trade_plan": {
-          "entry": 328.5,
-          "target": 343.28,
-          "stop": 320.29,
+          "entry": 329.0,
+          "target": 343.8,
+          "stop": 320.78,
           "risk_reward": "1:1.8",
-          "profit_margin_percent": 4.58,
+          "profit_margin_percent": 4.5,
           "loss_risk_percent": 2.5,
-          "rule": "318.64 seviyesine çekilmesini BEKLE ve AL, 343.28 seviyesinde KÂR AL, 320.29 altına inerse ZARAR KES",
+          "rule": "319.13 seviyesine çekilmesini BEKLE ve AL, 343.8 seviyesinde KÂR AL, 320.78 altına inerse ZARAR KES",
           "is_dip_entry": true,
-          "wait_for_dip_price": 318.64,
+          "wait_for_dip_price": 319.13,
           "dip_discount_percent": 3.0,
-          "dip_note": "Tepeden almamak için TRY318.64 destek seviyesine gevşemesi beklenmelidir (-%3.0 daha ucuz)."
+          "dip_note": "Tepeden almamak için TRY319.13 destek seviyesine gevşemesi beklenmelidir (-%3.0 daha ucuz)."
         },
         "technicals": {
-          "rsi": 73.8,
-          "ema20": 302.23,
-          "ema50": 294.34,
-          "ema200": 297.22,
-          "atr": 9.62,
+          "rsi": 74.1,
+          "ema20": 304.76,
+          "ema50": 295.69,
+          "ema200": 297.61,
+          "atr": 9.4,
           "trend": "Yükseliş Trendi (Boğa)"
         },
         "simulation": {
-          "target_rate": 50.8,
-          "stop_rate": 14.6,
-          "open_rate": 34.6,
+          "target_rate": 51.4,
+          "stop_rate": 14.7,
+          "open_rate": 33.9,
           "historical_setup_count": 24,
           "historical_win_count": 12,
           "replays": 10000,
@@ -1584,7 +1478,113 @@
           }
         },
         "macro_avg_score": 80.0,
-        "updated_at": "2026-11-19 18:19:57"
+        "updated_at": "2026-11-22 23:01:05"
+      },
+      {
+        "symbol": "GARAN",
+        "raw_symbol": "GARAN.IS",
+        "name": "Türkiye Garanti Bankası",
+        "category": "Bankacılık",
+        "type": "Hisse",
+        "market": "BIST",
+        "currency": "₺",
+        "current_price": 144.2,
+        "change_percent": -1.5,
+        "action": "AL (Düşüşü Bekle)",
+        "confidence": 72,
+        "vade": "Kısa Vade (3 - 7 Gün)",
+        "vade_group": "Kısa Vade",
+        "vade_sure": "3-7 Gün",
+        "trade_plan": {
+          "entry": 144.2,
+          "target": 150.68,
+          "stop": 140.6,
+          "risk_reward": "1:1.8",
+          "profit_margin_percent": 4.49,
+          "loss_risk_percent": 2.5,
+          "rule": "139.87 seviyesine çekilmesini BEKLE ve AL, 150.68 seviyesinde KÂR AL, 140.6 altına inerse ZARAR KES",
+          "is_dip_entry": true,
+          "wait_for_dip_price": 139.87,
+          "dip_discount_percent": 3.0,
+          "dip_note": "Tepeden almamak için TRY139.87 destek seviyesine gevşemesi beklenmelidir (-%3.0 daha ucuz)."
+        },
+        "technicals": {
+          "rsi": 55.2,
+          "ema20": 142.98,
+          "ema50": 137.33,
+          "ema200": 137.03,
+          "atr": 4.49,
+          "trend": "Yükseliş Trendi (Boğa)"
+        },
+        "simulation": {
+          "target_rate": 50.9,
+          "stop_rate": 17.8,
+          "open_rate": 31.3,
+          "historical_setup_count": 24,
+          "historical_win_count": 12,
+          "replays": 10000,
+          "verdict": "Stopa Meyilli (Yüksek Risk)"
+        },
+        "historical_15y": "Son 15 yılda sektörünün döngüsel dalgalanmalarına paralel seyretti; kriz dönemlerinde pazar payını koruyan şirketler faiz ve talep toparlanmasında öncü rol oynadı.",
+        "side_tools": {
+          "tool1_debt_interest": {
+            "score": 80,
+            "status": "DENGELİ",
+            "detail": "Borçluluk sektörel normlar dahilinde; faiz karşılama oranı pozitif."
+          },
+          "tool2_tariffs": {
+            "score": 82,
+            "status": "ORTA ETKİ",
+            "detail": "Ticari tarifeler ve jeopolitik gelişmeler yakından izleniyor."
+          },
+          "tool3_commodity": {
+            "score": 80,
+            "status": "NÖTR",
+            "detail": "Girdi maliyetleri sözleşmelerle yönetiliyor."
+          },
+          "tool4_us10y": {
+            "score": 78,
+            "status": "PİYASA İLE UYUMLU",
+            "detail": "Tahvil faizlerindeki yönelim çarpanları dengeliyor."
+          },
+          "tool5_dxy_cds": {
+            "score": 82,
+            "status": "DENGELİ",
+            "detail": "Makro risk primine duyarlı fiyatlama."
+          },
+          "tool6_insider": {
+            "score": 84,
+            "status": "KURUMSAL İLGİ",
+            "detail": "Kurumsal yatırımcıların takip listesinde."
+          },
+          "tool7_kap_sec": {
+            "score": 88,
+            "status": "DÜZENLİ BİLDİRİM",
+            "detail": "Operasyonel kârlılık ve büyüme bildirimleri takipte."
+          },
+          "tool8_options": {
+            "score": 80,
+            "status": "DENGELİ",
+            "detail": "Türev piyasalarda nötr-pozitif pozisyonlanma."
+          },
+          "tool9_moneyflow": {
+            "score": 84,
+            "status": "NET GİRİŞ",
+            "detail": "Sektörel rotasyondan pay alıyor."
+          },
+          "tool10_inflation": {
+            "score": 85,
+            "status": "KORUMALI",
+            "detail": "Fiyatlama gücü maliyet artışlarını dengeleyecek düzeyde."
+          },
+          "tool11_piotroski": {
+            "score": 7,
+            "status": "İYİ (7/9)",
+            "detail": "Finansal sağlık kriterlerinin çoğunu karşılıyor."
+          }
+        },
+        "macro_avg_score": 75.5,
+        "updated_at": "2026-11-22 23:01:19"
       },
       {
         "symbol": "AVGO",
@@ -1594,40 +1594,40 @@
         "type": "Hisse",
         "market": "US",
         "currency": "$",
-        "current_price": 356.81,
-        "change_percent": 0.78,
+        "current_price": 304.41,
+        "change_percent": -12.19,
         "action": "İZLE / DİP BEKLE",
-        "confidence": 69,
+        "confidence": 61,
         "vade": "Kısa Vade (3 - 7 Gün)",
         "vade_group": "Kısa Vade",
         "vade_sure": "3-7 Gün",
         "trade_plan": {
-          "entry": 359.25,
-          "target": 384.31,
-          "stop": 345.33,
+          "entry": 304.41,
+          "target": 333.25,
+          "stop": 288.39,
           "risk_reward": "1:1.8",
-          "profit_margin_percent": 7.71,
-          "loss_risk_percent": 3.87,
-          "rule": "341.29 güçlü desteğine inmesini İZLE ve BEKLE, 384.31 hedef, 345.33 zarar kes",
+          "profit_margin_percent": 9.47,
+          "loss_risk_percent": 5.26,
+          "rule": "289.19 güçlü desteğine inmesini İZLE ve BEKLE, 333.25 hedef, 288.39 zarar kes",
           "is_dip_entry": true,
-          "wait_for_dip_price": 341.29,
+          "wait_for_dip_price": 289.19,
           "dip_discount_percent": 5.0,
-          "dip_note": "Aşırı alım veya yatay bant riski var; USD341.29 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
+          "dip_note": "Aşırı alım veya yatay bant riski var; USD289.19 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
         },
         "technicals": {
-          "rsi": 56.6,
-          "ema20": 339.5,
-          "ema50": 345.91,
-          "ema200": 359.29,
-          "atr": 17.4,
-          "trend": "Yatay / Konsolidasyon"
+          "rsi": 40.8,
+          "ema20": 335.06,
+          "ema50": 343.8,
+          "ema200": 358.78,
+          "atr": 20.02,
+          "trend": "Düşüş Trendi (Ayı)"
         },
         "simulation": {
-          "target_rate": 48.9,
-          "stop_rate": 15.7,
-          "open_rate": 35.4,
+          "target_rate": 44.9,
+          "stop_rate": 9.8,
+          "open_rate": 45.3,
           "historical_setup_count": 24,
-          "historical_win_count": 11,
+          "historical_win_count": 10,
           "replays": 10000,
           "verdict": "Stopa Meyilli (Yüksek Risk)"
         },
@@ -1690,219 +1690,7 @@
           }
         },
         "macro_avg_score": 80.8,
-        "updated_at": "2026-11-19 18:19:21"
-      },
-      {
-        "symbol": "AMD",
-        "raw_symbol": "AMD",
-        "name": "Advanced Micro Devices",
-        "category": "İşlemci & AI",
-        "type": "Hisse",
-        "market": "US",
-        "currency": "$",
-        "current_price": 487.46,
-        "change_percent": -8.05,
-        "action": "İZLE / DİP BEKLE",
-        "confidence": 61,
-        "vade": "Kısa Vade (3 - 7 Gün)",
-        "vade_group": "Kısa Vade",
-        "vade_sure": "3-7 Gün",
-        "trade_plan": {
-          "entry": 530.77,
-          "target": 587.27,
-          "stop": 499.38,
-          "risk_reward": "1:1.8",
-          "profit_margin_percent": 20.48,
-          "loss_risk_percent": 5.91,
-          "rule": "504.23 güçlü desteğine inmesini İZLE ve BEKLE, 587.27 hedef, 499.38 zarar kes",
-          "is_dip_entry": true,
-          "wait_for_dip_price": 504.23,
-          "dip_discount_percent": 5.0,
-          "dip_note": "Aşırı alım veya yatay bant riski var; USD504.23 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
-        },
-        "technicals": {
-          "rsi": 50.4,
-          "ema20": 524.06,
-          "ema50": 531.88,
-          "ema200": 426.79,
-          "atr": 39.24,
-          "trend": "Düşüş Trendi (Ayı)"
-        },
-        "simulation": {
-          "target_rate": 53.5,
-          "stop_rate": 11.7,
-          "open_rate": 34.8,
-          "historical_setup_count": 24,
-          "historical_win_count": 12,
-          "replays": 10000,
-          "verdict": "Hedefe Meyilli (Pozitif Beklenti)"
-        },
-        "historical_15y": "Son 15 yılda sektörünün döngüsel dalgalanmalarına paralel seyretti; kriz dönemlerinde pazar payını koruyan şirketler faiz ve talep toparlanmasında öncü rol oynadı.",
-        "side_tools": {
-          "tool1_debt_interest": {
-            "score": 80,
-            "status": "DENGELİ",
-            "detail": "Borçluluk sektörel normlar dahilinde; faiz karşılama oranı pozitif."
-          },
-          "tool2_tariffs": {
-            "score": 82,
-            "status": "ORTA ETKİ",
-            "detail": "Ticari tarifeler ve jeopolitik gelişmeler yakından izleniyor."
-          },
-          "tool3_commodity": {
-            "score": 80,
-            "status": "NÖTR",
-            "detail": "Girdi maliyetleri sözleşmelerle yönetiliyor."
-          },
-          "tool4_us10y": {
-            "score": 78,
-            "status": "PİYASA İLE UYUMLU",
-            "detail": "Tahvil faizlerindeki yönelim çarpanları dengeliyor."
-          },
-          "tool5_dxy_cds": {
-            "score": 82,
-            "status": "DENGELİ",
-            "detail": "Makro risk primine duyarlı fiyatlama."
-          },
-          "tool6_insider": {
-            "score": 84,
-            "status": "KURUMSAL İLGİ",
-            "detail": "Kurumsal yatırımcıların takip listesinde."
-          },
-          "tool7_kap_sec": {
-            "score": 88,
-            "status": "DÜZENLİ BİLDİRİM",
-            "detail": "Operasyonel kârlılık ve büyüme bildirimleri takipte."
-          },
-          "tool8_options": {
-            "score": 80,
-            "status": "DENGELİ",
-            "detail": "Türev piyasalarda nötr-pozitif pozisyonlanma."
-          },
-          "tool9_moneyflow": {
-            "score": 84,
-            "status": "NET GİRİŞ",
-            "detail": "Sektörel rotasyondan pay alıyor."
-          },
-          "tool10_inflation": {
-            "score": 85,
-            "status": "KORUMALI",
-            "detail": "Fiyatlama gücü maliyet artışlarını dengeleyecek düzeyde."
-          },
-          "tool11_piotroski": {
-            "score": 7,
-            "status": "İYİ (7/9)",
-            "detail": "Finansal sağlık kriterlerinin çoğunu karşılıyor."
-          }
-        },
-        "macro_avg_score": 75.5,
-        "updated_at": "2026-11-19 18:19:44"
-      },
-      {
-        "symbol": "NVDA",
-        "raw_symbol": "NVDA",
-        "name": "NVIDIA Corporation",
-        "category": "Yarı İletken & AI",
-        "type": "Hisse",
-        "market": "US",
-        "currency": "$",
-        "current_price": 152.43,
-        "change_percent": 0.97,
-        "action": "İZLE / DİP BEKLE",
-        "confidence": 60,
-        "vade": "Kısa Vade (3 - 7 Gün)",
-        "vade_group": "Kısa Vade",
-        "vade_sure": "3-7 Gün",
-        "trade_plan": {
-          "entry": 155.06,
-          "target": 168.74,
-          "stop": 147.46,
-          "risk_reward": "1:1.8",
-          "profit_margin_percent": 10.7,
-          "loss_risk_percent": 4.9,
-          "rule": "147.31 güçlü desteğine inmesini İZLE ve BEKLE, 168.74 hedef, 147.46 zarar kes",
-          "is_dip_entry": true,
-          "wait_for_dip_price": 147.31,
-          "dip_discount_percent": 5.0,
-          "dip_note": "Aşırı alım veya yatay bant riski var; USD147.31 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
-        },
-        "technicals": {
-          "rsi": 25.7,
-          "ema20": 180.42,
-          "ema50": 199.1,
-          "ema200": 200.82,
-          "atr": 9.5,
-          "trend": "Düşüş Trendi (Ayı)"
-        },
-        "simulation": {
-          "target_rate": 42.9,
-          "stop_rate": 9.7,
-          "open_rate": 47.4,
-          "historical_setup_count": 24,
-          "historical_win_count": 10,
-          "replays": 10000,
-          "verdict": "Stopa Meyilli (Yüksek Risk)"
-        },
-        "historical_15y": "2018 Kripto çöküşü ve 2022 Fed faiz artış döngüsünde teknoloji çarpanları daraldı; ancak nakit akışı ve AI tekel marjı sayesinde 2023-2026 döneminde S&P'ye %400 rölatif fark attı.",
-        "side_tools": {
-          "tool1_debt_interest": {
-            "score": 98,
-            "status": "KUSURSUZ",
-            "detail": "Sıfıra yakın net borç; $35B+ nakit ile yüksek faiz ortamından net faiz geliri elde ediyor."
-          },
-          "tool2_tariffs": {
-            "score": 85,
-            "status": "YÜKSEK DİRENÇ",
-            "detail": "Çin çip kısıtlamaları bilançoda fiyatlandı; Batı blokunun AI altyapı talebi arzı aşıyor."
-          },
-          "tool3_commodity": {
-            "score": 90,
-            "status": "POZİTİF KATALİZÖR",
-            "detail": "Veri merkezlerinin yüksek elektrik tüketimi, enerji verimliliği 4x yüksek Blackwell mimarisine talebi zorunlu kılıyor."
-          },
-          "tool4_us10y": {
-            "score": 78,
-            "status": "ORTA HASSASİYET",
-            "detail": "10Y tahvil faizindeki sert sıçramalarda kısa vadeli volatilite artar; büyüme hızı faiz baskısını yener."
-          },
-          "tool5_dxy_cds": {
-            "score": 88,
-            "status": "GÜÇLÜ",
-            "detail": "Doların güçlü kalması küresel gelir tahsilatını koruyor."
-          },
-          "tool6_insider": {
-            "score": 82,
-            "status": "ALIM BÖLGESİ",
-            "detail": "Kurumsal fonların (Whale 13F) çekirdek pozisyonu korunuyor."
-          },
-          "tool7_kap_sec": {
-            "score": 95,
-            "status": "GÜÇLÜ POZİTİF",
-            "detail": "SEC 10-Q/8-K raporlarında bulut sağlayıcılarının CAPEX harcama rehberlikleri rekor kırıyor."
-          },
-          "tool8_options": {
-            "score": 92,
-            "status": "BOĞA HAKİMİYETİ",
-            "detail": "Put/Call oranı 0.62; opsiyon piyasasında agresif yukarı yönlü Call primleri toplanıyor."
-          },
-          "tool9_moneyflow": {
-            "score": 94,
-            "status": "NET GİRİŞ",
-            "detail": "Chaikin Para Akışı (CMF) +0.28; mega-cap teknolojiye net kurumsal giriş."
-          },
-          "tool10_inflation": {
-            "score": 96,
-            "status": "TAM FİYATLAMA GÜCÜ",
-            "detail": "Yarı iletken GPU fiyatlarını dilediği gibi belirleme gücüne (monopol fiyatlama) sahip."
-          },
-          "tool11_piotroski": {
-            "score": 9,
-            "status": "MÜKEMMEL (9/9)",
-            "detail": "Kârlılık, likidite ve marj genişlemesinde tam puan."
-          }
-        },
-        "macro_avg_score": 82.5,
-        "updated_at": "2026-11-19 18:19:18"
+        "updated_at": "2026-11-22 23:00:39"
       },
       {
         "symbol": "PLTR",
@@ -1912,40 +1700,40 @@
         "type": "Hisse",
         "market": "US",
         "currency": "$",
-        "current_price": 160.01,
-        "change_percent": 2.14,
-        "action": "İZLE / DİP BEKLE",
-        "confidence": 60,
+        "current_price": 143.49,
+        "change_percent": -6.63,
+        "action": "TUT / KÂR REALİZASYONU",
+        "confidence": 59,
         "vade": "Kısa Vade (3 - 7 Gün)",
         "vade_group": "Kısa Vade",
         "vade_sure": "3-7 Gün",
         "trade_plan": {
-          "entry": 162.44,
-          "target": 174.99,
-          "stop": 155.47,
+          "entry": 143.49,
+          "target": 156.63,
+          "stop": 136.19,
           "risk_reward": "1:1.8",
-          "profit_margin_percent": 9.36,
-          "loss_risk_percent": 4.29,
-          "rule": "154.32 güçlü desteğine inmesini İZLE ve BEKLE, 174.99 hedef, 155.47 zarar kes",
-          "is_dip_entry": true,
-          "wait_for_dip_price": 154.32,
-          "dip_discount_percent": 5.0,
-          "dip_note": "Aşırı alım veya yatay bant riski var; USD154.32 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
+          "profit_margin_percent": 9.16,
+          "loss_risk_percent": 5.09,
+          "rule": "143.49 seviyesinde kâr realizasyonu yap veya uzak dur",
+          "is_dip_entry": false,
+          "wait_for_dip_price": 143.49,
+          "dip_discount_percent": 0.0,
+          "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
         },
         "technicals": {
-          "rsi": 39.1,
-          "ema20": 171.91,
-          "ema50": 176.8,
-          "ema200": 164.04,
-          "atr": 8.71,
+          "rsi": 26.4,
+          "ema20": 168.47,
+          "ema50": 175.17,
+          "ema200": 163.6,
+          "atr": 9.13,
           "trend": "Düşüş Trendi (Ayı)"
         },
         "simulation": {
-          "target_rate": 48.0,
-          "stop_rate": 15.4,
-          "open_rate": 36.6,
+          "target_rate": 44.9,
+          "stop_rate": 12.2,
+          "open_rate": 42.9,
           "historical_setup_count": 24,
-          "historical_win_count": 11,
+          "historical_win_count": 10,
           "replays": 10000,
           "verdict": "Stopa Meyilli (Yüksek Risk)"
         },
@@ -2008,7 +1796,219 @@
           }
         },
         "macro_avg_score": 82.9,
-        "updated_at": "2026-11-19 18:19:39"
+        "updated_at": "2026-11-22 23:00:53"
+      },
+      {
+        "symbol": "AMD",
+        "raw_symbol": "AMD",
+        "name": "Advanced Micro Devices",
+        "category": "İşlemci & AI",
+        "type": "Hisse",
+        "market": "US",
+        "currency": "$",
+        "current_price": 424.39,
+        "change_percent": -13.25,
+        "action": "TUT / KÂR REALİZASYONU",
+        "confidence": 58,
+        "vade": "Kısa Vade (3 - 7 Gün)",
+        "vade_group": "Kısa Vade",
+        "vade_sure": "3-7 Gün",
+        "trade_plan": {
+          "entry": 424.39,
+          "target": 489.78,
+          "stop": 388.06,
+          "risk_reward": "1:1.8",
+          "profit_margin_percent": 15.41,
+          "loss_risk_percent": 8.56,
+          "rule": "424.39 seviyesinde kâr realizasyonu yap veya uzak dur",
+          "is_dip_entry": false,
+          "wait_for_dip_price": 424.39,
+          "dip_discount_percent": 0.0,
+          "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
+        },
+        "technicals": {
+          "rsi": 38.4,
+          "ema20": 511.01,
+          "ema50": 526.11,
+          "ema200": 426.13,
+          "atr": 45.41,
+          "trend": "Düşüş Trendi (Ayı)"
+        },
+        "simulation": {
+          "target_rate": 50.0,
+          "stop_rate": 6.4,
+          "open_rate": 43.6,
+          "historical_setup_count": 24,
+          "historical_win_count": 12,
+          "replays": 10000,
+          "verdict": "Stopa Meyilli (Yüksek Risk)"
+        },
+        "historical_15y": "Son 15 yılda sektörünün döngüsel dalgalanmalarına paralel seyretti; kriz dönemlerinde pazar payını koruyan şirketler faiz ve talep toparlanmasında öncü rol oynadı.",
+        "side_tools": {
+          "tool1_debt_interest": {
+            "score": 80,
+            "status": "DENGELİ",
+            "detail": "Borçluluk sektörel normlar dahilinde; faiz karşılama oranı pozitif."
+          },
+          "tool2_tariffs": {
+            "score": 82,
+            "status": "ORTA ETKİ",
+            "detail": "Ticari tarifeler ve jeopolitik gelişmeler yakından izleniyor."
+          },
+          "tool3_commodity": {
+            "score": 80,
+            "status": "NÖTR",
+            "detail": "Girdi maliyetleri sözleşmelerle yönetiliyor."
+          },
+          "tool4_us10y": {
+            "score": 78,
+            "status": "PİYASA İLE UYUMLU",
+            "detail": "Tahvil faizlerindeki yönelim çarpanları dengeliyor."
+          },
+          "tool5_dxy_cds": {
+            "score": 82,
+            "status": "DENGELİ",
+            "detail": "Makro risk primine duyarlı fiyatlama."
+          },
+          "tool6_insider": {
+            "score": 84,
+            "status": "KURUMSAL İLGİ",
+            "detail": "Kurumsal yatırımcıların takip listesinde."
+          },
+          "tool7_kap_sec": {
+            "score": 88,
+            "status": "DÜZENLİ BİLDİRİM",
+            "detail": "Operasyonel kârlılık ve büyüme bildirimleri takipte."
+          },
+          "tool8_options": {
+            "score": 80,
+            "status": "DENGELİ",
+            "detail": "Türev piyasalarda nötr-pozitif pozisyonlanma."
+          },
+          "tool9_moneyflow": {
+            "score": 84,
+            "status": "NET GİRİŞ",
+            "detail": "Sektörel rotasyondan pay alıyor."
+          },
+          "tool10_inflation": {
+            "score": 85,
+            "status": "KORUMALI",
+            "detail": "Fiyatlama gücü maliyet artışlarını dengeleyecek düzeyde."
+          },
+          "tool11_piotroski": {
+            "score": 7,
+            "status": "İYİ (7/9)",
+            "detail": "Finansal sağlık kriterlerinin çoğunu karşılıyor."
+          }
+        },
+        "macro_avg_score": 75.5,
+        "updated_at": "2026-11-22 23:00:55"
+      },
+      {
+        "symbol": "NVDA",
+        "raw_symbol": "NVDA",
+        "name": "NVIDIA Corporation",
+        "category": "Yarı İletken & AI",
+        "type": "Hisse",
+        "market": "US",
+        "currency": "$",
+        "current_price": 125.53,
+        "change_percent": -14.01,
+        "action": "TUT / KÂR REALİZASYONU",
+        "confidence": 58,
+        "vade": "Kısa Vade (3 - 7 Gün)",
+        "vade_group": "Kısa Vade",
+        "vade_sure": "3-7 Gün",
+        "trade_plan": {
+          "entry": 125.53,
+          "target": 140.96,
+          "stop": 116.96,
+          "risk_reward": "1:1.8",
+          "profit_margin_percent": 12.29,
+          "loss_risk_percent": 6.83,
+          "rule": "125.53 seviyesinde kâr realizasyonu yap veya uzak dur",
+          "is_dip_entry": false,
+          "wait_for_dip_price": 125.53,
+          "dip_discount_percent": 0.0,
+          "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
+        },
+        "technicals": {
+          "rsi": 15.0,
+          "ema20": 174.41,
+          "ema50": 195.87,
+          "ema200": 199.92,
+          "atr": 10.71,
+          "trend": "Düşüş Trendi (Ayı)"
+        },
+        "simulation": {
+          "target_rate": 38.2,
+          "stop_rate": 5.4,
+          "open_rate": 56.4,
+          "historical_setup_count": 24,
+          "historical_win_count": 9,
+          "replays": 10000,
+          "verdict": "Stopa Meyilli (Yüksek Risk)"
+        },
+        "historical_15y": "2018 Kripto çöküşü ve 2022 Fed faiz artış döngüsünde teknoloji çarpanları daraldı; ancak nakit akışı ve AI tekel marjı sayesinde 2023-2026 döneminde S&P'ye %400 rölatif fark attı.",
+        "side_tools": {
+          "tool1_debt_interest": {
+            "score": 98,
+            "status": "KUSURSUZ",
+            "detail": "Sıfıra yakın net borç; $35B+ nakit ile yüksek faiz ortamından net faiz geliri elde ediyor."
+          },
+          "tool2_tariffs": {
+            "score": 85,
+            "status": "YÜKSEK DİRENÇ",
+            "detail": "Çin çip kısıtlamaları bilançoda fiyatlandı; Batı blokunun AI altyapı talebi arzı aşıyor."
+          },
+          "tool3_commodity": {
+            "score": 90,
+            "status": "POZİTİF KATALİZÖR",
+            "detail": "Veri merkezlerinin yüksek elektrik tüketimi, enerji verimliliği 4x yüksek Blackwell mimarisine talebi zorunlu kılıyor."
+          },
+          "tool4_us10y": {
+            "score": 78,
+            "status": "ORTA HASSASİYET",
+            "detail": "10Y tahvil faizindeki sert sıçramalarda kısa vadeli volatilite artar; büyüme hızı faiz baskısını yener."
+          },
+          "tool5_dxy_cds": {
+            "score": 88,
+            "status": "GÜÇLÜ",
+            "detail": "Doların güçlü kalması küresel gelir tahsilatını koruyor."
+          },
+          "tool6_insider": {
+            "score": 82,
+            "status": "ALIM BÖLGESİ",
+            "detail": "Kurumsal fonların (Whale 13F) çekirdek pozisyonu korunuyor."
+          },
+          "tool7_kap_sec": {
+            "score": 95,
+            "status": "GÜÇLÜ POZİTİF",
+            "detail": "SEC 10-Q/8-K raporlarında bulut sağlayıcılarının CAPEX harcama rehberlikleri rekor kırıyor."
+          },
+          "tool8_options": {
+            "score": 92,
+            "status": "BOĞA HAKİMİYETİ",
+            "detail": "Put/Call oranı 0.62; opsiyon piyasasında agresif yukarı yönlü Call primleri toplanıyor."
+          },
+          "tool9_moneyflow": {
+            "score": 94,
+            "status": "NET GİRİŞ",
+            "detail": "Chaikin Para Akışı (CMF) +0.28; mega-cap teknolojiye net kurumsal giriş."
+          },
+          "tool10_inflation": {
+            "score": 96,
+            "status": "TAM FİYATLAMA GÜCÜ",
+            "detail": "Yarı iletken GPU fiyatlarını dilediği gibi belirleme gücüne (monopol fiyatlama) sahip."
+          },
+          "tool11_piotroski": {
+            "score": 9,
+            "status": "MÜKEMMEL (9/9)",
+            "detail": "Kârlılık, likidite ve marj genişlemesinde tam puan."
+          }
+        },
+        "macro_avg_score": 82.5,
+        "updated_at": "2026-11-22 23:00:38"
       },
       {
         "symbol": "HALKB",
@@ -2018,38 +2018,38 @@
         "type": "Hisse",
         "market": "BIST",
         "currency": "₺",
-        "current_price": 40.14,
-        "change_percent": 2.98,
+        "current_price": 38.66,
+        "change_percent": -3.69,
         "action": "TUT / KÂR REALİZASYONU",
         "confidence": 58,
         "vade": "Kısa Vade (3 - 7 Gün)",
         "vade_group": "Kısa Vade",
         "vade_sure": "3-7 Gün",
         "trade_plan": {
-          "entry": 40.06,
-          "target": 42.47,
-          "stop": 38.72,
+          "entry": 38.66,
+          "target": 41.09,
+          "stop": 37.31,
           "risk_reward": "1:1.8",
-          "profit_margin_percent": 5.8,
-          "loss_risk_percent": 3.34,
-          "rule": "40.06 seviyesinde kâr realizasyonu yap veya uzak dur",
+          "profit_margin_percent": 6.29,
+          "loss_risk_percent": 3.49,
+          "rule": "38.66 seviyesinde kâr realizasyonu yap veya uzak dur",
           "is_dip_entry": false,
-          "wait_for_dip_price": 40.06,
+          "wait_for_dip_price": 38.66,
           "dip_discount_percent": 0.0,
           "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
         },
         "technicals": {
-          "rsi": 42.2,
-          "ema20": 41.66,
-          "ema50": 42.4,
-          "ema200": 41.92,
-          "atr": 1.68,
+          "rsi": 38.0,
+          "ema20": 41.38,
+          "ema50": 42.26,
+          "ema200": 41.89,
+          "atr": 1.69,
           "trend": "Düşüş Trendi (Ayı)"
         },
         "simulation": {
-          "target_rate": 44.1,
-          "stop_rate": 24.4,
-          "open_rate": 31.5,
+          "target_rate": 42.9,
+          "stop_rate": 23.7,
+          "open_rate": 33.4,
           "historical_setup_count": 24,
           "historical_win_count": 10,
           "replays": 10000,
@@ -2114,7 +2114,7 @@
           }
         },
         "macro_avg_score": 73.6,
-        "updated_at": "2026-11-19 18:20:02"
+        "updated_at": "2026-11-22 23:01:08"
       },
       {
         "symbol": "XBI",
@@ -2124,38 +2124,38 @@
         "type": "ETF",
         "market": "US",
         "currency": "$",
-        "current_price": 144.54,
-        "change_percent": -0.34,
+        "current_price": 140.18,
+        "change_percent": -2.73,
         "action": "TUT / KÂR REALİZASYONU",
         "confidence": 58,
         "vade": "Kısa Vade (3 - 7 Gün)",
         "vade_group": "Kısa Vade",
         "vade_sure": "3-7 Gün",
         "trade_plan": {
-          "entry": 147.07,
-          "target": 154.0,
-          "stop": 143.22,
+          "entry": 140.18,
+          "target": 147.27,
+          "stop": 136.24,
           "risk_reward": "1:1.8",
-          "profit_margin_percent": 6.54,
-          "loss_risk_percent": 2.62,
-          "rule": "147.07 seviyesinde kâr realizasyonu yap veya uzak dur",
+          "profit_margin_percent": 5.06,
+          "loss_risk_percent": 2.81,
+          "rule": "140.18 seviyesinde kâr realizasyonu yap veya uzak dur",
           "is_dip_entry": false,
-          "wait_for_dip_price": 147.07,
+          "wait_for_dip_price": 140.18,
           "dip_discount_percent": 0.0,
           "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
         },
         "technicals": {
-          "rsi": 43.6,
-          "ema20": 150.92,
-          "ema50": 152.71,
-          "ema200": 142.65,
-          "atr": 4.81,
+          "rsi": 35.4,
+          "ema20": 149.64,
+          "ema50": 152.11,
+          "ema200": 142.59,
+          "atr": 4.92,
           "trend": "Düşüş Trendi (Ayı)"
         },
         "simulation": {
-          "target_rate": 45.7,
-          "stop_rate": 19.0,
-          "open_rate": 35.3,
+          "target_rate": 44.4,
+          "stop_rate": 15.9,
+          "open_rate": 39.7,
           "historical_setup_count": 24,
           "historical_win_count": 10,
           "replays": 10000,
@@ -2220,7 +2220,7 @@
           }
         },
         "macro_avg_score": 73.5,
-        "updated_at": "2026-11-19 18:19:29"
+        "updated_at": "2026-11-22 23:00:45"
       }
     ],
     "orta_vade": [
@@ -2232,42 +2232,42 @@
         "type": "Hisse",
         "market": "BIST",
         "currency": "₺",
-        "current_price": 334.75,
-        "change_percent": -3.18,
+        "current_price": 322.75,
+        "change_percent": -3.58,
         "action": "İZLE / DİP BEKLE",
-        "confidence": 61,
+        "confidence": 60,
         "vade": "Orta Vade (2 - 4 Hafta)",
         "vade_group": "Orta Vade",
         "vade_sure": "2-4 Hafta",
         "trade_plan": {
-          "entry": 335.75,
-          "target": 362.61,
-          "stop": 322.32,
+          "entry": 322.75,
+          "target": 348.57,
+          "stop": 309.84,
           "risk_reward": "1:2.0",
-          "profit_margin_percent": 8.32,
+          "profit_margin_percent": 8.0,
           "loss_risk_percent": 4.0,
-          "rule": "318.96 güçlü desteğine inmesini İZLE ve BEKLE, 362.61 hedef, 322.32 zarar kes",
+          "rule": "306.61 güçlü desteğine inmesini İZLE ve BEKLE, 348.57 hedef, 309.84 zarar kes",
           "is_dip_entry": true,
-          "wait_for_dip_price": 318.96,
+          "wait_for_dip_price": 306.61,
           "dip_discount_percent": 5.0,
-          "dip_note": "Aşırı alım veya yatay bant riski var; TRY318.96 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
+          "dip_note": "Aşırı alım veya yatay bant riski var; TRY306.61 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
         },
         "technicals": {
-          "rsi": 39.5,
-          "ema20": 350.35,
-          "ema50": 358.39,
-          "ema200": 300.81,
-          "atr": 13.35,
+          "rsi": 34.4,
+          "ema20": 347.64,
+          "ema50": 356.96,
+          "ema200": 300.74,
+          "atr": 13.55,
           "trend": "Düşüş Trendi (Ayı)"
         },
         "simulation": {
-          "target_rate": 43.5,
-          "stop_rate": 35.9,
-          "open_rate": 20.6,
+          "target_rate": 41.4,
+          "stop_rate": 37.0,
+          "open_rate": 21.6,
           "historical_setup_count": 24,
-          "historical_win_count": 10,
+          "historical_win_count": 9,
           "replays": 10000,
-          "verdict": "Stopa Meyilli (Yüksek Risk)"
+          "verdict": "Yazı-Tura Düzeyi (Dengeli / Nötr)"
         },
         "historical_15y": "2014 RUP (Fuel Oil Dönüşüm) yatırımı sonrasında Akdeniz rafineri marjlarının üzerinde prim üretti. 2022 Rusya-Ukrayna savaşıyla fırlayan motorin ve jet yakıtı crack marjları sayesinde BIST tarihinin en yüksek temettülerini dağıttı.",
         "side_tools": {
@@ -2328,7 +2328,7 @@
           }
         },
         "macro_avg_score": 83.6,
-        "updated_at": "2026-11-19 18:20:00"
+        "updated_at": "2026-11-22 23:01:07"
       },
       {
         "symbol": "ASELS",
@@ -2338,40 +2338,40 @@
         "type": "Hisse",
         "market": "BIST",
         "currency": "₺",
-        "current_price": 337.0,
-        "change_percent": -1.96,
+        "current_price": 327.0,
+        "change_percent": -2.97,
         "action": "İZLE / DİP BEKLE",
-        "confidence": 61,
+        "confidence": 60,
         "vade": "Orta Vade (2 - 4 Hafta)",
         "vade_group": "Orta Vade",
         "vade_sure": "2-4 Hafta",
         "trade_plan": {
-          "entry": 337.0,
-          "target": 363.96,
-          "stop": 323.52,
+          "entry": 327.0,
+          "target": 353.16,
+          "stop": 313.92,
           "risk_reward": "1:2.0",
           "profit_margin_percent": 8.0,
           "loss_risk_percent": 4.0,
-          "rule": "320.15 güçlü desteğine inmesini İZLE ve BEKLE, 363.96 hedef, 323.52 zarar kes",
+          "rule": "310.65 güçlü desteğine inmesini İZLE ve BEKLE, 353.16 hedef, 313.92 zarar kes",
           "is_dip_entry": true,
-          "wait_for_dip_price": 320.15,
+          "wait_for_dip_price": 310.65,
           "dip_discount_percent": 5.0,
-          "dip_note": "Aşırı alım veya yatay bant riski var; TRY320.15 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
+          "dip_note": "Aşırı alım veya yatay bant riski var; TRY310.65 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
         },
         "technicals": {
-          "rsi": 45.4,
-          "ema20": 343.62,
-          "ema50": 351.95,
-          "ema200": 340.77,
-          "atr": 14.42,
+          "rsi": 41.0,
+          "ema20": 342.04,
+          "ema50": 350.97,
+          "ema200": 340.9,
+          "atr": 14.23,
           "trend": "Düşüş Trendi (Ayı)"
         },
         "simulation": {
-          "target_rate": 41.9,
-          "stop_rate": 37.2,
-          "open_rate": 20.9,
+          "target_rate": 40.7,
+          "stop_rate": 38.5,
+          "open_rate": 20.8,
           "historical_setup_count": 24,
-          "historical_win_count": 10,
+          "historical_win_count": 9,
           "replays": 10000,
           "verdict": "Yazı-Tura Düzeyi (Dengeli / Nötr)"
         },
@@ -2434,7 +2434,7 @@
           }
         },
         "macro_avg_score": 82.6,
-        "updated_at": "2026-11-19 18:20:22"
+        "updated_at": "2026-11-22 23:01:15"
       },
       {
         "symbol": "TSM",
@@ -2444,42 +2444,42 @@
         "type": "ADR",
         "market": "US",
         "currency": "$",
-        "current_price": 362.8,
-        "change_percent": 0.05,
-        "action": "İZLE / DİP BEKLE",
-        "confidence": 60,
+        "current_price": 318.71,
+        "change_percent": -9.48,
+        "action": "TUT / KÂR REALİZASYONU",
+        "confidence": 58,
         "vade": "Orta Vade (2 - 4 Hafta)",
         "vade_group": "Orta Vade",
         "vade_sure": "2-4 Hafta",
         "trade_plan": {
-          "entry": 368.8,
-          "target": 398.3,
-          "stop": 354.05,
+          "entry": 318.71,
+          "target": 349.21,
+          "stop": 303.46,
           "risk_reward": "1:2.0",
-          "profit_margin_percent": 9.79,
-          "loss_risk_percent": 4.0,
-          "rule": "350.36 güçlü desteğine inmesini İZLE ve BEKLE, 398.3 hedef, 354.05 zarar kes",
-          "is_dip_entry": true,
-          "wait_for_dip_price": 350.36,
-          "dip_discount_percent": 5.0,
-          "dip_note": "Aşırı alım veya yatay bant riski var; USD350.36 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
+          "profit_margin_percent": 9.57,
+          "loss_risk_percent": 4.78,
+          "rule": "318.71 seviyesinde kâr realizasyonu yap veya uzak dur",
+          "is_dip_entry": false,
+          "wait_for_dip_price": 318.71,
+          "dip_discount_percent": 0.0,
+          "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
         },
         "technicals": {
-          "rsi": 39.2,
-          "ema20": 394.28,
-          "ema50": 412.06,
-          "ema200": 393.15,
-          "atr": 17.12,
+          "rsi": 28.3,
+          "ema20": 385.65,
+          "ema50": 407.78,
+          "ema200": 392.47,
+          "atr": 19.06,
           "trend": "Düşüş Trendi (Ayı)"
         },
         "simulation": {
-          "target_rate": 41.9,
-          "stop_rate": 34.6,
-          "open_rate": 23.5,
+          "target_rate": 36.5,
+          "stop_rate": 32.8,
+          "open_rate": 30.7,
           "historical_setup_count": 24,
-          "historical_win_count": 10,
+          "historical_win_count": 8,
           "replays": 10000,
-          "verdict": "Stopa Meyilli (Yüksek Risk)"
+          "verdict": "Yazı-Tura Düzeyi (Dengeli / Nötr)"
         },
         "historical_15y": "2011'den bu yana küresel yarı iletken döküm pazar payını %50'den %62'ye çıkardı; Apple, Nvidia ve AMD'nin tek üretim kapısı haline gelerek jeopolitik gerilim dönemlerinde bile marjlarını korudu.",
         "side_tools": {
@@ -2540,113 +2540,7 @@
           }
         },
         "macro_avg_score": 82.1,
-        "updated_at": "2026-11-19 18:19:24"
-      },
-      {
-        "symbol": "IBB",
-        "raw_symbol": "IBB",
-        "name": "iShares Biotechnology ETF",
-        "category": "Biyoteknoloji",
-        "type": "ETF",
-        "market": "US",
-        "currency": "$",
-        "current_price": 204.28,
-        "change_percent": -0.54,
-        "action": "TUT / KÂR REALİZASYONU",
-        "confidence": 59,
-        "vade": "Orta Vade (2 - 4 Hafta)",
-        "vade_group": "Orta Vade",
-        "vade_sure": "2-4 Hafta",
-        "trade_plan": {
-          "entry": 207.35,
-          "target": 223.93,
-          "stop": 199.06,
-          "risk_reward": "1:2.0",
-          "profit_margin_percent": 9.62,
-          "loss_risk_percent": 4.0,
-          "rule": "207.35 seviyesinde kâr realizasyonu yap veya uzak dur",
-          "is_dip_entry": false,
-          "wait_for_dip_price": 207.35,
-          "dip_discount_percent": 0.0,
-          "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
-        },
-        "technicals": {
-          "rsi": 45.4,
-          "ema20": 211.22,
-          "ema50": 208.88,
-          "ema200": 190.49,
-          "atr": 5.05,
-          "trend": "Düşüş Trendi (Ayı)"
-        },
-        "simulation": {
-          "target_rate": 47.6,
-          "stop_rate": 12.0,
-          "open_rate": 40.4,
-          "historical_setup_count": 24,
-          "historical_win_count": 11,
-          "replays": 10000,
-          "verdict": "Stopa Meyilli (Yüksek Risk)"
-        },
-        "historical_15y": "Son 15 yılda sektörünün döngüsel dalgalanmalarına paralel seyretti; kriz dönemlerinde pazar payını koruyan şirketler faiz ve talep toparlanmasında öncü rol oynadı.",
-        "side_tools": {
-          "tool1_debt_interest": {
-            "score": 80,
-            "status": "DENGELİ",
-            "detail": "Borçluluk sektörel normlar dahilinde; faiz karşılama oranı pozitif."
-          },
-          "tool2_tariffs": {
-            "score": 82,
-            "status": "ORTA ETKİ",
-            "detail": "Ticari tarifeler ve jeopolitik gelişmeler yakından izleniyor."
-          },
-          "tool3_commodity": {
-            "score": 80,
-            "status": "NÖTR",
-            "detail": "Girdi maliyetleri sözleşmelerle yönetiliyor."
-          },
-          "tool4_us10y": {
-            "score": 78,
-            "status": "PİYASA İLE UYUMLU",
-            "detail": "Tahvil faizlerindeki yönelim çarpanları dengeliyor."
-          },
-          "tool5_dxy_cds": {
-            "score": 82,
-            "status": "DENGELİ",
-            "detail": "Makro risk primine duyarlı fiyatlama."
-          },
-          "tool6_insider": {
-            "score": 84,
-            "status": "KURUMSAL İLGİ",
-            "detail": "Kurumsal yatırımcıların takip listesinde."
-          },
-          "tool7_kap_sec": {
-            "score": 88,
-            "status": "DÜZENLİ BİLDİRİM",
-            "detail": "Operasyonel kârlılık ve büyüme bildirimleri takipte."
-          },
-          "tool8_options": {
-            "score": 80,
-            "status": "DENGELİ",
-            "detail": "Türev piyasalarda nötr-pozitif pozisyonlanma."
-          },
-          "tool9_moneyflow": {
-            "score": 84,
-            "status": "NET GİRİŞ",
-            "detail": "Sektörel rotasyondan pay alıyor."
-          },
-          "tool10_inflation": {
-            "score": 85,
-            "status": "KORUMALI",
-            "detail": "Fiyatlama gücü maliyet artışlarını dengeleyecek düzeyde."
-          },
-          "tool11_piotroski": {
-            "score": 7,
-            "status": "İYİ (7/9)",
-            "detail": "Finansal sağlık kriterlerinin çoğunu karşılıyor."
-          }
-        },
-        "macro_avg_score": 75.5,
-        "updated_at": "2026-11-19 18:19:32"
+        "updated_at": "2026-11-22 23:00:41"
       },
       {
         "symbol": "IWM",
@@ -2656,40 +2550,40 @@
         "type": "ETF",
         "market": "US",
         "currency": "$",
-        "current_price": 268.13,
-        "change_percent": -0.73,
+        "current_price": 256.61,
+        "change_percent": -2.88,
         "action": "TUT / KÂR REALİZASYONU",
         "confidence": 58,
         "vade": "Orta Vade (2 - 4 Hafta)",
         "vade_group": "Orta Vade",
         "vade_sure": "2-4 Hafta",
         "trade_plan": {
-          "entry": 269.25,
-          "target": 290.79,
-          "stop": 258.48,
+          "entry": 256.61,
+          "target": 277.13,
+          "stop": 246.35,
           "risk_reward": "1:2.0",
-          "profit_margin_percent": 8.45,
+          "profit_margin_percent": 8.0,
           "loss_risk_percent": 4.0,
-          "rule": "269.25 seviyesinde kâr realizasyonu yap veya uzak dur",
+          "rule": "256.61 seviyesinde kâr realizasyonu yap veya uzak dur",
           "is_dip_entry": false,
-          "wait_for_dip_price": 269.25,
+          "wait_for_dip_price": 256.61,
           "dip_discount_percent": 0.0,
           "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
         },
         "technicals": {
-          "rsi": 39.8,
-          "ema20": 276.07,
-          "ema50": 279.84,
-          "ema200": 275.38,
-          "atr": 4.75,
+          "rsi": 30.2,
+          "ema20": 273.78,
+          "ema50": 278.74,
+          "ema200": 275.3,
+          "atr": 5.45,
           "trend": "Düşüş Trendi (Ayı)"
         },
         "simulation": {
-          "target_rate": 37.2,
-          "stop_rate": 2.3,
-          "open_rate": 60.5,
+          "target_rate": 32.6,
+          "stop_rate": 4.1,
+          "open_rate": 63.3,
           "historical_setup_count": 24,
-          "historical_win_count": 8,
+          "historical_win_count": 7,
           "replays": 10000,
           "verdict": "Stopa Meyilli (Yüksek Risk)"
         },
@@ -2752,48 +2646,48 @@
           }
         },
         "macro_avg_score": 72.9,
-        "updated_at": "2026-11-19 18:19:27"
+        "updated_at": "2026-11-22 23:00:44"
       },
       {
-        "symbol": "KCHOL",
-        "raw_symbol": "KCHOL.IS",
-        "name": "Koç Holding",
-        "category": "Holding & İhracat",
-        "type": "Hisse",
-        "market": "BIST",
-        "currency": "₺",
-        "current_price": 193.7,
-        "change_percent": -0.87,
+        "symbol": "IBB",
+        "raw_symbol": "IBB",
+        "name": "iShares Biotechnology ETF",
+        "category": "Biyoteknoloji",
+        "type": "ETF",
+        "market": "US",
+        "currency": "$",
+        "current_price": 199.54,
+        "change_percent": -2.05,
         "action": "TUT / KÂR REALİZASYONU",
         "confidence": 58,
         "vade": "Orta Vade (2 - 4 Hafta)",
         "vade_group": "Orta Vade",
         "vade_sure": "2-4 Hafta",
         "trade_plan": {
-          "entry": 193.7,
-          "target": 209.2,
-          "stop": 185.95,
+          "entry": 199.54,
+          "target": 215.5,
+          "stop": 191.56,
           "risk_reward": "1:2.0",
           "profit_margin_percent": 8.0,
           "loss_risk_percent": 4.0,
-          "rule": "193.7 seviyesinde kâr realizasyonu yap veya uzak dur",
+          "rule": "199.54 seviyesinde kâr realizasyonu yap veya uzak dur",
           "is_dip_entry": false,
-          "wait_for_dip_price": 193.7,
+          "wait_for_dip_price": 199.54,
           "dip_discount_percent": 0.0,
           "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
         },
         "technicals": {
-          "rsi": 39.0,
-          "ema20": 202.74,
-          "ema50": 205.46,
-          "ema200": 200.34,
-          "atr": 6.31,
+          "rsi": 37.0,
+          "ema20": 209.8,
+          "ema50": 208.37,
+          "ema200": 190.47,
+          "atr": 5.19,
           "trend": "Düşüş Trendi (Ayı)"
         },
         "simulation": {
-          "target_rate": 44.0,
-          "stop_rate": 24.0,
-          "open_rate": 32.0,
+          "target_rate": 44.5,
+          "stop_rate": 13.5,
+          "open_rate": 42.0,
           "historical_setup_count": 24,
           "historical_win_count": 10,
           "replays": 10000,
@@ -2858,7 +2752,113 @@
           }
         },
         "macro_avg_score": 75.5,
-        "updated_at": "2026-11-19 18:20:24"
+        "updated_at": "2026-11-22 23:00:48"
+      },
+      {
+        "symbol": "KCHOL",
+        "raw_symbol": "KCHOL.IS",
+        "name": "Koç Holding",
+        "category": "Holding & İhracat",
+        "type": "Hisse",
+        "market": "BIST",
+        "currency": "₺",
+        "current_price": 187.2,
+        "change_percent": -3.36,
+        "action": "TUT / KÂR REALİZASYONU",
+        "confidence": 58,
+        "vade": "Orta Vade (2 - 4 Hafta)",
+        "vade_group": "Orta Vade",
+        "vade_sure": "2-4 Hafta",
+        "trade_plan": {
+          "entry": 187.2,
+          "target": 202.18,
+          "stop": 179.71,
+          "risk_reward": "1:2.0",
+          "profit_margin_percent": 8.0,
+          "loss_risk_percent": 4.0,
+          "rule": "187.2 seviyesinde kâr realizasyonu yap veya uzak dur",
+          "is_dip_entry": false,
+          "wait_for_dip_price": 187.2,
+          "dip_discount_percent": 0.0,
+          "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
+        },
+        "technicals": {
+          "rsi": 34.1,
+          "ema20": 201.26,
+          "ema50": 204.74,
+          "ema200": 200.19,
+          "atr": 6.39,
+          "trend": "Düşüş Trendi (Ayı)"
+        },
+        "simulation": {
+          "target_rate": 43.1,
+          "stop_rate": 25.1,
+          "open_rate": 31.8,
+          "historical_setup_count": 24,
+          "historical_win_count": 10,
+          "replays": 10000,
+          "verdict": "Stopa Meyilli (Yüksek Risk)"
+        },
+        "historical_15y": "Son 15 yılda sektörünün döngüsel dalgalanmalarına paralel seyretti; kriz dönemlerinde pazar payını koruyan şirketler faiz ve talep toparlanmasında öncü rol oynadı.",
+        "side_tools": {
+          "tool1_debt_interest": {
+            "score": 80,
+            "status": "DENGELİ",
+            "detail": "Borçluluk sektörel normlar dahilinde; faiz karşılama oranı pozitif."
+          },
+          "tool2_tariffs": {
+            "score": 82,
+            "status": "ORTA ETKİ",
+            "detail": "Ticari tarifeler ve jeopolitik gelişmeler yakından izleniyor."
+          },
+          "tool3_commodity": {
+            "score": 80,
+            "status": "NÖTR",
+            "detail": "Girdi maliyetleri sözleşmelerle yönetiliyor."
+          },
+          "tool4_us10y": {
+            "score": 78,
+            "status": "PİYASA İLE UYUMLU",
+            "detail": "Tahvil faizlerindeki yönelim çarpanları dengeliyor."
+          },
+          "tool5_dxy_cds": {
+            "score": 82,
+            "status": "DENGELİ",
+            "detail": "Makro risk primine duyarlı fiyatlama."
+          },
+          "tool6_insider": {
+            "score": 84,
+            "status": "KURUMSAL İLGİ",
+            "detail": "Kurumsal yatırımcıların takip listesinde."
+          },
+          "tool7_kap_sec": {
+            "score": 88,
+            "status": "DÜZENLİ BİLDİRİM",
+            "detail": "Operasyonel kârlılık ve büyüme bildirimleri takipte."
+          },
+          "tool8_options": {
+            "score": 80,
+            "status": "DENGELİ",
+            "detail": "Türev piyasalarda nötr-pozitif pozisyonlanma."
+          },
+          "tool9_moneyflow": {
+            "score": 84,
+            "status": "NET GİRİŞ",
+            "detail": "Sektörel rotasyondan pay alıyor."
+          },
+          "tool10_inflation": {
+            "score": 85,
+            "status": "KORUMALI",
+            "detail": "Fiyatlama gücü maliyet artışlarını dengeleyecek düzeyde."
+          },
+          "tool11_piotroski": {
+            "score": 7,
+            "status": "İYİ (7/9)",
+            "detail": "Finansal sağlık kriterlerinin çoğunu karşılıyor."
+          }
+        },
+        "macro_avg_score": 75.5,
+        "updated_at": "2026-11-22 23:01:17"
       }
     ],
     "uzun_vade": [
@@ -2870,146 +2870,40 @@
         "type": "Hisse",
         "market": "US",
         "currency": "$",
-        "current_price": 349.13,
-        "change_percent": -0.94,
-        "action": "AL (Düşüşü Bekle)",
-        "confidence": 75,
-        "vade": "Uzun Vade (1 - 6 Ay)",
-        "vade_group": "Uzun Vade",
-        "vade_sure": "1-6 Ay",
-        "trade_plan": {
-          "entry": 349.52,
-          "target": 404.05,
-          "stop": 326.8,
-          "risk_reward": "1:2.4",
-          "profit_margin_percent": 15.73,
-          "loss_risk_percent": 6.5,
-          "rule": "339.03 seviyesine çekilmesini BEKLE ve AL, 404.05 seviyesinde KÂR AL, 326.8 altına inerse ZARAR KES",
-          "is_dip_entry": true,
-          "wait_for_dip_price": 339.03,
-          "dip_discount_percent": 3.0,
-          "dip_note": "Tepeden almamak için USD339.03 destek seviyesine gevşemesi beklenmelidir (-%3.0 daha ucuz)."
-        },
-        "technicals": {
-          "rsi": 53.3,
-          "ema20": 348.2,
-          "ema50": 340.65,
-          "ema200": 307.52,
-          "atr": 7.61,
-          "trend": "Yükseliş Trendi (Boğa)"
-        },
-        "simulation": {
-          "target_rate": 61.6,
-          "stop_rate": 5.1,
-          "open_rate": 33.3,
-          "historical_setup_count": 24,
-          "historical_win_count": 14,
-          "replays": 10000,
-          "verdict": "Hedefe Meyilli (Pozitif Beklenti)"
-        },
-        "historical_15y": "Son 15 yılda sektörünün döngüsel dalgalanmalarına paralel seyretti; kriz dönemlerinde pazar payını koruyan şirketler faiz ve talep toparlanmasında öncü rol oynadı.",
-        "side_tools": {
-          "tool1_debt_interest": {
-            "score": 80,
-            "status": "DENGELİ",
-            "detail": "Borçluluk sektörel normlar dahilinde; faiz karşılama oranı pozitif."
-          },
-          "tool2_tariffs": {
-            "score": 82,
-            "status": "ORTA ETKİ",
-            "detail": "Ticari tarifeler ve jeopolitik gelişmeler yakından izleniyor."
-          },
-          "tool3_commodity": {
-            "score": 80,
-            "status": "NÖTR",
-            "detail": "Girdi maliyetleri sözleşmelerle yönetiliyor."
-          },
-          "tool4_us10y": {
-            "score": 78,
-            "status": "PİYASA İLE UYUMLU",
-            "detail": "Tahvil faizlerindeki yönelim çarpanları dengeliyor."
-          },
-          "tool5_dxy_cds": {
-            "score": 82,
-            "status": "DENGELİ",
-            "detail": "Makro risk primine duyarlı fiyatlama."
-          },
-          "tool6_insider": {
-            "score": 84,
-            "status": "KURUMSAL İLGİ",
-            "detail": "Kurumsal yatırımcıların takip listesinde."
-          },
-          "tool7_kap_sec": {
-            "score": 88,
-            "status": "DÜZENLİ BİLDİRİM",
-            "detail": "Operasyonel kârlılık ve büyüme bildirimleri takipte."
-          },
-          "tool8_options": {
-            "score": 80,
-            "status": "DENGELİ",
-            "detail": "Türev piyasalarda nötr-pozitif pozisyonlanma."
-          },
-          "tool9_moneyflow": {
-            "score": 84,
-            "status": "NET GİRİŞ",
-            "detail": "Sektörel rotasyondan pay alıyor."
-          },
-          "tool10_inflation": {
-            "score": 85,
-            "status": "KORUMALI",
-            "detail": "Fiyatlama gücü maliyet artışlarını dengeleyecek düzeyde."
-          },
-          "tool11_piotroski": {
-            "score": 7,
-            "status": "İYİ (7/9)",
-            "detail": "Finansal sağlık kriterlerinin çoğunu karşılıyor."
-          }
-        },
-        "macro_avg_score": 75.5,
-        "updated_at": "2026-11-19 18:19:50"
-      },
-      {
-        "symbol": "MSFT",
-        "raw_symbol": "MSFT",
-        "name": "Microsoft Corp.",
-        "category": "Yazılım & Bulut",
-        "type": "Hisse",
-        "market": "US",
-        "currency": "$",
-        "current_price": 518.22,
-        "change_percent": 2.15,
+        "current_price": 342.56,
+        "change_percent": -1.9,
         "action": "İZLE / DİP BEKLE",
-        "confidence": 68,
+        "confidence": 69,
         "vade": "Uzun Vade (1 - 6 Ay)",
         "vade_group": "Uzun Vade",
         "vade_sure": "1-6 Ay",
         "trade_plan": {
-          "entry": 519.4,
-          "target": 600.42,
-          "stop": 485.64,
+          "entry": 342.56,
+          "target": 396.01,
+          "stop": 320.29,
           "risk_reward": "1:2.4",
-          "profit_margin_percent": 15.86,
+          "profit_margin_percent": 15.6,
           "loss_risk_percent": 6.5,
-          "rule": "493.43 güçlü desteğine inmesini İZLE ve BEKLE, 600.42 hedef, 485.64 zarar kes",
+          "rule": "325.43 güçlü desteğine inmesini İZLE ve BEKLE, 396.01 hedef, 320.29 zarar kes",
           "is_dip_entry": true,
-          "wait_for_dip_price": 493.43,
+          "wait_for_dip_price": 325.43,
           "dip_discount_percent": 5.0,
-          "dip_note": "Aşırı alım veya yatay bant riski var; USD493.43 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
+          "dip_note": "Aşırı alım veya yatay bant riski var; USD325.43 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
         },
         "technicals": {
-          "rsi": 48.3,
-          "ema20": 523.28,
-          "ema50": 515.62,
-          "ema200": 467.4,
-          "atr": 15.19,
+          "rsi": 46.4,
+          "ema20": 347.64,
+          "ema50": 340.71,
+          "ema200": 307.74,
+          "atr": 8.18,
           "trend": "Yatay / Konsolidasyon"
         },
         "simulation": {
-          "target_rate": 53.6,
-          "stop_rate": 9.9,
-          "open_rate": 36.5,
+          "target_rate": 58.2,
+          "stop_rate": 6.2,
+          "open_rate": 35.6,
           "historical_setup_count": 24,
-          "historical_win_count": 12,
+          "historical_win_count": 13,
           "replays": 10000,
           "verdict": "Hedefe Meyilli (Pozitif Beklenti)"
         },
@@ -3072,7 +2966,7 @@
           }
         },
         "macro_avg_score": 75.5,
-        "updated_at": "2026-11-19 18:19:55"
+        "updated_at": "2026-11-22 23:00:59"
       },
       {
         "symbol": "ENJSA",
@@ -3082,38 +2976,38 @@
         "type": "Hisse",
         "market": "BIST",
         "currency": "₺",
-        "current_price": 113.2,
-        "change_percent": -1.48,
+        "current_price": 111.6,
+        "change_percent": -1.41,
         "action": "İZLE / DİP BEKLE",
         "confidence": 63,
         "vade": "Uzun Vade (1 - 6 Ay)",
         "vade_group": "Uzun Vade",
         "vade_sure": "1-6 Ay",
         "trade_plan": {
-          "entry": 113.5,
-          "target": 131.21,
-          "stop": 106.12,
+          "entry": 111.6,
+          "target": 129.0,
+          "stop": 104.35,
           "risk_reward": "1:2.4",
-          "profit_margin_percent": 15.91,
+          "profit_margin_percent": 15.59,
           "loss_risk_percent": 6.5,
-          "rule": "107.82 güçlü desteğine inmesini İZLE ve BEKLE, 131.21 hedef, 106.12 zarar kes",
+          "rule": "106.02 güçlü desteğine inmesini İZLE ve BEKLE, 129.0 hedef, 104.35 zarar kes",
           "is_dip_entry": true,
-          "wait_for_dip_price": 107.82,
+          "wait_for_dip_price": 106.02,
           "dip_discount_percent": 5.0,
-          "dip_note": "Aşırı alım veya yatay bant riski var; TRY107.82 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
+          "dip_note": "Aşırı alım veya yatay bant riski var; TRY106.02 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
         },
         "technicals": {
-          "rsi": 45.9,
-          "ema20": 116.46,
-          "ema50": 114.24,
-          "ema200": 109.15,
-          "atr": 3.97,
+          "rsi": 43.0,
+          "ema20": 115.97,
+          "ema50": 114.13,
+          "ema200": 109.23,
+          "atr": 3.86,
           "trend": "Düşüş Trendi (Ayı)"
         },
         "simulation": {
-          "target_rate": 47.9,
-          "stop_rate": 23.7,
-          "open_rate": 28.4,
+          "target_rate": 49.0,
+          "stop_rate": 23.8,
+          "open_rate": 27.2,
           "historical_setup_count": 24,
           "historical_win_count": 11,
           "replays": 10000,
@@ -3178,154 +3072,48 @@
           }
         },
         "macro_avg_score": 81.8,
-        "updated_at": "2026-11-19 18:20:10"
+        "updated_at": "2026-11-22 23:01:13"
       },
       {
-        "symbol": "GRID",
-        "raw_symbol": "GRID",
-        "name": "First Trust Smart Grid ETF",
-        "category": "Akıllı Şebeke & Enerji",
-        "type": "ETF",
+        "symbol": "MSFT",
+        "raw_symbol": "MSFT",
+        "name": "Microsoft Corp.",
+        "category": "Yazılım & Bulut",
+        "type": "Hisse",
         "market": "US",
         "currency": "$",
-        "current_price": 154.87,
-        "change_percent": -0.2,
+        "current_price": 484.52,
+        "change_percent": -2.77,
         "action": "TUT / KÂR REALİZASYONU",
         "confidence": 58,
         "vade": "Uzun Vade (1 - 6 Ay)",
         "vade_group": "Uzun Vade",
         "vade_sure": "1-6 Ay",
         "trade_plan": {
-          "entry": 156.1,
-          "target": 180.46,
-          "stop": 145.95,
-          "risk_reward": "1:2.4",
-          "profit_margin_percent": 16.52,
-          "loss_risk_percent": 6.5,
-          "rule": "156.1 seviyesinde kâr realizasyonu yap veya uzak dur",
-          "is_dip_entry": false,
-          "wait_for_dip_price": 156.1,
-          "dip_discount_percent": 0.0,
-          "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
-        },
-        "technicals": {
-          "rsi": 39.0,
-          "ema20": 161.34,
-          "ema50": 168.14,
-          "ema200": 172.58,
-          "atr": 3.97,
-          "trend": "Düşüş Trendi (Ayı)"
-        },
-        "simulation": {
-          "target_rate": 35.4,
-          "stop_rate": 19.8,
-          "open_rate": 44.8,
-          "historical_setup_count": 24,
-          "historical_win_count": 8,
-          "replays": 10000,
-          "verdict": "Stopa Meyilli (Yüksek Risk)"
-        },
-        "historical_15y": "Son 15 yılda sakin seyreden elektrik şebekesi hisseleri, 2023 sonrasında yapay zeka veri merkezlerinin devasa trafo ve şebeke ihtiyacıyla 2000'lerin başındaki telekom altyapı patlamasına benzer 10 yıllık mega-trende girdi.",
-        "side_tools": {
-          "tool1_debt_interest": {
-            "score": 86,
-            "status": "SAĞLAM",
-            "detail": "Şebeke ekipman üreticileri (Eaton, Quanta, Schneider) net nakit üretiyor."
-          },
-          "tool2_tariffs": {
-            "score": 88,
-            "status": "YERLİ AVANTAJ",
-            "detail": "ABD Altyapı Yasası (IIJA) ve yerli şebeke teşvikleri doğrudan fon aktarıyor."
-          },
-          "tool3_commodity": {
-            "score": 90,
-            "status": "DOĞRUDAN YARARLANICI",
-            "detail": "Elektrik talebi arttıkça trafo ve şebeke modernizasyon harcamaları katlanıyor."
-          },
-          "tool4_us10y": {
-            "score": 84,
-            "status": "DEFANSİF",
-            "detail": "Altyapı şirketlerinin istikrarlı nakit akışı tahvil faizi baskısını dengeliyor."
-          },
-          "tool5_dxy_cds": {
-            "score": 85,
-            "status": "DENGELİ",
-            "detail": "Kamu ve özel sektör garantili altyapı sözleşmeleri."
-          },
-          "tool6_insider": {
-            "score": 86,
-            "status": "KURUMSAL BİRİKİM",
-            "detail": "Emeklilik ve ESG fonlarının portföylerinde uzun vadeli ağırlık artışı."
-          },
-          "tool7_kap_sec": {
-            "score": 94,
-            "status": "TARİHİ SİPARİŞ",
-            "detail": "Bileşen şirketlerin trafo teslim süreleri 3-4 yıla uzadı; sipariş defterleri rekor seviyede."
-          },
-          "tool8_options": {
-            "score": 80,
-            "status": "SAKİN",
-            "detail": "Düşük oynaklık, istikrarlı kurumsal talep."
-          },
-          "tool9_moneyflow": {
-            "score": 92,
-            "status": "KURUMSAL ROTASYON",
-            "detail": "Hızlı tüketimden elektrifikasyon altyapısına büyük fon rotasyonu."
-          },
-          "tool10_inflation": {
-            "score": 90,
-            "status": "KORUMALI",
-            "detail": "Maliyet artışları kamu altyapı ihalelerinde doğrudan fiyat farkı olarak ödenir."
-          },
-          "tool11_piotroski": {
-            "score": 8,
-            "status": "GÜÇLÜ (8/9)",
-            "detail": "ETF içindeki ana hisselerin operasyonel kârlılığı artış trendinde."
-          }
-        },
-        "macro_avg_score": 80.3,
-        "updated_at": "2026-11-19 18:19:37"
-      },
-      {
-        "symbol": "BIMAS",
-        "raw_symbol": "BIMAS.IS",
-        "name": "BİM Birleşik Mağazalar",
-        "category": "Perakende & Defansif",
-        "type": "Hisse",
-        "market": "BIST",
-        "currency": "₺",
-        "current_price": 384.0,
-        "change_percent": -1.48,
-        "action": "TUT / KÂR REALİZASYONU",
-        "confidence": 58,
-        "vade": "Uzun Vade (1 - 6 Ay)",
-        "vade_group": "Uzun Vade",
-        "vade_sure": "1-6 Ay",
-        "trade_plan": {
-          "entry": 384.0,
-          "target": 443.9,
-          "stop": 359.04,
+          "entry": 484.52,
+          "target": 560.1,
+          "stop": 453.03,
           "risk_reward": "1:2.4",
           "profit_margin_percent": 15.6,
           "loss_risk_percent": 6.5,
-          "rule": "384.0 seviyesinde kâr realizasyonu yap veya uzak dur",
+          "rule": "484.52 seviyesinde kâr realizasyonu yap veya uzak dur",
           "is_dip_entry": false,
-          "wait_for_dip_price": 384.0,
+          "wait_for_dip_price": 484.52,
           "dip_discount_percent": 0.0,
           "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
         },
         "technicals": {
-          "rsi": 49.4,
-          "ema20": 383.58,
-          "ema50": 389.41,
-          "ema200": 368.15,
-          "atr": 11.35,
+          "rsi": 34.8,
+          "ema20": 517.77,
+          "ema50": 513.6,
+          "ema200": 466.7,
+          "atr": 16.41,
           "trend": "Düşüş Trendi (Ayı)"
         },
         "simulation": {
-          "target_rate": 43.2,
-          "stop_rate": 19.1,
-          "open_rate": 37.7,
+          "target_rate": 44.1,
+          "stop_rate": 15.3,
+          "open_rate": 40.6,
           "historical_setup_count": 24,
           "historical_win_count": 10,
           "replays": 10000,
@@ -3390,7 +3178,219 @@
           }
         },
         "macro_avg_score": 75.5,
-        "updated_at": "2026-11-19 18:20:39"
+        "updated_at": "2026-11-22 23:01:04"
+      },
+      {
+        "symbol": "BIMAS",
+        "raw_symbol": "BIMAS.IS",
+        "name": "BİM Birleşik Mağazalar",
+        "category": "Perakende & Defansif",
+        "type": "Hisse",
+        "market": "BIST",
+        "currency": "₺",
+        "current_price": 374.25,
+        "change_percent": -2.54,
+        "action": "TUT / KÂR REALİZASYONU",
+        "confidence": 58,
+        "vade": "Uzun Vade (1 - 6 Ay)",
+        "vade_group": "Uzun Vade",
+        "vade_sure": "1-6 Ay",
+        "trade_plan": {
+          "entry": 374.25,
+          "target": 432.64,
+          "stop": 349.92,
+          "risk_reward": "1:2.4",
+          "profit_margin_percent": 15.6,
+          "loss_risk_percent": 6.5,
+          "rule": "374.25 seviyesinde kâr realizasyonu yap veya uzak dur",
+          "is_dip_entry": false,
+          "wait_for_dip_price": 374.25,
+          "dip_discount_percent": 0.0,
+          "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
+        },
+        "technicals": {
+          "rsi": 44.0,
+          "ema20": 382.69,
+          "ema50": 388.81,
+          "ema200": 368.22,
+          "atr": 11.34,
+          "trend": "Düşüş Trendi (Ayı)"
+        },
+        "simulation": {
+          "target_rate": 43.0,
+          "stop_rate": 19.9,
+          "open_rate": 37.1,
+          "historical_setup_count": 24,
+          "historical_win_count": 10,
+          "replays": 10000,
+          "verdict": "Stopa Meyilli (Yüksek Risk)"
+        },
+        "historical_15y": "Son 15 yılda sektörünün döngüsel dalgalanmalarına paralel seyretti; kriz dönemlerinde pazar payını koruyan şirketler faiz ve talep toparlanmasında öncü rol oynadı.",
+        "side_tools": {
+          "tool1_debt_interest": {
+            "score": 80,
+            "status": "DENGELİ",
+            "detail": "Borçluluk sektörel normlar dahilinde; faiz karşılama oranı pozitif."
+          },
+          "tool2_tariffs": {
+            "score": 82,
+            "status": "ORTA ETKİ",
+            "detail": "Ticari tarifeler ve jeopolitik gelişmeler yakından izleniyor."
+          },
+          "tool3_commodity": {
+            "score": 80,
+            "status": "NÖTR",
+            "detail": "Girdi maliyetleri sözleşmelerle yönetiliyor."
+          },
+          "tool4_us10y": {
+            "score": 78,
+            "status": "PİYASA İLE UYUMLU",
+            "detail": "Tahvil faizlerindeki yönelim çarpanları dengeliyor."
+          },
+          "tool5_dxy_cds": {
+            "score": 82,
+            "status": "DENGELİ",
+            "detail": "Makro risk primine duyarlı fiyatlama."
+          },
+          "tool6_insider": {
+            "score": 84,
+            "status": "KURUMSAL İLGİ",
+            "detail": "Kurumsal yatırımcıların takip listesinde."
+          },
+          "tool7_kap_sec": {
+            "score": 88,
+            "status": "DÜZENLİ BİLDİRİM",
+            "detail": "Operasyonel kârlılık ve büyüme bildirimleri takipte."
+          },
+          "tool8_options": {
+            "score": 80,
+            "status": "DENGELİ",
+            "detail": "Türev piyasalarda nötr-pozitif pozisyonlanma."
+          },
+          "tool9_moneyflow": {
+            "score": 84,
+            "status": "NET GİRİŞ",
+            "detail": "Sektörel rotasyondan pay alıyor."
+          },
+          "tool10_inflation": {
+            "score": 85,
+            "status": "KORUMALI",
+            "detail": "Fiyatlama gücü maliyet artışlarını dengeleyecek düzeyde."
+          },
+          "tool11_piotroski": {
+            "score": 7,
+            "status": "İYİ (7/9)",
+            "detail": "Finansal sağlık kriterlerinin çoğunu karşılıyor."
+          }
+        },
+        "macro_avg_score": 75.5,
+        "updated_at": "2026-11-22 23:01:23"
+      },
+      {
+        "symbol": "GRID",
+        "raw_symbol": "GRID",
+        "name": "First Trust Smart Grid ETF",
+        "category": "Akıllı Şebeke & Enerji",
+        "type": "ETF",
+        "market": "US",
+        "currency": "$",
+        "current_price": 145.44,
+        "change_percent": -4.58,
+        "action": "TUT / KÂR REALİZASYONU",
+        "confidence": 58,
+        "vade": "Uzun Vade (1 - 6 Ay)",
+        "vade_group": "Uzun Vade",
+        "vade_sure": "1-6 Ay",
+        "trade_plan": {
+          "entry": 145.44,
+          "target": 168.12,
+          "stop": 135.99,
+          "risk_reward": "1:2.4",
+          "profit_margin_percent": 15.59,
+          "loss_risk_percent": 6.5,
+          "rule": "145.44 seviyesinde kâr realizasyonu yap veya uzak dur",
+          "is_dip_entry": false,
+          "wait_for_dip_price": 145.44,
+          "dip_discount_percent": 0.0,
+          "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
+        },
+        "technicals": {
+          "rsi": 28.8,
+          "ema20": 159.51,
+          "ema50": 167.12,
+          "ema200": 172.41,
+          "atr": 4.44,
+          "trend": "Düşüş Trendi (Ayı)"
+        },
+        "simulation": {
+          "target_rate": 30.1,
+          "stop_rate": 24.6,
+          "open_rate": 45.3,
+          "historical_setup_count": 24,
+          "historical_win_count": 7,
+          "replays": 10000,
+          "verdict": "Yazı-Tura Düzeyi (Dengeli / Nötr)"
+        },
+        "historical_15y": "Son 15 yılda sakin seyreden elektrik şebekesi hisseleri, 2023 sonrasında yapay zeka veri merkezlerinin devasa trafo ve şebeke ihtiyacıyla 2000'lerin başındaki telekom altyapı patlamasına benzer 10 yıllık mega-trende girdi.",
+        "side_tools": {
+          "tool1_debt_interest": {
+            "score": 86,
+            "status": "SAĞLAM",
+            "detail": "Şebeke ekipman üreticileri (Eaton, Quanta, Schneider) net nakit üretiyor."
+          },
+          "tool2_tariffs": {
+            "score": 88,
+            "status": "YERLİ AVANTAJ",
+            "detail": "ABD Altyapı Yasası (IIJA) ve yerli şebeke teşvikleri doğrudan fon aktarıyor."
+          },
+          "tool3_commodity": {
+            "score": 90,
+            "status": "DOĞRUDAN YARARLANICI",
+            "detail": "Elektrik talebi arttıkça trafo ve şebeke modernizasyon harcamaları katlanıyor."
+          },
+          "tool4_us10y": {
+            "score": 84,
+            "status": "DEFANSİF",
+            "detail": "Altyapı şirketlerinin istikrarlı nakit akışı tahvil faizi baskısını dengeliyor."
+          },
+          "tool5_dxy_cds": {
+            "score": 85,
+            "status": "DENGELİ",
+            "detail": "Kamu ve özel sektör garantili altyapı sözleşmeleri."
+          },
+          "tool6_insider": {
+            "score": 86,
+            "status": "KURUMSAL BİRİKİM",
+            "detail": "Emeklilik ve ESG fonlarının portföylerinde uzun vadeli ağırlık artışı."
+          },
+          "tool7_kap_sec": {
+            "score": 94,
+            "status": "TARİHİ SİPARİŞ",
+            "detail": "Bileşen şirketlerin trafo teslim süreleri 3-4 yıla uzadı; sipariş defterleri rekor seviyede."
+          },
+          "tool8_options": {
+            "score": 80,
+            "status": "SAKİN",
+            "detail": "Düşük oynaklık, istikrarlı kurumsal talep."
+          },
+          "tool9_moneyflow": {
+            "score": 92,
+            "status": "KURUMSAL ROTASYON",
+            "detail": "Hızlı tüketimden elektrifikasyon altyapısına büyük fon rotasyonu."
+          },
+          "tool10_inflation": {
+            "score": 90,
+            "status": "KORUMALI",
+            "detail": "Maliyet artışları kamu altyapı ihalelerinde doğrudan fiyat farkı olarak ödenir."
+          },
+          "tool11_piotroski": {
+            "score": 8,
+            "status": "GÜÇLÜ (8/9)",
+            "detail": "ETF içindeki ana hisselerin operasyonel kârlılığı artış trendinde."
+          }
+        },
+        "macro_avg_score": 80.3,
+        "updated_at": "2026-11-22 23:00:52"
       }
     ]
   },
@@ -3403,40 +3403,40 @@
       "type": "Hisse",
       "market": "US",
       "currency": "$",
-      "current_price": 349.13,
-      "change_percent": -0.94,
-      "action": "AL (Düşüşü Bekle)",
-      "confidence": 75,
+      "current_price": 342.56,
+      "change_percent": -1.9,
+      "action": "İZLE / DİP BEKLE",
+      "confidence": 69,
       "vade": "Uzun Vade (1 - 6 Ay)",
       "vade_group": "Uzun Vade",
       "vade_sure": "1-6 Ay",
       "trade_plan": {
-        "entry": 349.52,
-        "target": 404.05,
-        "stop": 326.8,
+        "entry": 342.56,
+        "target": 396.01,
+        "stop": 320.29,
         "risk_reward": "1:2.4",
-        "profit_margin_percent": 15.73,
+        "profit_margin_percent": 15.6,
         "loss_risk_percent": 6.5,
-        "rule": "339.03 seviyesine çekilmesini BEKLE ve AL, 404.05 seviyesinde KÂR AL, 326.8 altına inerse ZARAR KES",
+        "rule": "325.43 güçlü desteğine inmesini İZLE ve BEKLE, 396.01 hedef, 320.29 zarar kes",
         "is_dip_entry": true,
-        "wait_for_dip_price": 339.03,
-        "dip_discount_percent": 3.0,
-        "dip_note": "Tepeden almamak için USD339.03 destek seviyesine gevşemesi beklenmelidir (-%3.0 daha ucuz)."
+        "wait_for_dip_price": 325.43,
+        "dip_discount_percent": 5.0,
+        "dip_note": "Aşırı alım veya yatay bant riski var; USD325.43 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
       },
       "technicals": {
-        "rsi": 53.3,
-        "ema20": 348.2,
-        "ema50": 340.65,
-        "ema200": 307.52,
-        "atr": 7.61,
-        "trend": "Yükseliş Trendi (Boğa)"
+        "rsi": 46.4,
+        "ema20": 347.64,
+        "ema50": 340.71,
+        "ema200": 307.74,
+        "atr": 8.18,
+        "trend": "Yatay / Konsolidasyon"
       },
       "simulation": {
-        "target_rate": 61.6,
-        "stop_rate": 5.1,
-        "open_rate": 33.3,
+        "target_rate": 58.2,
+        "stop_rate": 6.2,
+        "open_rate": 35.6,
         "historical_setup_count": 24,
-        "historical_win_count": 14,
+        "historical_win_count": 13,
         "replays": 10000,
         "verdict": "Hedefe Meyilli (Pozitif Beklenti)"
       },
@@ -3499,7 +3499,7 @@
         }
       },
       "macro_avg_score": 75.5,
-      "updated_at": "2026-11-19 18:19:50"
+      "updated_at": "2026-11-22 23:00:59"
     },
     {
       "symbol": "AVGO",
@@ -3509,40 +3509,40 @@
       "type": "Hisse",
       "market": "US",
       "currency": "$",
-      "current_price": 356.81,
-      "change_percent": 0.78,
+      "current_price": 304.41,
+      "change_percent": -12.19,
       "action": "İZLE / DİP BEKLE",
-      "confidence": 69,
+      "confidence": 61,
       "vade": "Kısa Vade (3 - 7 Gün)",
       "vade_group": "Kısa Vade",
       "vade_sure": "3-7 Gün",
       "trade_plan": {
-        "entry": 359.25,
-        "target": 384.31,
-        "stop": 345.33,
+        "entry": 304.41,
+        "target": 333.25,
+        "stop": 288.39,
         "risk_reward": "1:1.8",
-        "profit_margin_percent": 7.71,
-        "loss_risk_percent": 3.87,
-        "rule": "341.29 güçlü desteğine inmesini İZLE ve BEKLE, 384.31 hedef, 345.33 zarar kes",
+        "profit_margin_percent": 9.47,
+        "loss_risk_percent": 5.26,
+        "rule": "289.19 güçlü desteğine inmesini İZLE ve BEKLE, 333.25 hedef, 288.39 zarar kes",
         "is_dip_entry": true,
-        "wait_for_dip_price": 341.29,
+        "wait_for_dip_price": 289.19,
         "dip_discount_percent": 5.0,
-        "dip_note": "Aşırı alım veya yatay bant riski var; USD341.29 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
+        "dip_note": "Aşırı alım veya yatay bant riski var; USD289.19 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
       },
       "technicals": {
-        "rsi": 56.6,
-        "ema20": 339.5,
-        "ema50": 345.91,
-        "ema200": 359.29,
-        "atr": 17.4,
-        "trend": "Yatay / Konsolidasyon"
+        "rsi": 40.8,
+        "ema20": 335.06,
+        "ema50": 343.8,
+        "ema200": 358.78,
+        "atr": 20.02,
+        "trend": "Düşüş Trendi (Ayı)"
       },
       "simulation": {
-        "target_rate": 48.9,
-        "stop_rate": 15.7,
-        "open_rate": 35.4,
+        "target_rate": 44.9,
+        "stop_rate": 9.8,
+        "open_rate": 45.3,
         "historical_setup_count": 24,
-        "historical_win_count": 11,
+        "historical_win_count": 10,
         "replays": 10000,
         "verdict": "Stopa Meyilli (Yüksek Risk)"
       },
@@ -3605,431 +3605,7 @@
         }
       },
       "macro_avg_score": 80.8,
-      "updated_at": "2026-11-19 18:19:21"
-    },
-    {
-      "symbol": "MSFT",
-      "raw_symbol": "MSFT",
-      "name": "Microsoft Corp.",
-      "category": "Yazılım & Bulut",
-      "type": "Hisse",
-      "market": "US",
-      "currency": "$",
-      "current_price": 518.22,
-      "change_percent": 2.15,
-      "action": "İZLE / DİP BEKLE",
-      "confidence": 68,
-      "vade": "Uzun Vade (1 - 6 Ay)",
-      "vade_group": "Uzun Vade",
-      "vade_sure": "1-6 Ay",
-      "trade_plan": {
-        "entry": 519.4,
-        "target": 600.42,
-        "stop": 485.64,
-        "risk_reward": "1:2.4",
-        "profit_margin_percent": 15.86,
-        "loss_risk_percent": 6.5,
-        "rule": "493.43 güçlü desteğine inmesini İZLE ve BEKLE, 600.42 hedef, 485.64 zarar kes",
-        "is_dip_entry": true,
-        "wait_for_dip_price": 493.43,
-        "dip_discount_percent": 5.0,
-        "dip_note": "Aşırı alım veya yatay bant riski var; USD493.43 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
-      },
-      "technicals": {
-        "rsi": 48.3,
-        "ema20": 523.28,
-        "ema50": 515.62,
-        "ema200": 467.4,
-        "atr": 15.19,
-        "trend": "Yatay / Konsolidasyon"
-      },
-      "simulation": {
-        "target_rate": 53.6,
-        "stop_rate": 9.9,
-        "open_rate": 36.5,
-        "historical_setup_count": 24,
-        "historical_win_count": 12,
-        "replays": 10000,
-        "verdict": "Hedefe Meyilli (Pozitif Beklenti)"
-      },
-      "historical_15y": "Son 15 yılda sektörünün döngüsel dalgalanmalarına paralel seyretti; kriz dönemlerinde pazar payını koruyan şirketler faiz ve talep toparlanmasında öncü rol oynadı.",
-      "side_tools": {
-        "tool1_debt_interest": {
-          "score": 80,
-          "status": "DENGELİ",
-          "detail": "Borçluluk sektörel normlar dahilinde; faiz karşılama oranı pozitif."
-        },
-        "tool2_tariffs": {
-          "score": 82,
-          "status": "ORTA ETKİ",
-          "detail": "Ticari tarifeler ve jeopolitik gelişmeler yakından izleniyor."
-        },
-        "tool3_commodity": {
-          "score": 80,
-          "status": "NÖTR",
-          "detail": "Girdi maliyetleri sözleşmelerle yönetiliyor."
-        },
-        "tool4_us10y": {
-          "score": 78,
-          "status": "PİYASA İLE UYUMLU",
-          "detail": "Tahvil faizlerindeki yönelim çarpanları dengeliyor."
-        },
-        "tool5_dxy_cds": {
-          "score": 82,
-          "status": "DENGELİ",
-          "detail": "Makro risk primine duyarlı fiyatlama."
-        },
-        "tool6_insider": {
-          "score": 84,
-          "status": "KURUMSAL İLGİ",
-          "detail": "Kurumsal yatırımcıların takip listesinde."
-        },
-        "tool7_kap_sec": {
-          "score": 88,
-          "status": "DÜZENLİ BİLDİRİM",
-          "detail": "Operasyonel kârlılık ve büyüme bildirimleri takipte."
-        },
-        "tool8_options": {
-          "score": 80,
-          "status": "DENGELİ",
-          "detail": "Türev piyasalarda nötr-pozitif pozisyonlanma."
-        },
-        "tool9_moneyflow": {
-          "score": 84,
-          "status": "NET GİRİŞ",
-          "detail": "Sektörel rotasyondan pay alıyor."
-        },
-        "tool10_inflation": {
-          "score": 85,
-          "status": "KORUMALI",
-          "detail": "Fiyatlama gücü maliyet artışlarını dengeleyecek düzeyde."
-        },
-        "tool11_piotroski": {
-          "score": 7,
-          "status": "İYİ (7/9)",
-          "detail": "Finansal sağlık kriterlerinin çoğunu karşılıyor."
-        }
-      },
-      "macro_avg_score": 75.5,
-      "updated_at": "2026-11-19 18:19:55"
-    },
-    {
-      "symbol": "AMD",
-      "raw_symbol": "AMD",
-      "name": "Advanced Micro Devices",
-      "category": "İşlemci & AI",
-      "type": "Hisse",
-      "market": "US",
-      "currency": "$",
-      "current_price": 487.46,
-      "change_percent": -8.05,
-      "action": "İZLE / DİP BEKLE",
-      "confidence": 61,
-      "vade": "Kısa Vade (3 - 7 Gün)",
-      "vade_group": "Kısa Vade",
-      "vade_sure": "3-7 Gün",
-      "trade_plan": {
-        "entry": 530.77,
-        "target": 587.27,
-        "stop": 499.38,
-        "risk_reward": "1:1.8",
-        "profit_margin_percent": 20.48,
-        "loss_risk_percent": 5.91,
-        "rule": "504.23 güçlü desteğine inmesini İZLE ve BEKLE, 587.27 hedef, 499.38 zarar kes",
-        "is_dip_entry": true,
-        "wait_for_dip_price": 504.23,
-        "dip_discount_percent": 5.0,
-        "dip_note": "Aşırı alım veya yatay bant riski var; USD504.23 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
-      },
-      "technicals": {
-        "rsi": 50.4,
-        "ema20": 524.06,
-        "ema50": 531.88,
-        "ema200": 426.79,
-        "atr": 39.24,
-        "trend": "Düşüş Trendi (Ayı)"
-      },
-      "simulation": {
-        "target_rate": 53.5,
-        "stop_rate": 11.7,
-        "open_rate": 34.8,
-        "historical_setup_count": 24,
-        "historical_win_count": 12,
-        "replays": 10000,
-        "verdict": "Hedefe Meyilli (Pozitif Beklenti)"
-      },
-      "historical_15y": "Son 15 yılda sektörünün döngüsel dalgalanmalarına paralel seyretti; kriz dönemlerinde pazar payını koruyan şirketler faiz ve talep toparlanmasında öncü rol oynadı.",
-      "side_tools": {
-        "tool1_debt_interest": {
-          "score": 80,
-          "status": "DENGELİ",
-          "detail": "Borçluluk sektörel normlar dahilinde; faiz karşılama oranı pozitif."
-        },
-        "tool2_tariffs": {
-          "score": 82,
-          "status": "ORTA ETKİ",
-          "detail": "Ticari tarifeler ve jeopolitik gelişmeler yakından izleniyor."
-        },
-        "tool3_commodity": {
-          "score": 80,
-          "status": "NÖTR",
-          "detail": "Girdi maliyetleri sözleşmelerle yönetiliyor."
-        },
-        "tool4_us10y": {
-          "score": 78,
-          "status": "PİYASA İLE UYUMLU",
-          "detail": "Tahvil faizlerindeki yönelim çarpanları dengeliyor."
-        },
-        "tool5_dxy_cds": {
-          "score": 82,
-          "status": "DENGELİ",
-          "detail": "Makro risk primine duyarlı fiyatlama."
-        },
-        "tool6_insider": {
-          "score": 84,
-          "status": "KURUMSAL İLGİ",
-          "detail": "Kurumsal yatırımcıların takip listesinde."
-        },
-        "tool7_kap_sec": {
-          "score": 88,
-          "status": "DÜZENLİ BİLDİRİM",
-          "detail": "Operasyonel kârlılık ve büyüme bildirimleri takipte."
-        },
-        "tool8_options": {
-          "score": 80,
-          "status": "DENGELİ",
-          "detail": "Türev piyasalarda nötr-pozitif pozisyonlanma."
-        },
-        "tool9_moneyflow": {
-          "score": 84,
-          "status": "NET GİRİŞ",
-          "detail": "Sektörel rotasyondan pay alıyor."
-        },
-        "tool10_inflation": {
-          "score": 85,
-          "status": "KORUMALI",
-          "detail": "Fiyatlama gücü maliyet artışlarını dengeleyecek düzeyde."
-        },
-        "tool11_piotroski": {
-          "score": 7,
-          "status": "İYİ (7/9)",
-          "detail": "Finansal sağlık kriterlerinin çoğunu karşılıyor."
-        }
-      },
-      "macro_avg_score": 75.5,
-      "updated_at": "2026-11-19 18:19:44"
-    },
-    {
-      "symbol": "NVDA",
-      "raw_symbol": "NVDA",
-      "name": "NVIDIA Corporation",
-      "category": "Yarı İletken & AI",
-      "type": "Hisse",
-      "market": "US",
-      "currency": "$",
-      "current_price": 152.43,
-      "change_percent": 0.97,
-      "action": "İZLE / DİP BEKLE",
-      "confidence": 60,
-      "vade": "Kısa Vade (3 - 7 Gün)",
-      "vade_group": "Kısa Vade",
-      "vade_sure": "3-7 Gün",
-      "trade_plan": {
-        "entry": 155.06,
-        "target": 168.74,
-        "stop": 147.46,
-        "risk_reward": "1:1.8",
-        "profit_margin_percent": 10.7,
-        "loss_risk_percent": 4.9,
-        "rule": "147.31 güçlü desteğine inmesini İZLE ve BEKLE, 168.74 hedef, 147.46 zarar kes",
-        "is_dip_entry": true,
-        "wait_for_dip_price": 147.31,
-        "dip_discount_percent": 5.0,
-        "dip_note": "Aşırı alım veya yatay bant riski var; USD147.31 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
-      },
-      "technicals": {
-        "rsi": 25.7,
-        "ema20": 180.42,
-        "ema50": 199.1,
-        "ema200": 200.82,
-        "atr": 9.5,
-        "trend": "Düşüş Trendi (Ayı)"
-      },
-      "simulation": {
-        "target_rate": 42.9,
-        "stop_rate": 9.7,
-        "open_rate": 47.4,
-        "historical_setup_count": 24,
-        "historical_win_count": 10,
-        "replays": 10000,
-        "verdict": "Stopa Meyilli (Yüksek Risk)"
-      },
-      "historical_15y": "2018 Kripto çöküşü ve 2022 Fed faiz artış döngüsünde teknoloji çarpanları daraldı; ancak nakit akışı ve AI tekel marjı sayesinde 2023-2026 döneminde S&P'ye %400 rölatif fark attı.",
-      "side_tools": {
-        "tool1_debt_interest": {
-          "score": 98,
-          "status": "KUSURSUZ",
-          "detail": "Sıfıra yakın net borç; $35B+ nakit ile yüksek faiz ortamından net faiz geliri elde ediyor."
-        },
-        "tool2_tariffs": {
-          "score": 85,
-          "status": "YÜKSEK DİRENÇ",
-          "detail": "Çin çip kısıtlamaları bilançoda fiyatlandı; Batı blokunun AI altyapı talebi arzı aşıyor."
-        },
-        "tool3_commodity": {
-          "score": 90,
-          "status": "POZİTİF KATALİZÖR",
-          "detail": "Veri merkezlerinin yüksek elektrik tüketimi, enerji verimliliği 4x yüksek Blackwell mimarisine talebi zorunlu kılıyor."
-        },
-        "tool4_us10y": {
-          "score": 78,
-          "status": "ORTA HASSASİYET",
-          "detail": "10Y tahvil faizindeki sert sıçramalarda kısa vadeli volatilite artar; büyüme hızı faiz baskısını yener."
-        },
-        "tool5_dxy_cds": {
-          "score": 88,
-          "status": "GÜÇLÜ",
-          "detail": "Doların güçlü kalması küresel gelir tahsilatını koruyor."
-        },
-        "tool6_insider": {
-          "score": 82,
-          "status": "ALIM BÖLGESİ",
-          "detail": "Kurumsal fonların (Whale 13F) çekirdek pozisyonu korunuyor."
-        },
-        "tool7_kap_sec": {
-          "score": 95,
-          "status": "GÜÇLÜ POZİTİF",
-          "detail": "SEC 10-Q/8-K raporlarında bulut sağlayıcılarının CAPEX harcama rehberlikleri rekor kırıyor."
-        },
-        "tool8_options": {
-          "score": 92,
-          "status": "BOĞA HAKİMİYETİ",
-          "detail": "Put/Call oranı 0.62; opsiyon piyasasında agresif yukarı yönlü Call primleri toplanıyor."
-        },
-        "tool9_moneyflow": {
-          "score": 94,
-          "status": "NET GİRİŞ",
-          "detail": "Chaikin Para Akışı (CMF) +0.28; mega-cap teknolojiye net kurumsal giriş."
-        },
-        "tool10_inflation": {
-          "score": 96,
-          "status": "TAM FİYATLAMA GÜCÜ",
-          "detail": "Yarı iletken GPU fiyatlarını dilediği gibi belirleme gücüne (monopol fiyatlama) sahip."
-        },
-        "tool11_piotroski": {
-          "score": 9,
-          "status": "MÜKEMMEL (9/9)",
-          "detail": "Kârlılık, likidite ve marj genişlemesinde tam puan."
-        }
-      },
-      "macro_avg_score": 82.5,
-      "updated_at": "2026-11-19 18:19:18"
-    },
-    {
-      "symbol": "TSM",
-      "raw_symbol": "TSM",
-      "name": "Taiwan Semiconductor",
-      "category": "Yarı İletken Döküm",
-      "type": "ADR",
-      "market": "US",
-      "currency": "$",
-      "current_price": 362.8,
-      "change_percent": 0.05,
-      "action": "İZLE / DİP BEKLE",
-      "confidence": 60,
-      "vade": "Orta Vade (2 - 4 Hafta)",
-      "vade_group": "Orta Vade",
-      "vade_sure": "2-4 Hafta",
-      "trade_plan": {
-        "entry": 368.8,
-        "target": 398.3,
-        "stop": 354.05,
-        "risk_reward": "1:2.0",
-        "profit_margin_percent": 9.79,
-        "loss_risk_percent": 4.0,
-        "rule": "350.36 güçlü desteğine inmesini İZLE ve BEKLE, 398.3 hedef, 354.05 zarar kes",
-        "is_dip_entry": true,
-        "wait_for_dip_price": 350.36,
-        "dip_discount_percent": 5.0,
-        "dip_note": "Aşırı alım veya yatay bant riski var; USD350.36 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
-      },
-      "technicals": {
-        "rsi": 39.2,
-        "ema20": 394.28,
-        "ema50": 412.06,
-        "ema200": 393.15,
-        "atr": 17.12,
-        "trend": "Düşüş Trendi (Ayı)"
-      },
-      "simulation": {
-        "target_rate": 41.9,
-        "stop_rate": 34.6,
-        "open_rate": 23.5,
-        "historical_setup_count": 24,
-        "historical_win_count": 10,
-        "replays": 10000,
-        "verdict": "Stopa Meyilli (Yüksek Risk)"
-      },
-      "historical_15y": "2011'den bu yana küresel yarı iletken döküm pazar payını %50'den %62'ye çıkardı; Apple, Nvidia ve AMD'nin tek üretim kapısı haline gelerek jeopolitik gerilim dönemlerinde bile marjlarını korudu.",
-      "side_tools": {
-        "tool1_debt_interest": {
-          "score": 92,
-          "status": "GÜVENLİ",
-          "detail": "Net nakit pozisyonunda; yıllık $30B+ faaliyet kârı borç riskini sıfırlıyor."
-        },
-        "tool2_tariffs": {
-          "score": 82,
-          "status": "YÖNETİLEBİLİR",
-          "detail": "ABD (Arizona), Japonya ve Almanya fabrikalarıyla jeopolitik riskini dağıtıyor."
-        },
-        "tool3_commodity": {
-          "score": 88,
-          "status": "DENGELİ",
-          "detail": "Saf silikon ve nadir element tedariki uzun vadeli kontratlarla güvencede."
-        },
-        "tool4_us10y": {
-          "score": 85,
-          "status": "DİRENÇLİ",
-          "detail": "Teknolojideki tekel konumu tahvil faizine karşı defansif kalkan sağlıyor."
-        },
-        "tool5_dxy_cds": {
-          "score": 86,
-          "status": "POZİTİF",
-          "detail": "Dolar bazlı küresel gelirler Tayvan doları maliyetlerine karşı arbitraj yaratıyor."
-        },
-        "tool6_insider": {
-          "score": 90,
-          "status": "BALİNA GÜVENİ",
-          "detail": "Küresel egemen varlık fonlarının ana çekirdek portföy varlığı."
-        },
-        "tool7_kap_sec": {
-          "score": 96,
-          "status": "DOLU KAPASİTE",
-          "detail": "3nm ve 2nm gelişmiş düğüm kapasitesi 2027 sonuna kadar kapalı gişe rezerve."
-        },
-        "tool8_options": {
-          "score": 88,
-          "status": "BOĞA",
-          "detail": "ADR opsiyonlarında kurumsal alım eğilimi hakim."
-        },
-        "tool9_moneyflow": {
-          "score": 92,
-          "status": "NET POZİTİF",
-          "detail": "Yarı iletken ETF'lerinden (SMH/SOXX) gelen otomatik fon akışı."
-        },
-        "tool10_inflation": {
-          "score": 95,
-          "status": "FİYATLAMA GÜCÜ",
-          "detail": "Müşterilerine (Apple/Nvidia) fiyat artışlarını koşulsuz kabul ettirebiliyor."
-        },
-        "tool11_piotroski": {
-          "score": 9,
-          "status": "MÜKEMMEL (9/9)",
-          "detail": "Dünyanın en karlı ve nakit zengini sanayi bilançolarından biri."
-        }
-      },
-      "macro_avg_score": 82.1,
-      "updated_at": "2026-11-19 18:19:24"
+      "updated_at": "2026-11-22 23:00:39"
     },
     {
       "symbol": "PLTR",
@@ -4039,40 +3615,40 @@
       "type": "Hisse",
       "market": "US",
       "currency": "$",
-      "current_price": 160.01,
-      "change_percent": 2.14,
-      "action": "İZLE / DİP BEKLE",
-      "confidence": 60,
+      "current_price": 143.49,
+      "change_percent": -6.63,
+      "action": "TUT / KÂR REALİZASYONU",
+      "confidence": 59,
       "vade": "Kısa Vade (3 - 7 Gün)",
       "vade_group": "Kısa Vade",
       "vade_sure": "3-7 Gün",
       "trade_plan": {
-        "entry": 162.44,
-        "target": 174.99,
-        "stop": 155.47,
+        "entry": 143.49,
+        "target": 156.63,
+        "stop": 136.19,
         "risk_reward": "1:1.8",
-        "profit_margin_percent": 9.36,
-        "loss_risk_percent": 4.29,
-        "rule": "154.32 güçlü desteğine inmesini İZLE ve BEKLE, 174.99 hedef, 155.47 zarar kes",
-        "is_dip_entry": true,
-        "wait_for_dip_price": 154.32,
-        "dip_discount_percent": 5.0,
-        "dip_note": "Aşırı alım veya yatay bant riski var; USD154.32 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
+        "profit_margin_percent": 9.16,
+        "loss_risk_percent": 5.09,
+        "rule": "143.49 seviyesinde kâr realizasyonu yap veya uzak dur",
+        "is_dip_entry": false,
+        "wait_for_dip_price": 143.49,
+        "dip_discount_percent": 0.0,
+        "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
       },
       "technicals": {
-        "rsi": 39.1,
-        "ema20": 171.91,
-        "ema50": 176.8,
-        "ema200": 164.04,
-        "atr": 8.71,
+        "rsi": 26.4,
+        "ema20": 168.47,
+        "ema50": 175.17,
+        "ema200": 163.6,
+        "atr": 9.13,
         "trend": "Düşüş Trendi (Ayı)"
       },
       "simulation": {
-        "target_rate": 48.0,
-        "stop_rate": 15.4,
-        "open_rate": 36.6,
+        "target_rate": 44.9,
+        "stop_rate": 12.2,
+        "open_rate": 42.9,
         "historical_setup_count": 24,
-        "historical_win_count": 11,
+        "historical_win_count": 10,
         "replays": 10000,
         "verdict": "Stopa Meyilli (Yüksek Risk)"
       },
@@ -4135,50 +3711,50 @@
         }
       },
       "macro_avg_score": 82.9,
-      "updated_at": "2026-11-19 18:19:39"
+      "updated_at": "2026-11-22 23:00:53"
     },
     {
-      "symbol": "IBB",
-      "raw_symbol": "IBB",
-      "name": "iShares Biotechnology ETF",
-      "category": "Biyoteknoloji",
-      "type": "ETF",
+      "symbol": "MSFT",
+      "raw_symbol": "MSFT",
+      "name": "Microsoft Corp.",
+      "category": "Yazılım & Bulut",
+      "type": "Hisse",
       "market": "US",
       "currency": "$",
-      "current_price": 204.28,
-      "change_percent": -0.54,
+      "current_price": 484.52,
+      "change_percent": -2.77,
       "action": "TUT / KÂR REALİZASYONU",
-      "confidence": 59,
-      "vade": "Orta Vade (2 - 4 Hafta)",
-      "vade_group": "Orta Vade",
-      "vade_sure": "2-4 Hafta",
+      "confidence": 58,
+      "vade": "Uzun Vade (1 - 6 Ay)",
+      "vade_group": "Uzun Vade",
+      "vade_sure": "1-6 Ay",
       "trade_plan": {
-        "entry": 207.35,
-        "target": 223.93,
-        "stop": 199.06,
-        "risk_reward": "1:2.0",
-        "profit_margin_percent": 9.62,
-        "loss_risk_percent": 4.0,
-        "rule": "207.35 seviyesinde kâr realizasyonu yap veya uzak dur",
+        "entry": 484.52,
+        "target": 560.1,
+        "stop": 453.03,
+        "risk_reward": "1:2.4",
+        "profit_margin_percent": 15.6,
+        "loss_risk_percent": 6.5,
+        "rule": "484.52 seviyesinde kâr realizasyonu yap veya uzak dur",
         "is_dip_entry": false,
-        "wait_for_dip_price": 207.35,
+        "wait_for_dip_price": 484.52,
         "dip_discount_percent": 0.0,
         "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
       },
       "technicals": {
-        "rsi": 45.4,
-        "ema20": 211.22,
-        "ema50": 208.88,
-        "ema200": 190.49,
-        "atr": 5.05,
+        "rsi": 34.8,
+        "ema20": 517.77,
+        "ema50": 513.6,
+        "ema200": 466.7,
+        "atr": 16.41,
         "trend": "Düşüş Trendi (Ayı)"
       },
       "simulation": {
-        "target_rate": 47.6,
-        "stop_rate": 12.0,
-        "open_rate": 40.4,
+        "target_rate": 44.1,
+        "stop_rate": 15.3,
+        "open_rate": 40.6,
         "historical_setup_count": 24,
-        "historical_win_count": 11,
+        "historical_win_count": 10,
         "replays": 10000,
         "verdict": "Stopa Meyilli (Yüksek Risk)"
       },
@@ -4241,7 +3817,7 @@
         }
       },
       "macro_avg_score": 75.5,
-      "updated_at": "2026-11-19 18:19:32"
+      "updated_at": "2026-11-22 23:01:04"
     },
     {
       "symbol": "GRID",
@@ -4251,42 +3827,42 @@
       "type": "ETF",
       "market": "US",
       "currency": "$",
-      "current_price": 154.87,
-      "change_percent": -0.2,
+      "current_price": 145.44,
+      "change_percent": -4.58,
       "action": "TUT / KÂR REALİZASYONU",
       "confidence": 58,
       "vade": "Uzun Vade (1 - 6 Ay)",
       "vade_group": "Uzun Vade",
       "vade_sure": "1-6 Ay",
       "trade_plan": {
-        "entry": 156.1,
-        "target": 180.46,
-        "stop": 145.95,
+        "entry": 145.44,
+        "target": 168.12,
+        "stop": 135.99,
         "risk_reward": "1:2.4",
-        "profit_margin_percent": 16.52,
+        "profit_margin_percent": 15.59,
         "loss_risk_percent": 6.5,
-        "rule": "156.1 seviyesinde kâr realizasyonu yap veya uzak dur",
+        "rule": "145.44 seviyesinde kâr realizasyonu yap veya uzak dur",
         "is_dip_entry": false,
-        "wait_for_dip_price": 156.1,
+        "wait_for_dip_price": 145.44,
         "dip_discount_percent": 0.0,
         "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
       },
       "technicals": {
-        "rsi": 39.0,
-        "ema20": 161.34,
-        "ema50": 168.14,
-        "ema200": 172.58,
-        "atr": 3.97,
+        "rsi": 28.8,
+        "ema20": 159.51,
+        "ema50": 167.12,
+        "ema200": 172.41,
+        "atr": 4.44,
         "trend": "Düşüş Trendi (Ayı)"
       },
       "simulation": {
-        "target_rate": 35.4,
-        "stop_rate": 19.8,
-        "open_rate": 44.8,
+        "target_rate": 30.1,
+        "stop_rate": 24.6,
+        "open_rate": 45.3,
         "historical_setup_count": 24,
-        "historical_win_count": 8,
+        "historical_win_count": 7,
         "replays": 10000,
-        "verdict": "Stopa Meyilli (Yüksek Risk)"
+        "verdict": "Yazı-Tura Düzeyi (Dengeli / Nötr)"
       },
       "historical_15y": "Son 15 yılda sakin seyreden elektrik şebekesi hisseleri, 2023 sonrasında yapay zeka veri merkezlerinin devasa trafo ve şebeke ihtiyacıyla 2000'lerin başındaki telekom altyapı patlamasına benzer 10 yıllık mega-trende girdi.",
       "side_tools": {
@@ -4347,7 +3923,325 @@
         }
       },
       "macro_avg_score": 80.3,
-      "updated_at": "2026-11-19 18:19:37"
+      "updated_at": "2026-11-22 23:00:52"
+    },
+    {
+      "symbol": "AMD",
+      "raw_symbol": "AMD",
+      "name": "Advanced Micro Devices",
+      "category": "İşlemci & AI",
+      "type": "Hisse",
+      "market": "US",
+      "currency": "$",
+      "current_price": 424.39,
+      "change_percent": -13.25,
+      "action": "TUT / KÂR REALİZASYONU",
+      "confidence": 58,
+      "vade": "Kısa Vade (3 - 7 Gün)",
+      "vade_group": "Kısa Vade",
+      "vade_sure": "3-7 Gün",
+      "trade_plan": {
+        "entry": 424.39,
+        "target": 489.78,
+        "stop": 388.06,
+        "risk_reward": "1:1.8",
+        "profit_margin_percent": 15.41,
+        "loss_risk_percent": 8.56,
+        "rule": "424.39 seviyesinde kâr realizasyonu yap veya uzak dur",
+        "is_dip_entry": false,
+        "wait_for_dip_price": 424.39,
+        "dip_discount_percent": 0.0,
+        "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
+      },
+      "technicals": {
+        "rsi": 38.4,
+        "ema20": 511.01,
+        "ema50": 526.11,
+        "ema200": 426.13,
+        "atr": 45.41,
+        "trend": "Düşüş Trendi (Ayı)"
+      },
+      "simulation": {
+        "target_rate": 50.0,
+        "stop_rate": 6.4,
+        "open_rate": 43.6,
+        "historical_setup_count": 24,
+        "historical_win_count": 12,
+        "replays": 10000,
+        "verdict": "Stopa Meyilli (Yüksek Risk)"
+      },
+      "historical_15y": "Son 15 yılda sektörünün döngüsel dalgalanmalarına paralel seyretti; kriz dönemlerinde pazar payını koruyan şirketler faiz ve talep toparlanmasında öncü rol oynadı.",
+      "side_tools": {
+        "tool1_debt_interest": {
+          "score": 80,
+          "status": "DENGELİ",
+          "detail": "Borçluluk sektörel normlar dahilinde; faiz karşılama oranı pozitif."
+        },
+        "tool2_tariffs": {
+          "score": 82,
+          "status": "ORTA ETKİ",
+          "detail": "Ticari tarifeler ve jeopolitik gelişmeler yakından izleniyor."
+        },
+        "tool3_commodity": {
+          "score": 80,
+          "status": "NÖTR",
+          "detail": "Girdi maliyetleri sözleşmelerle yönetiliyor."
+        },
+        "tool4_us10y": {
+          "score": 78,
+          "status": "PİYASA İLE UYUMLU",
+          "detail": "Tahvil faizlerindeki yönelim çarpanları dengeliyor."
+        },
+        "tool5_dxy_cds": {
+          "score": 82,
+          "status": "DENGELİ",
+          "detail": "Makro risk primine duyarlı fiyatlama."
+        },
+        "tool6_insider": {
+          "score": 84,
+          "status": "KURUMSAL İLGİ",
+          "detail": "Kurumsal yatırımcıların takip listesinde."
+        },
+        "tool7_kap_sec": {
+          "score": 88,
+          "status": "DÜZENLİ BİLDİRİM",
+          "detail": "Operasyonel kârlılık ve büyüme bildirimleri takipte."
+        },
+        "tool8_options": {
+          "score": 80,
+          "status": "DENGELİ",
+          "detail": "Türev piyasalarda nötr-pozitif pozisyonlanma."
+        },
+        "tool9_moneyflow": {
+          "score": 84,
+          "status": "NET GİRİŞ",
+          "detail": "Sektörel rotasyondan pay alıyor."
+        },
+        "tool10_inflation": {
+          "score": 85,
+          "status": "KORUMALI",
+          "detail": "Fiyatlama gücü maliyet artışlarını dengeleyecek düzeyde."
+        },
+        "tool11_piotroski": {
+          "score": 7,
+          "status": "İYİ (7/9)",
+          "detail": "Finansal sağlık kriterlerinin çoğunu karşılıyor."
+        }
+      },
+      "macro_avg_score": 75.5,
+      "updated_at": "2026-11-22 23:00:55"
+    },
+    {
+      "symbol": "NVDA",
+      "raw_symbol": "NVDA",
+      "name": "NVIDIA Corporation",
+      "category": "Yarı İletken & AI",
+      "type": "Hisse",
+      "market": "US",
+      "currency": "$",
+      "current_price": 125.53,
+      "change_percent": -14.01,
+      "action": "TUT / KÂR REALİZASYONU",
+      "confidence": 58,
+      "vade": "Kısa Vade (3 - 7 Gün)",
+      "vade_group": "Kısa Vade",
+      "vade_sure": "3-7 Gün",
+      "trade_plan": {
+        "entry": 125.53,
+        "target": 140.96,
+        "stop": 116.96,
+        "risk_reward": "1:1.8",
+        "profit_margin_percent": 12.29,
+        "loss_risk_percent": 6.83,
+        "rule": "125.53 seviyesinde kâr realizasyonu yap veya uzak dur",
+        "is_dip_entry": false,
+        "wait_for_dip_price": 125.53,
+        "dip_discount_percent": 0.0,
+        "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
+      },
+      "technicals": {
+        "rsi": 15.0,
+        "ema20": 174.41,
+        "ema50": 195.87,
+        "ema200": 199.92,
+        "atr": 10.71,
+        "trend": "Düşüş Trendi (Ayı)"
+      },
+      "simulation": {
+        "target_rate": 38.2,
+        "stop_rate": 5.4,
+        "open_rate": 56.4,
+        "historical_setup_count": 24,
+        "historical_win_count": 9,
+        "replays": 10000,
+        "verdict": "Stopa Meyilli (Yüksek Risk)"
+      },
+      "historical_15y": "2018 Kripto çöküşü ve 2022 Fed faiz artış döngüsünde teknoloji çarpanları daraldı; ancak nakit akışı ve AI tekel marjı sayesinde 2023-2026 döneminde S&P'ye %400 rölatif fark attı.",
+      "side_tools": {
+        "tool1_debt_interest": {
+          "score": 98,
+          "status": "KUSURSUZ",
+          "detail": "Sıfıra yakın net borç; $35B+ nakit ile yüksek faiz ortamından net faiz geliri elde ediyor."
+        },
+        "tool2_tariffs": {
+          "score": 85,
+          "status": "YÜKSEK DİRENÇ",
+          "detail": "Çin çip kısıtlamaları bilançoda fiyatlandı; Batı blokunun AI altyapı talebi arzı aşıyor."
+        },
+        "tool3_commodity": {
+          "score": 90,
+          "status": "POZİTİF KATALİZÖR",
+          "detail": "Veri merkezlerinin yüksek elektrik tüketimi, enerji verimliliği 4x yüksek Blackwell mimarisine talebi zorunlu kılıyor."
+        },
+        "tool4_us10y": {
+          "score": 78,
+          "status": "ORTA HASSASİYET",
+          "detail": "10Y tahvil faizindeki sert sıçramalarda kısa vadeli volatilite artar; büyüme hızı faiz baskısını yener."
+        },
+        "tool5_dxy_cds": {
+          "score": 88,
+          "status": "GÜÇLÜ",
+          "detail": "Doların güçlü kalması küresel gelir tahsilatını koruyor."
+        },
+        "tool6_insider": {
+          "score": 82,
+          "status": "ALIM BÖLGESİ",
+          "detail": "Kurumsal fonların (Whale 13F) çekirdek pozisyonu korunuyor."
+        },
+        "tool7_kap_sec": {
+          "score": 95,
+          "status": "GÜÇLÜ POZİTİF",
+          "detail": "SEC 10-Q/8-K raporlarında bulut sağlayıcılarının CAPEX harcama rehberlikleri rekor kırıyor."
+        },
+        "tool8_options": {
+          "score": 92,
+          "status": "BOĞA HAKİMİYETİ",
+          "detail": "Put/Call oranı 0.62; opsiyon piyasasında agresif yukarı yönlü Call primleri toplanıyor."
+        },
+        "tool9_moneyflow": {
+          "score": 94,
+          "status": "NET GİRİŞ",
+          "detail": "Chaikin Para Akışı (CMF) +0.28; mega-cap teknolojiye net kurumsal giriş."
+        },
+        "tool10_inflation": {
+          "score": 96,
+          "status": "TAM FİYATLAMA GÜCÜ",
+          "detail": "Yarı iletken GPU fiyatlarını dilediği gibi belirleme gücüne (monopol fiyatlama) sahip."
+        },
+        "tool11_piotroski": {
+          "score": 9,
+          "status": "MÜKEMMEL (9/9)",
+          "detail": "Kârlılık, likidite ve marj genişlemesinde tam puan."
+        }
+      },
+      "macro_avg_score": 82.5,
+      "updated_at": "2026-11-22 23:00:38"
+    },
+    {
+      "symbol": "TSM",
+      "raw_symbol": "TSM",
+      "name": "Taiwan Semiconductor",
+      "category": "Yarı İletken Döküm",
+      "type": "ADR",
+      "market": "US",
+      "currency": "$",
+      "current_price": 318.71,
+      "change_percent": -9.48,
+      "action": "TUT / KÂR REALİZASYONU",
+      "confidence": 58,
+      "vade": "Orta Vade (2 - 4 Hafta)",
+      "vade_group": "Orta Vade",
+      "vade_sure": "2-4 Hafta",
+      "trade_plan": {
+        "entry": 318.71,
+        "target": 349.21,
+        "stop": 303.46,
+        "risk_reward": "1:2.0",
+        "profit_margin_percent": 9.57,
+        "loss_risk_percent": 4.78,
+        "rule": "318.71 seviyesinde kâr realizasyonu yap veya uzak dur",
+        "is_dip_entry": false,
+        "wait_for_dip_price": 318.71,
+        "dip_discount_percent": 0.0,
+        "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
+      },
+      "technicals": {
+        "rsi": 28.3,
+        "ema20": 385.65,
+        "ema50": 407.78,
+        "ema200": 392.47,
+        "atr": 19.06,
+        "trend": "Düşüş Trendi (Ayı)"
+      },
+      "simulation": {
+        "target_rate": 36.5,
+        "stop_rate": 32.8,
+        "open_rate": 30.7,
+        "historical_setup_count": 24,
+        "historical_win_count": 8,
+        "replays": 10000,
+        "verdict": "Yazı-Tura Düzeyi (Dengeli / Nötr)"
+      },
+      "historical_15y": "2011'den bu yana küresel yarı iletken döküm pazar payını %50'den %62'ye çıkardı; Apple, Nvidia ve AMD'nin tek üretim kapısı haline gelerek jeopolitik gerilim dönemlerinde bile marjlarını korudu.",
+      "side_tools": {
+        "tool1_debt_interest": {
+          "score": 92,
+          "status": "GÜVENLİ",
+          "detail": "Net nakit pozisyonunda; yıllık $30B+ faaliyet kârı borç riskini sıfırlıyor."
+        },
+        "tool2_tariffs": {
+          "score": 82,
+          "status": "YÖNETİLEBİLİR",
+          "detail": "ABD (Arizona), Japonya ve Almanya fabrikalarıyla jeopolitik riskini dağıtıyor."
+        },
+        "tool3_commodity": {
+          "score": 88,
+          "status": "DENGELİ",
+          "detail": "Saf silikon ve nadir element tedariki uzun vadeli kontratlarla güvencede."
+        },
+        "tool4_us10y": {
+          "score": 85,
+          "status": "DİRENÇLİ",
+          "detail": "Teknolojideki tekel konumu tahvil faizine karşı defansif kalkan sağlıyor."
+        },
+        "tool5_dxy_cds": {
+          "score": 86,
+          "status": "POZİTİF",
+          "detail": "Dolar bazlı küresel gelirler Tayvan doları maliyetlerine karşı arbitraj yaratıyor."
+        },
+        "tool6_insider": {
+          "score": 90,
+          "status": "BALİNA GÜVENİ",
+          "detail": "Küresel egemen varlık fonlarının ana çekirdek portföy varlığı."
+        },
+        "tool7_kap_sec": {
+          "score": 96,
+          "status": "DOLU KAPASİTE",
+          "detail": "3nm ve 2nm gelişmiş düğüm kapasitesi 2027 sonuna kadar kapalı gişe rezerve."
+        },
+        "tool8_options": {
+          "score": 88,
+          "status": "BOĞA",
+          "detail": "ADR opsiyonlarında kurumsal alım eğilimi hakim."
+        },
+        "tool9_moneyflow": {
+          "score": 92,
+          "status": "NET POZİTİF",
+          "detail": "Yarı iletken ETF'lerinden (SMH/SOXX) gelen otomatik fon akışı."
+        },
+        "tool10_inflation": {
+          "score": 95,
+          "status": "FİYATLAMA GÜCÜ",
+          "detail": "Müşterilerine (Apple/Nvidia) fiyat artışlarını koşulsuz kabul ettirebiliyor."
+        },
+        "tool11_piotroski": {
+          "score": 9,
+          "status": "MÜKEMMEL (9/9)",
+          "detail": "Dünyanın en karlı ve nakit zengini sanayi bilançolarından biri."
+        }
+      },
+      "macro_avg_score": 82.1,
+      "updated_at": "2026-11-22 23:00:41"
     },
     {
       "symbol": "IWM",
@@ -4357,40 +4251,40 @@
       "type": "ETF",
       "market": "US",
       "currency": "$",
-      "current_price": 268.13,
-      "change_percent": -0.73,
+      "current_price": 256.61,
+      "change_percent": -2.88,
       "action": "TUT / KÂR REALİZASYONU",
       "confidence": 58,
       "vade": "Orta Vade (2 - 4 Hafta)",
       "vade_group": "Orta Vade",
       "vade_sure": "2-4 Hafta",
       "trade_plan": {
-        "entry": 269.25,
-        "target": 290.79,
-        "stop": 258.48,
+        "entry": 256.61,
+        "target": 277.13,
+        "stop": 246.35,
         "risk_reward": "1:2.0",
-        "profit_margin_percent": 8.45,
+        "profit_margin_percent": 8.0,
         "loss_risk_percent": 4.0,
-        "rule": "269.25 seviyesinde kâr realizasyonu yap veya uzak dur",
+        "rule": "256.61 seviyesinde kâr realizasyonu yap veya uzak dur",
         "is_dip_entry": false,
-        "wait_for_dip_price": 269.25,
+        "wait_for_dip_price": 256.61,
         "dip_discount_percent": 0.0,
         "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
       },
       "technicals": {
-        "rsi": 39.8,
-        "ema20": 276.07,
-        "ema50": 279.84,
-        "ema200": 275.38,
-        "atr": 4.75,
+        "rsi": 30.2,
+        "ema20": 273.78,
+        "ema50": 278.74,
+        "ema200": 275.3,
+        "atr": 5.45,
         "trend": "Düşüş Trendi (Ayı)"
       },
       "simulation": {
-        "target_rate": 37.2,
-        "stop_rate": 2.3,
-        "open_rate": 60.5,
+        "target_rate": 32.6,
+        "stop_rate": 4.1,
+        "open_rate": 63.3,
         "historical_setup_count": 24,
-        "historical_win_count": 8,
+        "historical_win_count": 7,
         "replays": 10000,
         "verdict": "Stopa Meyilli (Yüksek Risk)"
       },
@@ -4453,7 +4347,113 @@
         }
       },
       "macro_avg_score": 72.9,
-      "updated_at": "2026-11-19 18:19:27"
+      "updated_at": "2026-11-22 23:00:44"
+    },
+    {
+      "symbol": "IBB",
+      "raw_symbol": "IBB",
+      "name": "iShares Biotechnology ETF",
+      "category": "Biyoteknoloji",
+      "type": "ETF",
+      "market": "US",
+      "currency": "$",
+      "current_price": 199.54,
+      "change_percent": -2.05,
+      "action": "TUT / KÂR REALİZASYONU",
+      "confidence": 58,
+      "vade": "Orta Vade (2 - 4 Hafta)",
+      "vade_group": "Orta Vade",
+      "vade_sure": "2-4 Hafta",
+      "trade_plan": {
+        "entry": 199.54,
+        "target": 215.5,
+        "stop": 191.56,
+        "risk_reward": "1:2.0",
+        "profit_margin_percent": 8.0,
+        "loss_risk_percent": 4.0,
+        "rule": "199.54 seviyesinde kâr realizasyonu yap veya uzak dur",
+        "is_dip_entry": false,
+        "wait_for_dip_price": 199.54,
+        "dip_discount_percent": 0.0,
+        "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
+      },
+      "technicals": {
+        "rsi": 37.0,
+        "ema20": 209.8,
+        "ema50": 208.37,
+        "ema200": 190.47,
+        "atr": 5.19,
+        "trend": "Düşüş Trendi (Ayı)"
+      },
+      "simulation": {
+        "target_rate": 44.5,
+        "stop_rate": 13.5,
+        "open_rate": 42.0,
+        "historical_setup_count": 24,
+        "historical_win_count": 10,
+        "replays": 10000,
+        "verdict": "Stopa Meyilli (Yüksek Risk)"
+      },
+      "historical_15y": "Son 15 yılda sektörünün döngüsel dalgalanmalarına paralel seyretti; kriz dönemlerinde pazar payını koruyan şirketler faiz ve talep toparlanmasında öncü rol oynadı.",
+      "side_tools": {
+        "tool1_debt_interest": {
+          "score": 80,
+          "status": "DENGELİ",
+          "detail": "Borçluluk sektörel normlar dahilinde; faiz karşılama oranı pozitif."
+        },
+        "tool2_tariffs": {
+          "score": 82,
+          "status": "ORTA ETKİ",
+          "detail": "Ticari tarifeler ve jeopolitik gelişmeler yakından izleniyor."
+        },
+        "tool3_commodity": {
+          "score": 80,
+          "status": "NÖTR",
+          "detail": "Girdi maliyetleri sözleşmelerle yönetiliyor."
+        },
+        "tool4_us10y": {
+          "score": 78,
+          "status": "PİYASA İLE UYUMLU",
+          "detail": "Tahvil faizlerindeki yönelim çarpanları dengeliyor."
+        },
+        "tool5_dxy_cds": {
+          "score": 82,
+          "status": "DENGELİ",
+          "detail": "Makro risk primine duyarlı fiyatlama."
+        },
+        "tool6_insider": {
+          "score": 84,
+          "status": "KURUMSAL İLGİ",
+          "detail": "Kurumsal yatırımcıların takip listesinde."
+        },
+        "tool7_kap_sec": {
+          "score": 88,
+          "status": "DÜZENLİ BİLDİRİM",
+          "detail": "Operasyonel kârlılık ve büyüme bildirimleri takipte."
+        },
+        "tool8_options": {
+          "score": 80,
+          "status": "DENGELİ",
+          "detail": "Türev piyasalarda nötr-pozitif pozisyonlanma."
+        },
+        "tool9_moneyflow": {
+          "score": 84,
+          "status": "NET GİRİŞ",
+          "detail": "Sektörel rotasyondan pay alıyor."
+        },
+        "tool10_inflation": {
+          "score": 85,
+          "status": "KORUMALI",
+          "detail": "Fiyatlama gücü maliyet artışlarını dengeleyecek düzeyde."
+        },
+        "tool11_piotroski": {
+          "score": 7,
+          "status": "İYİ (7/9)",
+          "detail": "Finansal sağlık kriterlerinin çoğunu karşılıyor."
+        }
+      },
+      "macro_avg_score": 75.5,
+      "updated_at": "2026-11-22 23:00:48"
     },
     {
       "symbol": "XBI",
@@ -4463,38 +4463,38 @@
       "type": "ETF",
       "market": "US",
       "currency": "$",
-      "current_price": 144.54,
-      "change_percent": -0.34,
+      "current_price": 140.18,
+      "change_percent": -2.73,
       "action": "TUT / KÂR REALİZASYONU",
       "confidence": 58,
       "vade": "Kısa Vade (3 - 7 Gün)",
       "vade_group": "Kısa Vade",
       "vade_sure": "3-7 Gün",
       "trade_plan": {
-        "entry": 147.07,
-        "target": 154.0,
-        "stop": 143.22,
+        "entry": 140.18,
+        "target": 147.27,
+        "stop": 136.24,
         "risk_reward": "1:1.8",
-        "profit_margin_percent": 6.54,
-        "loss_risk_percent": 2.62,
-        "rule": "147.07 seviyesinde kâr realizasyonu yap veya uzak dur",
+        "profit_margin_percent": 5.06,
+        "loss_risk_percent": 2.81,
+        "rule": "140.18 seviyesinde kâr realizasyonu yap veya uzak dur",
         "is_dip_entry": false,
-        "wait_for_dip_price": 147.07,
+        "wait_for_dip_price": 140.18,
         "dip_discount_percent": 0.0,
         "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
       },
       "technicals": {
-        "rsi": 43.6,
-        "ema20": 150.92,
-        "ema50": 152.71,
-        "ema200": 142.65,
-        "atr": 4.81,
+        "rsi": 35.4,
+        "ema20": 149.64,
+        "ema50": 152.11,
+        "ema200": 142.59,
+        "atr": 4.92,
         "trend": "Düşüş Trendi (Ayı)"
       },
       "simulation": {
-        "target_rate": 45.7,
-        "stop_rate": 19.0,
-        "open_rate": 35.3,
+        "target_rate": 44.4,
+        "stop_rate": 15.9,
+        "open_rate": 39.7,
         "historical_setup_count": 24,
         "historical_win_count": 10,
         "replays": 10000,
@@ -4559,116 +4559,10 @@
         }
       },
       "macro_avg_score": 73.5,
-      "updated_at": "2026-11-19 18:19:29"
+      "updated_at": "2026-11-22 23:00:45"
     }
   ],
   "bist_market": [
-    {
-      "symbol": "GARAN",
-      "raw_symbol": "GARAN.IS",
-      "name": "Türkiye Garanti Bankası",
-      "category": "Bankacılık",
-      "type": "Hisse",
-      "market": "BIST",
-      "currency": "₺",
-      "current_price": 146.4,
-      "change_percent": 0.48,
-      "action": "AL (Düşüşü Bekle)",
-      "confidence": 72,
-      "vade": "Kısa Vade (3 - 7 Gün)",
-      "vade_group": "Kısa Vade",
-      "vade_sure": "3-7 Gün",
-      "trade_plan": {
-        "entry": 146.4,
-        "target": 153.01,
-        "stop": 142.73,
-        "risk_reward": "1:1.8",
-        "profit_margin_percent": 4.52,
-        "loss_risk_percent": 2.51,
-        "rule": "142.01 seviyesine çekilmesini BEKLE ve AL, 153.01 seviyesinde KÂR AL, 142.73 altına inerse ZARAR KES",
-        "is_dip_entry": true,
-        "wait_for_dip_price": 142.01,
-        "dip_discount_percent": 3.0,
-        "dip_note": "Tepeden almamak için TRY142.01 destek seviyesine gevşemesi beklenmelidir (-%3.0 daha ucuz)."
-      },
-      "technicals": {
-        "rsi": 59.1,
-        "ema20": 142.85,
-        "ema50": 137.05,
-        "ema200": 136.93,
-        "atr": 4.59,
-        "trend": "Yükseliş Trendi (Boğa)"
-      },
-      "simulation": {
-        "target_rate": 51.2,
-        "stop_rate": 17.6,
-        "open_rate": 31.2,
-        "historical_setup_count": 24,
-        "historical_win_count": 12,
-        "replays": 10000,
-        "verdict": "Stopa Meyilli (Yüksek Risk)"
-      },
-      "historical_15y": "Son 15 yılda sektörünün döngüsel dalgalanmalarına paralel seyretti; kriz dönemlerinde pazar payını koruyan şirketler faiz ve talep toparlanmasında öncü rol oynadı.",
-      "side_tools": {
-        "tool1_debt_interest": {
-          "score": 80,
-          "status": "DENGELİ",
-          "detail": "Borçluluk sektörel normlar dahilinde; faiz karşılama oranı pozitif."
-        },
-        "tool2_tariffs": {
-          "score": 82,
-          "status": "ORTA ETKİ",
-          "detail": "Ticari tarifeler ve jeopolitik gelişmeler yakından izleniyor."
-        },
-        "tool3_commodity": {
-          "score": 80,
-          "status": "NÖTR",
-          "detail": "Girdi maliyetleri sözleşmelerle yönetiliyor."
-        },
-        "tool4_us10y": {
-          "score": 78,
-          "status": "PİYASA İLE UYUMLU",
-          "detail": "Tahvil faizlerindeki yönelim çarpanları dengeliyor."
-        },
-        "tool5_dxy_cds": {
-          "score": 82,
-          "status": "DENGELİ",
-          "detail": "Makro risk primine duyarlı fiyatlama."
-        },
-        "tool6_insider": {
-          "score": 84,
-          "status": "KURUMSAL İLGİ",
-          "detail": "Kurumsal yatırımcıların takip listesinde."
-        },
-        "tool7_kap_sec": {
-          "score": 88,
-          "status": "DÜZENLİ BİLDİRİM",
-          "detail": "Operasyonel kârlılık ve büyüme bildirimleri takipte."
-        },
-        "tool8_options": {
-          "score": 80,
-          "status": "DENGELİ",
-          "detail": "Türev piyasalarda nötr-pozitif pozisyonlanma."
-        },
-        "tool9_moneyflow": {
-          "score": 84,
-          "status": "NET GİRİŞ",
-          "detail": "Sektörel rotasyondan pay alıyor."
-        },
-        "tool10_inflation": {
-          "score": 85,
-          "status": "KORUMALI",
-          "detail": "Fiyatlama gücü maliyet artışlarını dengeleyecek düzeyde."
-        },
-        "tool11_piotroski": {
-          "score": 7,
-          "status": "İYİ (7/9)",
-          "detail": "Finansal sağlık kriterlerinin çoğunu karşılıyor."
-        }
-      },
-      "macro_avg_score": 75.5,
-      "updated_at": "2026-11-19 18:20:31"
-    },
     {
       "symbol": "THYAO",
       "raw_symbol": "THYAO.IS",
@@ -4677,38 +4571,38 @@
       "type": "Hisse",
       "market": "BIST",
       "currency": "₺",
-      "current_price": 328.25,
-      "change_percent": 1.39,
+      "current_price": 329.0,
+      "change_percent": 0.23,
       "action": "AL (Düşüşü Bekle)",
       "confidence": 72,
       "vade": "Kısa Vade (3 - 7 Gün)",
       "vade_group": "Kısa Vade",
       "vade_sure": "3-7 Gün",
       "trade_plan": {
-        "entry": 328.5,
-        "target": 343.28,
-        "stop": 320.29,
+        "entry": 329.0,
+        "target": 343.8,
+        "stop": 320.78,
         "risk_reward": "1:1.8",
-        "profit_margin_percent": 4.58,
+        "profit_margin_percent": 4.5,
         "loss_risk_percent": 2.5,
-        "rule": "318.64 seviyesine çekilmesini BEKLE ve AL, 343.28 seviyesinde KÂR AL, 320.29 altına inerse ZARAR KES",
+        "rule": "319.13 seviyesine çekilmesini BEKLE ve AL, 343.8 seviyesinde KÂR AL, 320.78 altına inerse ZARAR KES",
         "is_dip_entry": true,
-        "wait_for_dip_price": 318.64,
+        "wait_for_dip_price": 319.13,
         "dip_discount_percent": 3.0,
-        "dip_note": "Tepeden almamak için TRY318.64 destek seviyesine gevşemesi beklenmelidir (-%3.0 daha ucuz)."
+        "dip_note": "Tepeden almamak için TRY319.13 destek seviyesine gevşemesi beklenmelidir (-%3.0 daha ucuz)."
       },
       "technicals": {
-        "rsi": 73.8,
-        "ema20": 302.23,
-        "ema50": 294.34,
-        "ema200": 297.22,
-        "atr": 9.62,
+        "rsi": 74.1,
+        "ema20": 304.76,
+        "ema50": 295.69,
+        "ema200": 297.61,
+        "atr": 9.4,
         "trend": "Yükseliş Trendi (Boğa)"
       },
       "simulation": {
-        "target_rate": 50.8,
-        "stop_rate": 14.6,
-        "open_rate": 34.6,
+        "target_rate": 51.4,
+        "stop_rate": 14.7,
+        "open_rate": 33.9,
         "historical_setup_count": 24,
         "historical_win_count": 12,
         "replays": 10000,
@@ -4773,7 +4667,113 @@
         }
       },
       "macro_avg_score": 80.0,
-      "updated_at": "2026-11-19 18:19:57"
+      "updated_at": "2026-11-22 23:01:05"
+    },
+    {
+      "symbol": "GARAN",
+      "raw_symbol": "GARAN.IS",
+      "name": "Türkiye Garanti Bankası",
+      "category": "Bankacılık",
+      "type": "Hisse",
+      "market": "BIST",
+      "currency": "₺",
+      "current_price": 144.2,
+      "change_percent": -1.5,
+      "action": "AL (Düşüşü Bekle)",
+      "confidence": 72,
+      "vade": "Kısa Vade (3 - 7 Gün)",
+      "vade_group": "Kısa Vade",
+      "vade_sure": "3-7 Gün",
+      "trade_plan": {
+        "entry": 144.2,
+        "target": 150.68,
+        "stop": 140.6,
+        "risk_reward": "1:1.8",
+        "profit_margin_percent": 4.49,
+        "loss_risk_percent": 2.5,
+        "rule": "139.87 seviyesine çekilmesini BEKLE ve AL, 150.68 seviyesinde KÂR AL, 140.6 altına inerse ZARAR KES",
+        "is_dip_entry": true,
+        "wait_for_dip_price": 139.87,
+        "dip_discount_percent": 3.0,
+        "dip_note": "Tepeden almamak için TRY139.87 destek seviyesine gevşemesi beklenmelidir (-%3.0 daha ucuz)."
+      },
+      "technicals": {
+        "rsi": 55.2,
+        "ema20": 142.98,
+        "ema50": 137.33,
+        "ema200": 137.03,
+        "atr": 4.49,
+        "trend": "Yükseliş Trendi (Boğa)"
+      },
+      "simulation": {
+        "target_rate": 50.9,
+        "stop_rate": 17.8,
+        "open_rate": 31.3,
+        "historical_setup_count": 24,
+        "historical_win_count": 12,
+        "replays": 10000,
+        "verdict": "Stopa Meyilli (Yüksek Risk)"
+      },
+      "historical_15y": "Son 15 yılda sektörünün döngüsel dalgalanmalarına paralel seyretti; kriz dönemlerinde pazar payını koruyan şirketler faiz ve talep toparlanmasında öncü rol oynadı.",
+      "side_tools": {
+        "tool1_debt_interest": {
+          "score": 80,
+          "status": "DENGELİ",
+          "detail": "Borçluluk sektörel normlar dahilinde; faiz karşılama oranı pozitif."
+        },
+        "tool2_tariffs": {
+          "score": 82,
+          "status": "ORTA ETKİ",
+          "detail": "Ticari tarifeler ve jeopolitik gelişmeler yakından izleniyor."
+        },
+        "tool3_commodity": {
+          "score": 80,
+          "status": "NÖTR",
+          "detail": "Girdi maliyetleri sözleşmelerle yönetiliyor."
+        },
+        "tool4_us10y": {
+          "score": 78,
+          "status": "PİYASA İLE UYUMLU",
+          "detail": "Tahvil faizlerindeki yönelim çarpanları dengeliyor."
+        },
+        "tool5_dxy_cds": {
+          "score": 82,
+          "status": "DENGELİ",
+          "detail": "Makro risk primine duyarlı fiyatlama."
+        },
+        "tool6_insider": {
+          "score": 84,
+          "status": "KURUMSAL İLGİ",
+          "detail": "Kurumsal yatırımcıların takip listesinde."
+        },
+        "tool7_kap_sec": {
+          "score": 88,
+          "status": "DÜZENLİ BİLDİRİM",
+          "detail": "Operasyonel kârlılık ve büyüme bildirimleri takipte."
+        },
+        "tool8_options": {
+          "score": 80,
+          "status": "DENGELİ",
+          "detail": "Türev piyasalarda nötr-pozitif pozisyonlanma."
+        },
+        "tool9_moneyflow": {
+          "score": 84,
+          "status": "NET GİRİŞ",
+          "detail": "Sektörel rotasyondan pay alıyor."
+        },
+        "tool10_inflation": {
+          "score": 85,
+          "status": "KORUMALI",
+          "detail": "Fiyatlama gücü maliyet artışlarını dengeleyecek düzeyde."
+        },
+        "tool11_piotroski": {
+          "score": 7,
+          "status": "İYİ (7/9)",
+          "detail": "Finansal sağlık kriterlerinin çoğunu karşılıyor."
+        }
+      },
+      "macro_avg_score": 75.5,
+      "updated_at": "2026-11-22 23:01:19"
     },
     {
       "symbol": "ENJSA",
@@ -4783,38 +4783,38 @@
       "type": "Hisse",
       "market": "BIST",
       "currency": "₺",
-      "current_price": 113.2,
-      "change_percent": -1.48,
+      "current_price": 111.6,
+      "change_percent": -1.41,
       "action": "İZLE / DİP BEKLE",
       "confidence": 63,
       "vade": "Uzun Vade (1 - 6 Ay)",
       "vade_group": "Uzun Vade",
       "vade_sure": "1-6 Ay",
       "trade_plan": {
-        "entry": 113.5,
-        "target": 131.21,
-        "stop": 106.12,
+        "entry": 111.6,
+        "target": 129.0,
+        "stop": 104.35,
         "risk_reward": "1:2.4",
-        "profit_margin_percent": 15.91,
+        "profit_margin_percent": 15.59,
         "loss_risk_percent": 6.5,
-        "rule": "107.82 güçlü desteğine inmesini İZLE ve BEKLE, 131.21 hedef, 106.12 zarar kes",
+        "rule": "106.02 güçlü desteğine inmesini İZLE ve BEKLE, 129.0 hedef, 104.35 zarar kes",
         "is_dip_entry": true,
-        "wait_for_dip_price": 107.82,
+        "wait_for_dip_price": 106.02,
         "dip_discount_percent": 5.0,
-        "dip_note": "Aşırı alım veya yatay bant riski var; TRY107.82 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
+        "dip_note": "Aşırı alım veya yatay bant riski var; TRY106.02 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
       },
       "technicals": {
-        "rsi": 45.9,
-        "ema20": 116.46,
-        "ema50": 114.24,
-        "ema200": 109.15,
-        "atr": 3.97,
+        "rsi": 43.0,
+        "ema20": 115.97,
+        "ema50": 114.13,
+        "ema200": 109.23,
+        "atr": 3.86,
         "trend": "Düşüş Trendi (Ayı)"
       },
       "simulation": {
-        "target_rate": 47.9,
-        "stop_rate": 23.7,
-        "open_rate": 28.4,
+        "target_rate": 49.0,
+        "stop_rate": 23.8,
+        "open_rate": 27.2,
         "historical_setup_count": 24,
         "historical_win_count": 11,
         "replays": 10000,
@@ -4879,7 +4879,7 @@
         }
       },
       "macro_avg_score": 81.8,
-      "updated_at": "2026-11-19 18:20:10"
+      "updated_at": "2026-11-22 23:01:13"
     },
     {
       "symbol": "TUPRS",
@@ -4889,42 +4889,42 @@
       "type": "Hisse",
       "market": "BIST",
       "currency": "₺",
-      "current_price": 334.75,
-      "change_percent": -3.18,
+      "current_price": 322.75,
+      "change_percent": -3.58,
       "action": "İZLE / DİP BEKLE",
-      "confidence": 61,
+      "confidence": 60,
       "vade": "Orta Vade (2 - 4 Hafta)",
       "vade_group": "Orta Vade",
       "vade_sure": "2-4 Hafta",
       "trade_plan": {
-        "entry": 335.75,
-        "target": 362.61,
-        "stop": 322.32,
+        "entry": 322.75,
+        "target": 348.57,
+        "stop": 309.84,
         "risk_reward": "1:2.0",
-        "profit_margin_percent": 8.32,
+        "profit_margin_percent": 8.0,
         "loss_risk_percent": 4.0,
-        "rule": "318.96 güçlü desteğine inmesini İZLE ve BEKLE, 362.61 hedef, 322.32 zarar kes",
+        "rule": "306.61 güçlü desteğine inmesini İZLE ve BEKLE, 348.57 hedef, 309.84 zarar kes",
         "is_dip_entry": true,
-        "wait_for_dip_price": 318.96,
+        "wait_for_dip_price": 306.61,
         "dip_discount_percent": 5.0,
-        "dip_note": "Aşırı alım veya yatay bant riski var; TRY318.96 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
+        "dip_note": "Aşırı alım veya yatay bant riski var; TRY306.61 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
       },
       "technicals": {
-        "rsi": 39.5,
-        "ema20": 350.35,
-        "ema50": 358.39,
-        "ema200": 300.81,
-        "atr": 13.35,
+        "rsi": 34.4,
+        "ema20": 347.64,
+        "ema50": 356.96,
+        "ema200": 300.74,
+        "atr": 13.55,
         "trend": "Düşüş Trendi (Ayı)"
       },
       "simulation": {
-        "target_rate": 43.5,
-        "stop_rate": 35.9,
-        "open_rate": 20.6,
+        "target_rate": 41.4,
+        "stop_rate": 37.0,
+        "open_rate": 21.6,
         "historical_setup_count": 24,
-        "historical_win_count": 10,
+        "historical_win_count": 9,
         "replays": 10000,
-        "verdict": "Stopa Meyilli (Yüksek Risk)"
+        "verdict": "Yazı-Tura Düzeyi (Dengeli / Nötr)"
       },
       "historical_15y": "2014 RUP (Fuel Oil Dönüşüm) yatırımı sonrasında Akdeniz rafineri marjlarının üzerinde prim üretti. 2022 Rusya-Ukrayna savaşıyla fırlayan motorin ve jet yakıtı crack marjları sayesinde BIST tarihinin en yüksek temettülerini dağıttı.",
       "side_tools": {
@@ -4985,7 +4985,7 @@
         }
       },
       "macro_avg_score": 83.6,
-      "updated_at": "2026-11-19 18:20:00"
+      "updated_at": "2026-11-22 23:01:07"
     },
     {
       "symbol": "ASELS",
@@ -4995,40 +4995,40 @@
       "type": "Hisse",
       "market": "BIST",
       "currency": "₺",
-      "current_price": 337.0,
-      "change_percent": -1.96,
+      "current_price": 327.0,
+      "change_percent": -2.97,
       "action": "İZLE / DİP BEKLE",
-      "confidence": 61,
+      "confidence": 60,
       "vade": "Orta Vade (2 - 4 Hafta)",
       "vade_group": "Orta Vade",
       "vade_sure": "2-4 Hafta",
       "trade_plan": {
-        "entry": 337.0,
-        "target": 363.96,
-        "stop": 323.52,
+        "entry": 327.0,
+        "target": 353.16,
+        "stop": 313.92,
         "risk_reward": "1:2.0",
         "profit_margin_percent": 8.0,
         "loss_risk_percent": 4.0,
-        "rule": "320.15 güçlü desteğine inmesini İZLE ve BEKLE, 363.96 hedef, 323.52 zarar kes",
+        "rule": "310.65 güçlü desteğine inmesini İZLE ve BEKLE, 353.16 hedef, 313.92 zarar kes",
         "is_dip_entry": true,
-        "wait_for_dip_price": 320.15,
+        "wait_for_dip_price": 310.65,
         "dip_discount_percent": 5.0,
-        "dip_note": "Aşırı alım veya yatay bant riski var; TRY320.15 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
+        "dip_note": "Aşırı alım veya yatay bant riski var; TRY310.65 seviyesine inmeden pozisyon açılmamalıdır (-%5.0 indirimli)."
       },
       "technicals": {
-        "rsi": 45.4,
-        "ema20": 343.62,
-        "ema50": 351.95,
-        "ema200": 340.77,
-        "atr": 14.42,
+        "rsi": 41.0,
+        "ema20": 342.04,
+        "ema50": 350.97,
+        "ema200": 340.9,
+        "atr": 14.23,
         "trend": "Düşüş Trendi (Ayı)"
       },
       "simulation": {
-        "target_rate": 41.9,
-        "stop_rate": 37.2,
-        "open_rate": 20.9,
+        "target_rate": 40.7,
+        "stop_rate": 38.5,
+        "open_rate": 20.8,
         "historical_setup_count": 24,
-        "historical_win_count": 10,
+        "historical_win_count": 9,
         "replays": 10000,
         "verdict": "Yazı-Tura Düzeyi (Dengeli / Nötr)"
       },
@@ -5091,7 +5091,7 @@
         }
       },
       "macro_avg_score": 82.6,
-      "updated_at": "2026-11-19 18:20:22"
+      "updated_at": "2026-11-22 23:01:15"
     },
     {
       "symbol": "BIMAS",
@@ -5101,38 +5101,38 @@
       "type": "Hisse",
       "market": "BIST",
       "currency": "₺",
-      "current_price": 384.0,
-      "change_percent": -1.48,
+      "current_price": 374.25,
+      "change_percent": -2.54,
       "action": "TUT / KÂR REALİZASYONU",
       "confidence": 58,
       "vade": "Uzun Vade (1 - 6 Ay)",
       "vade_group": "Uzun Vade",
       "vade_sure": "1-6 Ay",
       "trade_plan": {
-        "entry": 384.0,
-        "target": 443.9,
-        "stop": 359.04,
+        "entry": 374.25,
+        "target": 432.64,
+        "stop": 349.92,
         "risk_reward": "1:2.4",
         "profit_margin_percent": 15.6,
         "loss_risk_percent": 6.5,
-        "rule": "384.0 seviyesinde kâr realizasyonu yap veya uzak dur",
+        "rule": "374.25 seviyesinde kâr realizasyonu yap veya uzak dur",
         "is_dip_entry": false,
-        "wait_for_dip_price": 384.0,
+        "wait_for_dip_price": 374.25,
         "dip_discount_percent": 0.0,
         "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
       },
       "technicals": {
-        "rsi": 49.4,
-        "ema20": 383.58,
-        "ema50": 389.41,
-        "ema200": 368.15,
-        "atr": 11.35,
+        "rsi": 44.0,
+        "ema20": 382.69,
+        "ema50": 388.81,
+        "ema200": 368.22,
+        "atr": 11.34,
         "trend": "Düşüş Trendi (Ayı)"
       },
       "simulation": {
-        "target_rate": 43.2,
-        "stop_rate": 19.1,
-        "open_rate": 37.7,
+        "target_rate": 43.0,
+        "stop_rate": 19.9,
+        "open_rate": 37.1,
         "historical_setup_count": 24,
         "historical_win_count": 10,
         "replays": 10000,
@@ -5197,7 +5197,7 @@
         }
       },
       "macro_avg_score": 75.5,
-      "updated_at": "2026-11-19 18:20:39"
+      "updated_at": "2026-11-22 23:01:23"
     },
     {
       "symbol": "KCHOL",
@@ -5207,38 +5207,38 @@
       "type": "Hisse",
       "market": "BIST",
       "currency": "₺",
-      "current_price": 193.7,
-      "change_percent": -0.87,
+      "current_price": 187.2,
+      "change_percent": -3.36,
       "action": "TUT / KÂR REALİZASYONU",
       "confidence": 58,
       "vade": "Orta Vade (2 - 4 Hafta)",
       "vade_group": "Orta Vade",
       "vade_sure": "2-4 Hafta",
       "trade_plan": {
-        "entry": 193.7,
-        "target": 209.2,
-        "stop": 185.95,
+        "entry": 187.2,
+        "target": 202.18,
+        "stop": 179.71,
         "risk_reward": "1:2.0",
         "profit_margin_percent": 8.0,
         "loss_risk_percent": 4.0,
-        "rule": "193.7 seviyesinde kâr realizasyonu yap veya uzak dur",
+        "rule": "187.2 seviyesinde kâr realizasyonu yap veya uzak dur",
         "is_dip_entry": false,
-        "wait_for_dip_price": 193.7,
+        "wait_for_dip_price": 187.2,
         "dip_discount_percent": 0.0,
         "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
       },
       "technicals": {
-        "rsi": 39.0,
-        "ema20": 202.74,
-        "ema50": 205.46,
-        "ema200": 200.34,
-        "atr": 6.31,
+        "rsi": 34.1,
+        "ema20": 201.26,
+        "ema50": 204.74,
+        "ema200": 200.19,
+        "atr": 6.39,
         "trend": "Düşüş Trendi (Ayı)"
       },
       "simulation": {
-        "target_rate": 44.0,
-        "stop_rate": 24.0,
-        "open_rate": 32.0,
+        "target_rate": 43.1,
+        "stop_rate": 25.1,
+        "open_rate": 31.8,
         "historical_setup_count": 24,
         "historical_win_count": 10,
         "replays": 10000,
@@ -5303,7 +5303,7 @@
         }
       },
       "macro_avg_score": 75.5,
-      "updated_at": "2026-11-19 18:20:24"
+      "updated_at": "2026-11-22 23:01:17"
     },
     {
       "symbol": "HALKB",
@@ -5313,38 +5313,38 @@
       "type": "Hisse",
       "market": "BIST",
       "currency": "₺",
-      "current_price": 40.14,
-      "change_percent": 2.98,
+      "current_price": 38.66,
+      "change_percent": -3.69,
       "action": "TUT / KÂR REALİZASYONU",
       "confidence": 58,
       "vade": "Kısa Vade (3 - 7 Gün)",
       "vade_group": "Kısa Vade",
       "vade_sure": "3-7 Gün",
       "trade_plan": {
-        "entry": 40.06,
-        "target": 42.47,
-        "stop": 38.72,
+        "entry": 38.66,
+        "target": 41.09,
+        "stop": 37.31,
         "risk_reward": "1:1.8",
-        "profit_margin_percent": 5.8,
-        "loss_risk_percent": 3.34,
-        "rule": "40.06 seviyesinde kâr realizasyonu yap veya uzak dur",
+        "profit_margin_percent": 6.29,
+        "loss_risk_percent": 3.49,
+        "rule": "38.66 seviyesinde kâr realizasyonu yap veya uzak dur",
         "is_dip_entry": false,
-        "wait_for_dip_price": 40.06,
+        "wait_for_dip_price": 38.66,
         "dip_discount_percent": 0.0,
         "dip_note": "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
       },
       "technicals": {
-        "rsi": 42.2,
-        "ema20": 41.66,
-        "ema50": 42.4,
-        "ema200": 41.92,
-        "atr": 1.68,
+        "rsi": 38.0,
+        "ema20": 41.38,
+        "ema50": 42.26,
+        "ema200": 41.89,
+        "atr": 1.69,
         "trend": "Düşüş Trendi (Ayı)"
       },
       "simulation": {
-        "target_rate": 44.1,
-        "stop_rate": 24.4,
-        "open_rate": 31.5,
+        "target_rate": 42.9,
+        "stop_rate": 23.7,
+        "open_rate": 33.4,
         "historical_setup_count": 24,
         "historical_win_count": 10,
         "replays": 10000,
@@ -5409,7 +5409,7 @@
         }
       },
       "macro_avg_score": 73.6,
-      "updated_at": "2026-11-19 18:20:02"
+      "updated_at": "2026-11-22 23:01:08"
     }
   ]
 }
