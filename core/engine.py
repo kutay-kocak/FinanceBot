@@ -765,7 +765,15 @@ def run_full_pipeline():
             except Exception as e:
                 print(f"Hata {sym}: {e}")
 
-    # Vade Grupları Ayrımı ve Güven Sıralaması (Kullanıcının İstediği Hiyerarşi)
+    # BIST Enflasyon Kuralı: Orta ve Uzun vadede %5 veya altı kâr hedefli BIST tahminleri sitede gösterilmez
+    def _passes_bist_inflation_rule(item):
+        if item.get("market") == "BIST" and item.get("vade_group") in ("Orta Vade", "Uzun Vade"):
+            if item.get("trade_plan", {}).get("profit_margin_percent", 0) <= 5.0:
+                return False
+        return True
+
+    raw_all_assets = us_results + bist_results
+    bist_results = [x for x in bist_results if _passes_bist_inflation_rule(x)]
     all_assets = us_results + bist_results
     
     kisa_vade = [x for x in all_assets if x["vade_group"] == "Kısa Vade"]
@@ -780,11 +788,11 @@ def run_full_pipeline():
     us_results.sort(key=lambda x: (x["confidence"], x["trade_plan"]["profit_margin_percent"]), reverse=True)
     bist_results.sort(key=lambda x: (x["confidence"], x["trade_plan"]["profit_margin_percent"]), reverse=True)
 
-    # Geçmiş Tahminleri Doğrulama ve Kendi Kendini Geliştirme (Post-Mortem Analizi)
+    # Geçmiş Tahminleri Doğrulama ve Kendi Kendini Geliştirme (En az 5 gün kuralı ile)
     learning_report = learning_tracker.verify_and_learn_from_history(all_assets)
     
-    # Kutay'ın Pozisyonları ve Portföy Analizi
-    kutay_data = kutay_portfolio.evaluate_kutay_positions(all_assets)
+    # Kutay'ın Pozisyonları ve Portföy Analizi (tüm ham fiyatlarla)
+    kutay_data = kutay_portfolio.evaluate_kutay_positions(raw_all_assets)
 
     now_str = now_tsi().strftime("%Y-%m-%d %H:%M:%S")
     outlook_data = market_outlook.get_market_outlook()

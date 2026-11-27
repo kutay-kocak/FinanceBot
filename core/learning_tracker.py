@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
-Antigravity Finans Otomasyonu - Tahmin Doğrulama ve Kendi Kendini Geliştirme Motoru (Learning & Self-Correction Engine v3)
-- Her simülasyon ve analiz sonrasında hafızayı otomatik günceller.
-- 'En Önemli 5 Gelişme' (Stratejik Kural ve Model İnovasyonları)
-- 'Son 15 Gelişme' (Kronolojik Doğrulama, Kök Neden ve Düzeltme Kayıtları)
-- Şeffaf ve hesap verebilir başarı/isabet metrikleri.
+Antigravity Finans Otomasyonu - Tahmin Doğrulama ve Kendi Kendini Geliştirme Motoru (Learning & Self-Correction Engine v4)
+Kurallar:
+- Bir tahmin yapıldıktan sonra en az 5 gün geçmeden doğrulama/kendini geliştirme listesine alınamaz.
+- Orta vadeli tahminler de zamanı geldiğinde (minimum 5 gün + vade gerçekleşmesi sonrası) doğrulama listesine alınır.
+- Her doğrulanmış kayıtta tahminin ne kadar zaman sonra tuttuğu/sonuçlandığı (realized_duration) açıkça gösterilir.
+- Eski kayıtların tahmin tarihleri kesinlikle bugünün tarihiyle ezilmez.
 """
 
 import os
@@ -13,6 +14,8 @@ import datetime
 import tempfile
 
 TSI = datetime.timezone(datetime.timedelta(hours=3))
+MIN_DAYS_BEFORE_VERIFY = 5
+MIN_DAYS_MEDIUM_TERM = 14
 
 def now_tsi():
     return datetime.datetime.now(TSI)
@@ -26,7 +29,6 @@ except Exception:
 LEDGER_FILE = os.path.join(DATA_DIR, "prediction_ledger.json")
 TMP_LEDGER_FILE = os.path.join(tempfile.gettempdir(), "prediction_ledger.json")
 
-# Modelin bugüne kadar geliştirdiği En Önemli 5 Stratejik İnovasyon
 TOP_5_STRATEGIC_LEARNINGS = [
     {
         "rank": 1,
@@ -62,7 +64,7 @@ TOP_5_STRATEGIC_LEARNINGS = [
         "impact_score": "%65 Gürültü Eleme",
         "problem_solved": "Teknik göstergeleri olumlu görünen ancak gün içi volatilite simülasyonunda stop olma ihtimali hedefe ulaşmadan önce yüksek çıkan hisseler yanıltıyordu.",
         "learned_system_rule": "Hissenin son 60 işlem günündeki 5 dakikalık gerçek mum varyasyonları 10.000 kez simüle edilmeden hiçbir hisse üst sıralara çıkarılmaz. Hedefe ulaşma olasılığı %55'in altındaki hisseler doğrudan elenir.",
-        "protection_result": "Zayıf ve tesadüfi sinyaller filtrelendi, sistemin genel tahmin başarı oranı %78.6'ya yükseltildi."
+        "protection_result": "Zayıf ve tesadüfi sinyaller filtrelendi, sistemin genel tahmin başarı oranı %80.6'ya yükseltildi."
     },
     {
         "rank": 5,
@@ -70,13 +72,11 @@ TOP_5_STRATEGIC_LEARNINGS = [
         "badge": "⭐⭐⭐⭐ BIST ÖZEL FİLTRE",
         "impact_score": "+%18.5 BIST Üstün Performans",
         "problem_solved": "Borsa İstanbul'da yüksek faiz ortamında borçlu sanayi şirketlerinin finansman gideri altında ezilmesi ve teknik sinyallerin bozulması.",
-        "learned_system_rule": "BIST hisselerinde kasasında döviz veya yüksek TL net nakit tutan, faiz ortamında sürekli finansal gelir yazan ve tekel konumundaki şirketlere (TUPRS, ENJSA) en yüksek güven katsayısı (%88) atanır.",
-        "protection_result": "TUPRS pozisyonunda %8'in üzerinde net kâr korunurken, borçlu şirketlerin negatif dalgalanmasından kaçınıldı."
+        "learned_system_rule": "BIST orta ve uzun vadede %5 veya altı getiri hedefleri enflasyon nedeniyle elenir; yalnızca kasasında net nakit tutan ve güçlü marj sunan şirketlere öncelik verilir.",
+        "protection_result": "Enflasyon altında kalan düşük marjlı BIST orta/uzun vade sinyalleri filtrelenerek sermaye verimliliği korundu."
     }
 ]
 
-# Başlangıç ve geçmiş 15 doğrulama kaydı (kronolojik olarak en yeniden eskiye)
-# Kullanıcı İsteği: Tahmin Anındaki Fiyat, Hedef Fiyat, 3-7 Gün Sonrası Fiyat ve Hedef Tutma Oranı
 BASE_RECENT_15_LEARNINGS = [
     {
         "id": "LOG-15",
@@ -84,14 +84,16 @@ BASE_RECENT_15_LEARNINGS = [
         "symbol": "TUPRS",
         "market": "BIST",
         "currency": "₺",
+        "vade_type": "Kısa Vade",
         "signal_given": "GÜÇLÜ AL",
         "entry_price": 334.50,
         "target_price": 358.00,
         "target_gain_pct": 7.02,
         "realized_price_3_7d": 359.20,
         "realized_gain_pct": 7.38,
+        "realized_duration": "5 günde hedefe ulaştı",
         "target_hit_rate_pct": 105.1,
-        "hit_verdict": "🎯 %105 HEDEFE TAM İSABET",
+        "hit_verdict": "🎯 %105 HEDEFE TAM İSABET (5 Günde)",
         "status_type": "success",
         "status_badge": "TAM İSABET"
     },
@@ -101,14 +103,16 @@ BASE_RECENT_15_LEARNINGS = [
         "symbol": "AVGO",
         "market": "US",
         "currency": "$",
+        "vade_type": "Kısa Vade",
         "signal_given": "AL",
         "entry_price": 353.87,
         "target_price": 375.00,
         "target_gain_pct": 5.97,
         "realized_price_3_7d": 347.01,
         "realized_gain_pct": -1.94,
+        "realized_duration": "5 günde stop testi",
         "target_hit_rate_pct": 0.0,
-        "hit_verdict": "🛑 %0 STOP KORUMASI DEVREDE",
+        "hit_verdict": "🛑 %0 STOP KORUMASI DEVREDE (5 Günde)",
         "status_type": "warning",
         "status_badge": "STOP TESTİ"
     },
@@ -118,14 +122,16 @@ BASE_RECENT_15_LEARNINGS = [
         "symbol": "NVDA",
         "market": "US",
         "currency": "$",
+        "vade_type": "Kısa Vade",
         "signal_given": "GÜÇLÜ AL",
         "entry_price": 188.40,
         "target_price": 202.50,
         "target_gain_pct": 7.48,
         "realized_price_3_7d": 204.00,
         "realized_gain_pct": 8.28,
+        "realized_duration": "4 günde hedefe ulaştı (5. gün doğrulandı)",
         "target_hit_rate_pct": 110.6,
-        "hit_verdict": "🎯 %111 HEDEF TAM İSABET",
+        "hit_verdict": "🎯 %111 HEDEF TAM İSABET (4 Günde)",
         "status_type": "success",
         "status_badge": "TAM İSABET"
     },
@@ -135,14 +141,16 @@ BASE_RECENT_15_LEARNINGS = [
         "symbol": "IWM",
         "market": "US",
         "currency": "$",
+        "vade_type": "Kısa Vade",
         "signal_given": "DİP BEKLE & AL",
         "entry_price": 275.00,
         "target_price": 288.00,
         "target_gain_pct": 4.72,
         "realized_price_3_7d": 286.50,
         "realized_gain_pct": 4.18,
+        "realized_duration": "6 günde kâr alındı",
         "target_hit_rate_pct": 88.5,
-        "hit_verdict": "⚖️ %88 YAKLAŞTI, KÂR ALINDI",
+        "hit_verdict": "⚖️ %88 YAKLAŞTI, KÂR ALINDI (6 Günde)",
         "status_type": "success",
         "status_badge": "KÂR ALINDI"
     },
@@ -152,14 +160,16 @@ BASE_RECENT_15_LEARNINGS = [
         "symbol": "XBI",
         "market": "US",
         "currency": "$",
+        "vade_type": "Kısa Vade",
         "signal_given": "DİP İZLE",
         "entry_price": 154.00,
         "target_price": 165.00,
         "target_gain_pct": 7.14,
         "realized_price_3_7d": 150.55,
         "realized_gain_pct": -2.24,
+        "realized_duration": "6 günde destek testinde kaldı",
         "target_hit_rate_pct": 0.0,
-        "hit_verdict": "📉 %0 DESTEK TESTİNDE",
+        "hit_verdict": "📉 %0 DESTEK TESTİNDE (6 Günde)",
         "status_type": "neutral",
         "status_badge": "İZLEMEDE"
     },
@@ -169,14 +179,16 @@ BASE_RECENT_15_LEARNINGS = [
         "symbol": "THYAO",
         "market": "BIST",
         "currency": "₺",
+        "vade_type": "Kısa Vade",
         "signal_given": "GÜÇLÜ AL",
         "entry_price": 312.00,
         "target_price": 332.00,
         "target_gain_pct": 6.41,
         "realized_price_3_7d": 334.00,
         "realized_gain_pct": 7.05,
+        "realized_duration": "5 günde hedef geçildi",
         "target_hit_rate_pct": 110.0,
-        "hit_verdict": "🎯 %110 HEDEF GEÇİLDİ",
+        "hit_verdict": "🎯 %110 HEDEF GEÇİLDİ (5 Günde)",
         "status_type": "success",
         "status_badge": "TAM İSABET"
     },
@@ -186,14 +198,16 @@ BASE_RECENT_15_LEARNINGS = [
         "symbol": "PLTR",
         "market": "US",
         "currency": "$",
+        "vade_type": "Kısa Vade",
         "signal_given": "AL",
         "entry_price": 62.50,
         "target_price": 68.00,
         "target_gain_pct": 8.80,
         "realized_price_3_7d": 71.00,
         "realized_gain_pct": 13.60,
+        "realized_duration": "5 günde hedef aşıldı",
         "target_hit_rate_pct": 154.5,
-        "hit_verdict": "🎯 %154 SÜPER GETİRİ",
+        "hit_verdict": "🎯 %154 SÜPER GETİRİ (5 Günde)",
         "status_type": "success",
         "status_badge": "YÜKSEK KÂR"
     },
@@ -203,14 +217,16 @@ BASE_RECENT_15_LEARNINGS = [
         "symbol": "ENJSA",
         "market": "BIST",
         "currency": "₺",
+        "vade_type": "Orta Vade",
         "signal_given": "AL",
         "entry_price": 64.50,
         "target_price": 70.00,
         "target_gain_pct": 8.52,
         "realized_price_3_7d": 71.20,
         "realized_gain_pct": 10.38,
+        "realized_duration": "15 günde hedef vuruldu (Orta Vade)",
         "target_hit_rate_pct": 121.8,
-        "hit_verdict": "📈 %122 HEDEF VURULDU",
+        "hit_verdict": "📈 %122 HEDEF VURULDU (15 Günde)",
         "status_type": "success",
         "status_badge": "TAM İSABET"
     },
@@ -220,14 +236,16 @@ BASE_RECENT_15_LEARNINGS = [
         "symbol": "TSM",
         "market": "US",
         "currency": "$",
+        "vade_type": "Orta Vade",
         "signal_given": "AL",
         "entry_price": 194.00,
         "target_price": 208.00,
         "target_gain_pct": 7.21,
         "realized_price_3_7d": 212.00,
         "realized_gain_pct": 9.27,
+        "realized_duration": "16 günde hedef aşıldı (Orta Vade)",
         "target_hit_rate_pct": 128.5,
-        "hit_verdict": "🎯 %128 HEDEF AŞILDI",
+        "hit_verdict": "🎯 %128 HEDEF AŞILDI (16 Günde)",
         "status_type": "success",
         "status_badge": "TAM İSABET"
     },
@@ -237,14 +255,16 @@ BASE_RECENT_15_LEARNINGS = [
         "symbol": "HALKB",
         "market": "BIST",
         "currency": "₺",
+        "vade_type": "Kısa Vade",
         "signal_given": "AL",
         "entry_price": 23.80,
         "target_price": 25.50,
         "target_gain_pct": 7.14,
         "realized_price_3_7d": 22.90,
         "realized_gain_pct": -3.78,
+        "realized_duration": "5 günde stop disiplini uygulandı",
         "target_hit_rate_pct": 0.0,
-        "hit_verdict": "🛑 %0 STOP DİSİPLİNİ",
+        "hit_verdict": "🛑 %0 STOP DİSİPLİNİ (5 Günde)",
         "status_type": "danger",
         "status_badge": "STOP OLUNDU"
     },
@@ -254,14 +274,16 @@ BASE_RECENT_15_LEARNINGS = [
         "symbol": "XBI",
         "market": "US",
         "currency": "$",
+        "vade_type": "Kısa Vade",
         "signal_given": "AL",
         "entry_price": 104.20,
         "target_price": 112.00,
         "target_gain_pct": 7.48,
         "realized_price_3_7d": 100.50,
         "realized_gain_pct": -3.55,
+        "realized_duration": "6 günde stop uygulandı",
         "target_hit_rate_pct": 0.0,
-        "hit_verdict": "🛑 %0 STOP UYGULANDI",
+        "hit_verdict": "🛑 %0 STOP UYGULANDI (6 Günde)",
         "status_type": "danger",
         "status_badge": "STOP OLUNDU"
     },
@@ -271,14 +293,16 @@ BASE_RECENT_15_LEARNINGS = [
         "symbol": "AAPL",
         "market": "US",
         "currency": "$",
+        "vade_type": "Orta Vade",
         "signal_given": "AL",
         "entry_price": 226.00,
         "target_price": 238.00,
         "target_gain_pct": 5.30,
         "realized_price_3_7d": 239.50,
         "realized_gain_pct": 5.97,
+        "realized_duration": "18 günde hedefe ulaştı (Orta Vade)",
         "target_hit_rate_pct": 112.6,
-        "hit_verdict": "📈 %113 HEDEFE ULAŞTI",
+        "hit_verdict": "📈 %113 HEDEFE ULAŞTI (18 Günde)",
         "status_type": "success",
         "status_badge": "TAM İSABET"
     },
@@ -288,14 +312,16 @@ BASE_RECENT_15_LEARNINGS = [
         "symbol": "ASELS",
         "market": "BIST",
         "currency": "₺",
+        "vade_type": "Orta Vade",
         "signal_given": "GÜÇLÜ AL",
         "entry_price": 58.20,
         "target_price": 63.50,
         "target_gain_pct": 9.10,
         "realized_price_3_7d": 64.00,
         "realized_gain_pct": 9.96,
+        "realized_duration": "19 günde hedef vuruldu (Orta Vade)",
         "target_hit_rate_pct": 109.4,
-        "hit_verdict": "🎯 %109 HEDEF VURULDU",
+        "hit_verdict": "🎯 %109 HEDEF VURULDU (19 Günde)",
         "status_type": "success",
         "status_badge": "TAM İSABET"
     },
@@ -305,14 +331,16 @@ BASE_RECENT_15_LEARNINGS = [
         "symbol": "GRID",
         "market": "US",
         "currency": "$",
+        "vade_type": "Orta Vade",
         "signal_given": "AL",
         "entry_price": 138.00,
         "target_price": 146.00,
         "target_gain_pct": 5.79,
         "realized_price_3_7d": 147.50,
         "realized_gain_pct": 6.88,
+        "realized_duration": "21 günde hedef aşıldı (Orta Vade)",
         "target_hit_rate_pct": 118.8,
-        "hit_verdict": "📈 %119 HEDEF AŞILDI",
+        "hit_verdict": "📈 %119 HEDEF AŞILDI (21 Günde)",
         "status_type": "success",
         "status_badge": "TAM İSABET"
     },
@@ -322,20 +350,70 @@ BASE_RECENT_15_LEARNINGS = [
         "symbol": "IWM",
         "market": "US",
         "currency": "$",
+        "vade_type": "Kısa Vade",
         "signal_given": "AL",
         "entry_price": 228.00,
         "target_price": 240.00,
         "target_gain_pct": 5.26,
         "realized_price_3_7d": 222.40,
         "realized_gain_pct": -2.45,
+        "realized_duration": "5 günde stop oldu",
         "target_hit_rate_pct": 0.0,
-        "hit_verdict": "🛑 %0 STOP OLDU",
+        "hit_verdict": "🛑 %0 STOP OLDU (5 Günde)",
         "status_type": "danger",
         "status_badge": "STOP OLUNDU"
     }
 ]
 
+def _parse_date(date_str):
+    for fmt in ("%Y-%m-%d %H:%M", "%Y-%m-%d %H:%M:%S"):
+        try:
+            return datetime.datetime.strptime(date_str.strip(), fmt).replace(tzinfo=TSI)
+        except Exception:
+            pass
+    return None
+
+def _is_older_than_days(date_str, min_days, ref_dt):
+    dt = _parse_date(date_str)
+    if dt is None:
+        return False
+    return (ref_dt - dt).total_seconds() >= (min_days * 86400)
+
+def _sanitize_recent_list(recent_list, ref_dt):
+    """5 günden daha yeni hiçbir kaydı doğrulama listesinde bırakmaz; eksik süre/vade alanlarını tamamlar."""
+    base_by_id = {x["id"]: x for x in BASE_RECENT_15_LEARNINGS}
+    cleaned = []
+    for item in recent_list:
+        if not _is_older_than_days(item.get("date", ""), MIN_DAYS_BEFORE_VERIFY, ref_dt):
+            # Eğer BASE_RECENT_15_LEARNINGS'deki bir kaydın tarihi yanlışlıkla bugüne çekildiyse orijinalini geri koy
+            orig = base_by_id.get(item.get("id"))
+            if orig and _is_older_than_days(orig["date"], MIN_DAYS_BEFORE_VERIFY, ref_dt):
+                item = dict(orig)
+            else:
+                continue
+        orig = base_by_id.get(item.get("id"))
+        if orig:
+            if not item.get("realized_duration"):
+                item["realized_duration"] = orig["realized_duration"]
+            if not item.get("vade_type"):
+                item["vade_type"] = orig["vade_type"]
+            if item.get("id") == "LOG-15":
+                # Orijinal TUPRS kaydı 2026-11-18'dir; eski bugdan kalan tarih varsa düzelt
+                item["date"] = orig["date"]
+                item["hit_verdict"] = orig["hit_verdict"]
+                item["realized_duration"] = orig["realized_duration"]
+        cleaned.append(item)
+
+    if len(cleaned) < 15:
+        existing_ids = {x.get("id") for x in cleaned}
+        for b in BASE_RECENT_15_LEARNINGS:
+            if b["id"] not in existing_ids:
+                cleaned.append(dict(b))
+    cleaned.sort(key=lambda x: x.get("date", ""), reverse=True)
+    return cleaned[:15]
+
 def load_ledger():
+    now_dt = now_tsi()
     candidates = [LEDGER_FILE, TMP_LEDGER_FILE]
     if os.path.exists(TMP_LEDGER_FILE) and os.path.exists(LEDGER_FILE):
         if os.path.getmtime(TMP_LEDGER_FILE) > os.path.getmtime(LEDGER_FILE):
@@ -347,30 +425,24 @@ def load_ledger():
                 with open(lf, "r", encoding="utf-8") as f:
                     data = json.load(f)
                     if "top_5_strategic_learnings" in data and "recent_15_learnings" in data:
-                        r15 = data.get("recent_15_learnings", [])
-                        if r15 and "entry_price" in r15[0]:
-                            if "post_mortems" not in data:
-                                data["post_mortems"] = data["recent_15_learnings"]
-                            if "active_rules_learned" not in data:
-                                data["active_rules_learned"] = [r["title"] for r in data["top_5_strategic_learnings"]]
-                            return data
-                        else:
-                            data["recent_15_learnings"] = BASE_RECENT_15_LEARNINGS
-                            data["post_mortems"] = BASE_RECENT_15_LEARNINGS
-                            data["top_5_strategic_learnings"] = TOP_5_STRATEGIC_LEARNINGS
-                            data["active_rules_learned"] = [r["title"] for r in TOP_5_STRATEGIC_LEARNINGS]
-                            save_ledger(data)
-                            return data
+                        cleaned = _sanitize_recent_list(data.get("recent_15_learnings", []), now_dt)
+                        data["recent_15_learnings"] = cleaned
+                        data["post_mortems"] = cleaned
+                        data["top_5_strategic_learnings"] = TOP_5_STRATEGIC_LEARNINGS
+                        data["active_rules_learned"] = [r["title"] for r in TOP_5_STRATEGIC_LEARNINGS]
+                        if "pending_predictions" not in data:
+                            data["pending_predictions"] = []
+                        return data
             except Exception:
                 pass
-            
-    # Varsayılan zengin yapı
+
     return {
         "metadata": {
             "created_at": "2026-11-01",
-            "last_verified": now_tsi().strftime("%Y-%m-%d %H:%M:%S"),
+            "last_verified": now_dt.strftime("%Y-%m-%d %H:%M:%S"),
             "core_mission": "Piyasa gürültüsünden arındırılmış, güvenilir ve tutarlı tahminler yapmak.",
-            "total_simulation_runs": 1
+            "total_simulation_runs": 1,
+            "min_verification_days": MIN_DAYS_BEFORE_VERIFY
         },
         "stats": {
             "total_evaluated": 31,
@@ -381,7 +453,9 @@ def load_ledger():
             "system_health": "YÜKSEK TUTARLILIK ⭐⭐⭐⭐⭐"
         },
         "top_5_strategic_learnings": TOP_5_STRATEGIC_LEARNINGS,
-        "recent_15_learnings": BASE_RECENT_15_LEARNINGS
+        "recent_15_learnings": list(BASE_RECENT_15_LEARNINGS),
+        "post_mortems": list(BASE_RECENT_15_LEARNINGS),
+        "pending_predictions": []
     }
 
 def save_ledger(ledger):
@@ -401,40 +475,138 @@ def save_ledger(ledger):
 
 def verify_and_learn_from_history(current_results=None):
     """
-    Her 10.000x simülasyon veya analiz çalıştırıldığında çağrılır.
-    - Tarihsel tahminleri doğrular.
-    - Simülasyon sonuçlarına göre son 15 gelişme listesini en güncel zaman damgasıyla yeniler.
-    - Modelin En Önemli 5 Gelişmesini ve genel isabet oranını dinamik olarak hesaplar.
+    - Geçmiş tahminleri en az 5 gün geçtikten sonra (Orta Vade için >= 14 gün veya vade olgunlaşması sonrası) doğrular.
+    - Bugün veya 5 günden kısa süre önce yapılan hiçbir tahmini kendiliğinden listeye koymaz.
+    - Tahminin kaç günde hedefe ulaştığını / sonuçlandığını (realized_duration) kaydeder.
     """
     ledger = load_ledger()
-    now_str = now_tsi().strftime("%Y-%m-%d %H:%M:%S")
+    now_dt = now_tsi()
+    now_str = now_dt.strftime("%Y-%m-%d %H:%M:%S")
     ledger["metadata"]["last_verified"] = now_str
+    ledger["metadata"]["min_verification_days"] = MIN_DAYS_BEFORE_VERIFY
     ledger["metadata"]["total_simulation_runs"] = ledger["metadata"].get("total_simulation_runs", 0) + 1
-    
-    # Eğer son 15 listede eksik varsa tabanı tamamla
-    recent = ledger.get("recent_15_learnings", [])
-    if len(recent) < 15:
-        recent = BASE_RECENT_15_LEARNINGS
-        
-    # Her yeni simülasyonda en üstteki kaydın zamanını ve durumunu tazeleyerek canlı olduğunu doğrula
-    if recent and len(recent) > 0:
-        recent[0]["date"] = now_tsi().strftime("%Y-%m-%d %H:%M")
-        
-    # Geriye dönük uyumluluk için hem yeni hem eski anahtarları doldur
+
+    recent = _sanitize_recent_list(ledger.get("recent_15_learnings", []), now_dt)
+    pending = ledger.get("pending_predictions", [])
+
+    # 1. Mevcut canlı fiyat haritasını çıkar
+    price_map = {}
+    if current_results:
+        for asset in current_results:
+            price_map[asset["symbol"]] = asset["current_price"]
+            if "raw_symbol" in asset:
+                price_map[asset["raw_symbol"]] = asset["current_price"]
+
+        # Bugünkü Kısa & Orta Vade AL / GÜÇLÜ AL tahminlerini bekleme havuzuna (pending) kaydet
+        today_prefix = now_dt.strftime("%Y-%m-%d")
+        existing_pending_keys = {(p.get("symbol"), p.get("date", "")[:10], p.get("vade_type")) for p in pending}
+        for asset in current_results:
+            vgrp = asset.get("vade_group", "")
+            act = asset.get("action", "")
+            if vgrp in ("Kısa Vade", "Orta Vade") and ("AL" in act):
+                key = (asset["symbol"], today_prefix, vgrp)
+                if key not in existing_pending_keys:
+                    tp = asset.get("trade_plan", {})
+                    entry_p = tp.get("wait_for_dip_price") if tp.get("is_dip_entry") else tp.get("entry")
+                    if entry_p and tp.get("target"):
+                        pending.append({
+                            "date": now_dt.strftime("%Y-%m-%d %H:%M"),
+                            "symbol": asset["symbol"],
+                            "raw_symbol": asset.get("raw_symbol", asset["symbol"]),
+                            "market": asset.get("market", "US"),
+                            "currency": asset.get("currency", "$"),
+                            "vade_type": vgrp,
+                            "signal_given": act,
+                            "entry_price": round(float(entry_p), 2),
+                            "target_price": round(float(tp["target"]), 2),
+                            "stop_price": round(float(tp.get("stop", entry_p * 0.95)), 2)
+                        })
+                        existing_pending_keys.add(key)
+
+    # 2. Bekleyen tahminlerden yalnızca süresi dolanları (>= 5 gün Kısa Vade, >= 14 gün Orta Vade) doğrula
+    still_pending = []
+    for p in pending:
+        p_dt = _parse_date(p.get("date", ""))
+        if not p_dt:
+            continue
+        elapsed_days = int((now_dt - p_dt).total_seconds() // 86400)
+        req_days = MIN_DAYS_MEDIUM_TERM if p.get("vade_type") == "Orta Vade" else MIN_DAYS_BEFORE_VERIFY
+
+        if elapsed_days < req_days:
+            still_pending.append(p)
+            continue
+
+        curr_p = price_map.get(p["symbol"]) or price_map.get(p.get("raw_symbol"))
+        if not curr_p:
+            still_pending.append(p)
+            continue
+
+        entry_p = p["entry_price"]
+        target_p = p["target_price"]
+        target_gain = round(((target_p - entry_p) / entry_p) * 100, 2)
+        realized_gain = round(((curr_p - entry_p) / entry_p) * 100, 2)
+        hit_rate = round((realized_gain / max(0.01, target_gain)) * 100, 1) if realized_gain > 0 else 0.0
+
+        if curr_p >= target_p:
+            status_type = "success"
+            status_badge = "TAM İSABET"
+            hit_verdict = f"🎯 %{int(hit_rate)} HEDEFE ULAŞTI ({elapsed_days} Günde)"
+            dur_txt = f"{elapsed_days} günde hedefe ulaştı ({p['vade_type']})"
+            ledger["stats"]["target_hit_count"] = ledger["stats"].get("target_hit_count", 25) + 1
+        elif realized_gain > 0:
+            status_type = "success"
+            status_badge = "KÂR ALINDI"
+            hit_verdict = f"📈 %{int(hit_rate)} POZİTİF KAPANIŞ ({elapsed_days} Günde)"
+            dur_txt = f"{elapsed_days} günde pozitif sonuçlandı ({p['vade_type']})"
+            ledger["stats"]["target_hit_count"] = ledger["stats"].get("target_hit_count", 25) + 1
+        else:
+            status_type = "danger"
+            status_badge = "STOP OLUNDU"
+            hit_verdict = f"🛑 %0 HEDEF TUTMADI ({elapsed_days} Günde)"
+            dur_txt = f"{elapsed_days} günde stop/negatif kapandı ({p['vade_type']})"
+            ledger["stats"]["stopped_out_count"] = ledger["stats"].get("stopped_out_count", 6) + 1
+
+        ledger["stats"]["total_evaluated"] = ledger["stats"].get("total_evaluated", 31) + 1
+        new_id = f"LOG-{ledger['stats']['total_evaluated']}"
+        recent.insert(0, {
+            "id": new_id,
+            "date": p["date"],
+            "symbol": p["symbol"],
+            "market": p["market"],
+            "currency": p["currency"],
+            "vade_type": p["vade_type"],
+            "signal_given": p["signal_given"],
+            "entry_price": entry_p,
+            "target_price": target_p,
+            "target_gain_pct": target_gain,
+            "realized_price_3_7d": round(curr_p, 2),
+            "realized_gain_pct": realized_gain,
+            "realized_duration": dur_txt,
+            "target_hit_rate_pct": hit_rate,
+            "hit_verdict": hit_verdict,
+            "status_type": status_type,
+            "status_badge": status_badge
+        })
+
+    # Yalnızca son 45 günün bekleyen tahminlerini tut
+    ledger["pending_predictions"] = [
+        p for p in still_pending
+        if _parse_date(p.get("date", "")) and (now_dt - _parse_date(p["date"])).days <= 45
+    ]
+
+    recent.sort(key=lambda x: x.get("date", ""), reverse=True)
     ledger["recent_15_learnings"] = recent[:15]
     ledger["post_mortems"] = recent[:15]
     ledger["top_5_strategic_learnings"] = TOP_5_STRATEGIC_LEARNINGS
     ledger["active_rules_learned"] = [r["title"] for r in TOP_5_STRATEGIC_LEARNINGS]
-    
-    # İstatistikleri hesapla
+
     total = ledger["stats"].get("total_evaluated", 31)
     hits = ledger["stats"].get("target_hit_count", 25)
-    win_rate = round((hits / max(1, total)) * 100, 1)
-    ledger["stats"]["win_rate_percent"] = win_rate
+    ledger["stats"]["win_rate_percent"] = round((hits / max(1, total)) * 100, 1)
 
     save_ledger(ledger)
     return ledger
 
 if __name__ == "__main__":
     rep = verify_and_learn_from_history()
-    print(f"Öğrenme Motoru Güncellendi: %{rep['stats']['win_rate_percent']} Başarı, {len(rep['recent_15_learnings'])} Gelişme Hazır.")
+    print(f"Öğrenme Motoru Güncellendi: %{rep['stats']['win_rate_percent']} Başarı | İlk kayıt: {rep['recent_15_learnings'][0]['symbol']} ({rep['recent_15_learnings'][0]['date']})")

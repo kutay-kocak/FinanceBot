@@ -130,6 +130,18 @@ def update_prices_only(refresh_news=True):
         for it in hier.get(k, []):
             update_item_price(it)
 
+    # BIST Enflasyon Kuralı: Orta ve Uzun vadede %5 veya altı kâr hedefli BIST tahminleri siteden gizlenir
+    def _bist_margin_ok(item):
+        if item.get("market") == "BIST" and item.get("vade_group") in ("Orta Vade", "Uzun Vade"):
+            if item.get("trade_plan", {}).get("profit_margin_percent", 0) <= 5.0:
+                return False
+        return True
+
+    data["bist_market"] = [it for it in data.get("bist_market", []) if _bist_margin_ok(it)]
+    for k in ("orta_vade", "uzun_vade"):
+        if k in hier:
+            hier[k] = [it for it in hier.get(k, []) if _bist_margin_ok(it)]
+
     # Kutay'ın Pozisyonlarını güncel fiyatlarla yeniden hesapla (price_cache yedekli)
     all_assets = list(data.get("us_market", [])) + list(data.get("bist_market", []))
     existing_syms = {a.get("raw_symbol", a.get("symbol")) for a in all_assets}
