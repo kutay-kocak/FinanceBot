@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-01",
-    "last_verified": "2026-11-27 17:42:34",
+    "last_verified": "2026-11-27 17:53:42",
     "core_mission": "Piyasa gürültüsünden arındırılmış, güvenilir ve tutarlı tahminler yapmak.",
-    "total_simulation_runs": 269,
+    "total_simulation_runs": 270,
     "min_verification_days": 5
   },
   "stats": {

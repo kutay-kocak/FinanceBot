@@ -56,7 +56,7 @@ CORE_US_TICKERS = [
 ]
 
 OPPORTUNITY_US_TICKERS = [
-    {"symbol": "PLTR", "name": "Palantir Technologies", "category": "Büyük Veri & Savunma", "type": "Hisse", "vade_pref": "Kısa Vade"},
+    {"symbol": "PLTR", "name": "Palantir Technologies Inc. (Class A)", "category": "Büyük Veri & Savunma", "type": "Hisse", "vade_pref": "Kısa Vade"},
     {"symbol": "AMD", "name": "Advanced Micro Devices", "category": "İşlemci & AI", "type": "Hisse", "vade_pref": "Kısa Vade"},
     {"symbol": "AAPL", "name": "Apple Inc.", "category": "Tüketici Elektroniği", "type": "Hisse", "vade_pref": "Uzun Vade"},
     {"symbol": "MSFT", "name": "Microsoft Corp.", "category": "Yazılım & Bulut", "type": "Hisse", "vade_pref": "Uzun Vade"},
