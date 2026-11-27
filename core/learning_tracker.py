@@ -10,11 +10,21 @@ Antigravity Finans Otomasyonu - Tahmin Doğrulama ve Kendi Kendini Geliştirme M
 import os
 import json
 import datetime
+import tempfile
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TSI = datetime.timezone(datetime.timedelta(hours=3))
+
+def now_tsi():
+    return datetime.datetime.now(TSI)
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) if os.path.dirname(os.path.abspath(__file__)).endswith("core") else os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
-os.makedirs(DATA_DIR, exist_ok=True)
+try:
+    os.makedirs(DATA_DIR, exist_ok=True)
+except Exception:
+    pass
 LEDGER_FILE = os.path.join(DATA_DIR, "prediction_ledger.json")
+TMP_LEDGER_FILE = os.path.join(tempfile.gettempdir(), "prediction_ledger.json")
 
 # Modelin bugüne kadar geliştirdiği En Önemli 5 Stratejik İnovasyon
 TOP_5_STRATEGIC_LEARNINGS = [
@@ -326,35 +336,39 @@ BASE_RECENT_15_LEARNINGS = [
 ]
 
 def load_ledger():
-    if os.path.exists(LEDGER_FILE):
-        try:
-            with open(LEDGER_FILE, "r", encoding="utf-8") as f:
-                data = json.load(f)
-                if "top_5_strategic_learnings" in data and "recent_15_learnings" in data:
-                    # Check if recent_15_learnings has new format (entry_price)
-                    r15 = data.get("recent_15_learnings", [])
-                    if r15 and "entry_price" in r15[0]:
-                        if "post_mortems" not in data:
-                            data["post_mortems"] = data["recent_15_learnings"]
-                        if "active_rules_learned" not in data:
-                            data["active_rules_learned"] = [r["title"] for r in data["top_5_strategic_learnings"]]
-                        return data
-                    else:
-                        # Migrate old schema to new schema
-                        data["recent_15_learnings"] = BASE_RECENT_15_LEARNINGS
-                        data["post_mortems"] = BASE_RECENT_15_LEARNINGS
-                        data["top_5_strategic_learnings"] = TOP_5_STRATEGIC_LEARNINGS
-                        data["active_rules_learned"] = [r["title"] for r in TOP_5_STRATEGIC_LEARNINGS]
-                        save_ledger(data)
-                        return data
-        except Exception:
-            pass
+    candidates = [LEDGER_FILE, TMP_LEDGER_FILE]
+    if os.path.exists(TMP_LEDGER_FILE) and os.path.exists(LEDGER_FILE):
+        if os.path.getmtime(TMP_LEDGER_FILE) > os.path.getmtime(LEDGER_FILE):
+            candidates = [TMP_LEDGER_FILE, LEDGER_FILE]
+
+    for lf in candidates:
+        if os.path.exists(lf):
+            try:
+                with open(lf, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    if "top_5_strategic_learnings" in data and "recent_15_learnings" in data:
+                        r15 = data.get("recent_15_learnings", [])
+                        if r15 and "entry_price" in r15[0]:
+                            if "post_mortems" not in data:
+                                data["post_mortems"] = data["recent_15_learnings"]
+                            if "active_rules_learned" not in data:
+                                data["active_rules_learned"] = [r["title"] for r in data["top_5_strategic_learnings"]]
+                            return data
+                        else:
+                            data["recent_15_learnings"] = BASE_RECENT_15_LEARNINGS
+                            data["post_mortems"] = BASE_RECENT_15_LEARNINGS
+                            data["top_5_strategic_learnings"] = TOP_5_STRATEGIC_LEARNINGS
+                            data["active_rules_learned"] = [r["title"] for r in TOP_5_STRATEGIC_LEARNINGS]
+                            save_ledger(data)
+                            return data
+            except Exception:
+                pass
             
     # Varsayılan zengin yapı
     return {
         "metadata": {
             "created_at": "2026-11-01",
-            "last_verified": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "last_verified": now_tsi().strftime("%Y-%m-%d %H:%M:%S"),
             "core_mission": "Piyasa gürültüsünden arındırılmış, güvenilir ve tutarlı tahminler yapmak.",
             "total_simulation_runs": 1
         },
@@ -371,11 +385,19 @@ def load_ledger():
     }
 
 def save_ledger(ledger):
+    saved = False
     try:
         with open(LEDGER_FILE, "w", encoding="utf-8") as f:
             json.dump(ledger, f, ensure_ascii=False, indent=2)
-    except Exception as e:
-        print(f"Ledger kayıt hatası: {e}")
+        saved = True
+    except Exception:
+        pass
+    if not saved:
+        try:
+            with open(TMP_LEDGER_FILE, "w", encoding="utf-8") as f:
+                json.dump(ledger, f, ensure_ascii=False, indent=2)
+        except Exception as e:
+            print(f"Ledger geçici kayıt hatası: {e}")
 
 def verify_and_learn_from_history(current_results=None):
     """
@@ -385,7 +407,7 @@ def verify_and_learn_from_history(current_results=None):
     - Modelin En Önemli 5 Gelişmesini ve genel isabet oranını dinamik olarak hesaplar.
     """
     ledger = load_ledger()
-    now_str = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    now_str = now_tsi().strftime("%Y-%m-%d %H:%M:%S")
     ledger["metadata"]["last_verified"] = now_str
     ledger["metadata"]["total_simulation_runs"] = ledger["metadata"].get("total_simulation_runs", 0) + 1
     
@@ -396,7 +418,7 @@ def verify_and_learn_from_history(current_results=None):
         
     # Her yeni simülasyonda en üstteki kaydın zamanını ve durumunu tazeleyerek canlı olduğunu doğrula
     if recent and len(recent) > 0:
-        recent[0]["date"] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+        recent[0]["date"] = now_tsi().strftime("%Y-%m-%d %H:%M")
         
     # Geriye dönük uyumluluk için hem yeni hem eski anahtarları doldur
     ledger["recent_15_learnings"] = recent[:15]

@@ -22,9 +22,16 @@ import time
 import math
 import random
 import datetime
+import tempfile
 import urllib.request
 import urllib.parse
 import urllib.error
+from concurrent.futures import ThreadPoolExecutor
+
+TSI = datetime.timezone(datetime.timedelta(hours=3))
+
+def now_tsi():
+    return datetime.datetime.now(TSI)
 
 try:
     import learning_tracker
@@ -657,6 +664,10 @@ def analyze_ticker(ticker_info, is_bist=False):
         is_dip_entry = True
         dip_price = round(min(curr_price * 0.97, max(ema20, curr_price - (atr * 0.9))), 2)
         dip_discount_pct = round(((curr_price - dip_price) / curr_price) * 100, 1)
+        dip_risk = max(round(dip_price * risk_pct, 2), round(atr * 0.8, 2))
+        stop_loss = round(dip_price - dip_risk, 2)
+        take_profit = max(take_profit, round(dip_price + (dip_risk * reward_multiplier), 2))
+        risk_reward = round((take_profit - dip_price) / max(0.01, (dip_price - stop_loss)), 2)
         rule_text = f"{dip_price} seviyesine çekilmesini BEKLE ve AL, {take_profit} seviyesinde KÂR AL, {stop_loss} altına inerse ZARAR KES"
         dip_note = f"Tepeden almamak için {currency}{dip_price} destek seviyesine gevşemesi beklenmelidir (-%{dip_discount_pct} daha ucuz)."
     elif confidence >= 60:
@@ -664,6 +675,10 @@ def analyze_ticker(ticker_info, is_bist=False):
         is_dip_entry = True
         dip_price = round(min(curr_price * 0.95, max(ema50, curr_price - (atr * 1.4))), 2)
         dip_discount_pct = round(((curr_price - dip_price) / curr_price) * 100, 1)
+        dip_risk = max(round(dip_price * risk_pct, 2), round(atr * 0.8, 2))
+        stop_loss = round(dip_price - dip_risk, 2)
+        take_profit = max(take_profit, round(dip_price + (dip_risk * reward_multiplier), 2))
+        risk_reward = round((take_profit - dip_price) / max(0.01, (dip_price - stop_loss)), 2)
         rule_text = f"{dip_price} güçlü desteğine inmesini İZLE ve BEKLE, {take_profit} hedef, {stop_loss} zarar kes"
         dip_note = f"Aşırı alım veya yatay bant riski var; {currency}{dip_price} seviyesine inmeden pozisyon açılmamalıdır (-%{dip_discount_pct} indirimli)."
     else:
@@ -674,8 +689,9 @@ def analyze_ticker(ticker_info, is_bist=False):
         rule_text = f"{curr_price} seviyesinde kâr realizasyonu yap veya uzak dur"
         dip_note = "Yüksek kâr marjı veya güvenli giriş şartı oluşmadı; beklemede kalın."
         
-    profit_margin = round(((take_profit - entry_price) / entry_price) * 100, 2)
-    max_loss_p = round(((entry_price - stop_loss) / entry_price) * 100, 2)
+    effective_entry = dip_price if is_dip_entry else entry_price
+    profit_margin = round(((take_profit - curr_price) / curr_price) * 100, 2)
+    max_loss_p = round(((effective_entry - stop_loss) / effective_entry) * 100, 2)
 
     return {
         "symbol": display_name,
@@ -717,33 +733,37 @@ def analyze_ticker(ticker_info, is_bist=False):
         "historical_15y": historical_15y,
         "side_tools": side_tools,
         "macro_avg_score": round(avg_macro_score, 1),
-        "updated_at": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        "updated_at": now_tsi().strftime("%Y-%m-%d %H:%M:%S")
     }
 
 def run_full_pipeline():
-    print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] Finans Otomasyonu & 15 Yıllık Makro Motoru Başlatıldı...")
+    print(f"[{now_tsi().strftime('%H:%M:%S')}] Finans Otomasyonu & 15 Yıllık Makro Motoru Başlatıldı...")
     
-    us_results = []
-    print("\n--- ABD Piyasası Taranıyor ---")
-    for t in CORE_US_TICKERS + OPPORTUNITY_US_TICKERS:
-        print(f"Analiz ediliyor: {t['symbol']}...")
-        try:
-            res = analyze_ticker(t, is_bist=False)
-            if res:
-                us_results.append(res)
-        except Exception as e:
-            print(f"Hata {t['symbol']}: {e}")
+    us_tickers = CORE_US_TICKERS + OPPORTUNITY_US_TICKERS
+    bist_tickers = CORE_BIST_TICKERS + OPPORTUNITY_BIST_TICKERS
 
+    us_results = []
     bist_results = []
-    print("\n--- Borsa İstanbul Taranıyor ---")
-    for t in CORE_BIST_TICKERS + OPPORTUNITY_BIST_TICKERS:
-        print(f"Analiz ediliyor: {t['display']}...")
-        try:
-            res = analyze_ticker(t, is_bist=True)
-            if res:
-                bist_results.append(res)
-        except Exception as e:
-            print(f"Hata {t['display']}: {e}")
+
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        us_futs = [(t["symbol"], ex.submit(analyze_ticker, t, False)) for t in us_tickers]
+        bist_futs = [(t["display"], ex.submit(analyze_ticker, t, True)) for t in bist_tickers]
+
+        for sym, fut in us_futs:
+            try:
+                res = fut.result()
+                if res:
+                    us_results.append(res)
+            except Exception as e:
+                print(f"Hata {sym}: {e}")
+
+        for sym, fut in bist_futs:
+            try:
+                res = fut.result()
+                if res:
+                    bist_results.append(res)
+            except Exception as e:
+                print(f"Hata {sym}: {e}")
 
     # Vade Grupları Ayrımı ve Güven Sıralaması (Kullanıcının İstediği Hiyerarşi)
     all_assets = us_results + bist_results
@@ -766,11 +786,16 @@ def run_full_pipeline():
     # Kutay'ın Pozisyonları ve Portföy Analizi
     kutay_data = kutay_portfolio.evaluate_kutay_positions(all_assets)
 
+    now_str = now_tsi().strftime("%Y-%m-%d %H:%M:%S")
+    outlook_data = market_outlook.get_market_outlook()
+    fed_data = outlook_data.get("us", {}).get("fed_rate_decision") or fed_rate_tracker.get_fed_rate_forecast()
+
     payload = {
         "metadata": {
-            "last_run": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "last_simulation_run": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "last_price_update": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "last_run": now_str,
+            "last_simulation_run": now_str,
+            "last_price_update": now_str,
+            "timezone": "TSİ (UTC+3)",
             "status": "Aktif",
             "total_analyzed": len(all_assets),
             "simulations_per_asset": 10000,
@@ -780,8 +805,8 @@ def run_full_pipeline():
         },
         "kutay_portfolio": kutay_data,
         "learning_report": learning_report,
-        "market_outlook": market_outlook.get_market_outlook(),
-        "fed_rate_decision": fed_rate_tracker.get_fed_rate_forecast(),
+        "market_outlook": outlook_data,
+        "fed_rate_decision": fed_data,
         "hierarchy": {
             "kisa_vade": kisa_vade,
             "orta_vade": orta_vade,
@@ -791,9 +816,38 @@ def run_full_pipeline():
         "bist_market": bist_results
     }
     
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=2)
-        
+    save_paths = [
+        OUTPUT_FILE,
+    ]
+    wrote_disk = False
+    for sp in save_paths:
+        try:
+            parent = os.path.dirname(sp)
+            if os.path.exists(parent):
+                with open(sp, "w", encoding="utf-8") as f:
+                    json.dump(payload, f, ensure_ascii=False, indent=2)
+                wrote_disk = True
+        except Exception:
+            pass
+
+    # Vercel salt-okunur disk yedeklemesi (/tmp)
+    try:
+        tmp_out = os.path.join(tempfile.gettempdir(), "latest_analysis.json")
+        with open(tmp_out, "w", encoding="utf-8") as f:
+            json.dump(payload, f, ensure_ascii=False, indent=2)
+    except Exception:
+        pass
+
+    if wrote_disk:
+        try:
+            try:
+                from core import embed_data
+            except ImportError:
+                import embed_data
+            embed_data.embed()
+        except Exception as e:
+            print(f"Gömülü veri güncelleme notu: {e}")
+
     print(f"\n[OK] Analiz tamamlandı. Veriler kaydedildi: {OUTPUT_FILE}")
     print(f"[*] Yapay Zeka Doğruluk Oranı: %{learning_report['stats']['win_rate_percent']} ({learning_report['stats']['target_hit_count']}/{learning_report['stats']['total_evaluated']} Başarılı)")
     return payload

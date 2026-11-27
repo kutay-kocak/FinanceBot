@@ -2,6 +2,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 cloudflared.exe
+data/public_url.txt
 .agents/
 .vscode/
 .idea/

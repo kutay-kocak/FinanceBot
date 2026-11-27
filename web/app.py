@@ -10,7 +10,7 @@ import os
 import sys
 import json
 import threading
-from http.server import HTTPServer, SimpleHTTPRequestHandler
+from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 import time
 import datetime
 import urllib.parse
@@ -99,15 +99,28 @@ class SecureTradeDashboardHandler(SimpleHTTPRequestHandler):
         # URL'de key varsa çerez yazarak oturumu hatırla
         has_key_param = "key" in query_params and query_params["key"][0] == SECRET_KEY
 
-        if path == "/api/analysis":
+        if path in ("/api/analysis", "/latest_analysis.json", "/data/latest_analysis.json"):
             self.send_response(200)
             self.send_header("Content-Type", "application/json; charset=utf-8")
             if has_key_param:
                 self.send_auth_cookie()
             self.end_headers()
             if os.path.exists(DATA_FILE):
-                with open(DATA_FILE, "r", encoding="utf-8") as f:
-                    self.wfile.write(f.read().encode("utf-8"))
+                try:
+                    with open(DATA_FILE, "r", encoding="utf-8") as f:
+                        d_obj = json.load(f)
+                    ts_str = d_obj.get("metadata", {}).get("last_price_update", "").replace(" TSİ", "").strip()
+                    if ts_str:
+                        tsi = datetime.timezone(datetime.timedelta(hours=3))
+                        dt = datetime.datetime.strptime(ts_str, "%Y-%m-%d %H:%M:%S").replace(tzinfo=tsi)
+                        if (datetime.datetime.now(tsi) - dt).total_seconds() > 900:
+                            fresh = price_updater.update_prices_only(refresh_news=True)
+                            if fresh:
+                                d_obj = fresh
+                    self.wfile.write(json.dumps(d_obj, ensure_ascii=False).encode("utf-8"))
+                except Exception:
+                    with open(DATA_FILE, "r", encoding="utf-8") as f:
+                        self.wfile.write(f.read().encode("utf-8"))
             else:
                 self.wfile.write(json.dumps({"error": "Henüz analiz verisi oluşturulmadı."}).encode("utf-8"))
             return
@@ -178,31 +191,38 @@ class SecureTradeDashboardHandler(SimpleHTTPRequestHandler):
 
         if path == "/api/refresh-prices":
             try:
-                price_updater.update_prices_only()
+                updated = price_updater.update_prices_only(refresh_news=False)
                 self.send_response(200)
                 self.send_header("Content-Type", "application/json; charset=utf-8")
                 self.end_headers()
-                self.wfile.write(json.dumps({"status": "ok", "message": "Hisse fiyatları ve portföy kârları anında güncellendi."}).encode("utf-8"))
+                self.wfile.write(json.dumps({
+                    "status": "ok",
+                    "message": "Hisse fiyatları ve portföy kârları anında güncellendi.",
+                    "analysis": updated
+                }, ensure_ascii=False).encode("utf-8"))
             except Exception as e:
                 self.send_response(500)
                 self.send_header("Content-Type", "application/json; charset=utf-8")
                 self.end_headers()
-                self.wfile.write(json.dumps({"error": str(e)}).encode("utf-8"))
+                self.wfile.write(json.dumps({"error": str(e)}, ensure_ascii=False).encode("utf-8"))
             return
 
         if path == "/api/refresh-news" or path == "/api/refresh-macro":
             try:
-                price_updater.update_prices_only()
-                learning_tracker.verify_and_learn_from_history()
+                updated = price_updater.update_prices_only(refresh_news=True)
                 self.send_response(200)
                 self.send_header("Content-Type", "application/json; charset=utf-8")
                 self.end_headers()
-                self.wfile.write(json.dumps({"status": "ok", "message": "BIST ve ABD piyasa haberleri ile 7/30 günlük beklentiler güncellendi."}).encode("utf-8"))
+                self.wfile.write(json.dumps({
+                    "status": "ok",
+                    "message": "BIST ve ABD canlı piyasa haberleri ile 7/30 günlük beklentiler güncellendi.",
+                    "analysis": updated
+                }, ensure_ascii=False).encode("utf-8"))
             except Exception as e:
                 self.send_response(500)
                 self.send_header("Content-Type", "application/json; charset=utf-8")
                 self.end_headers()
-                self.wfile.write(json.dumps({"error": str(e)}).encode("utf-8"))
+                self.wfile.write(json.dumps({"error": str(e)}, ensure_ascii=False).encode("utf-8"))
             return
 
         if path == "/api/simulate":
@@ -362,7 +382,7 @@ def start_server(port=8080):
     startup_thread.start()
 
     server_address = ("0.0.0.0", port)
-    httpd = HTTPServer(server_address, SecureTradeDashboardHandler)
+    httpd = ThreadingHTTPServer(server_address, SecureTradeDashboardHandler)
     print(f"============================================================")
     print(f"  Antigravity Finans Dashboard (Güvenli Token Korumalı)    ")
     print(f"  Yerel Erişim (Siz):   http://localhost:{port}             ")

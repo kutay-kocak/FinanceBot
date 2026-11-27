@@ -1,10 +1,14 @@
-name: 15-Min Market Scanner & Telegram Alert
+name: Market Session Scanner & Telegram Alert
 
 on:
   schedule:
-    # Runs every 15 minutes
-    - cron: '*/15 * * * *'
-  workflow_dispatch: # Allows manual trigger from GitHub anytime
+    # BIST Sabah Seansı (09:45 TSİ = 06:45 UTC) & Gün Ortası (13:30 TSİ = 10:30 UTC)
+    - cron: '45 6 * * 1-5'
+    - cron: '30 10 * * 1-5'
+    # ABD Açılış Öncesi (17:15 TSİ = 14:15 UTC) & Kapanış Öncesi (22:30 TSİ = 19:30 UTC)
+    - cron: '15 14 * * 1-5'
+    - cron: '30 19 * * 1-5'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -21,21 +25,15 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
 
-      - name: Install Dependencies
+      - name: Run Price, News & Telegram Signal Scanner (TSİ)
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          python core/price_updater.py
 
-      - name: Run Price Updater & Telegram Signal Scanner
-        run: |
-          python -c "import os; os.system('python core/price_updater.py' if os.path.exists('core/price_updater.py') else 'python price_updater.py')"
-
-      - name: Commit and Push Updated Data
+      - name: Commit and Push Updated Data & Embedded HTML
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add latest_analysis.json data/ || true
-          git commit -m "Automated 15-Min Market & Signal Update [skip ci]" || echo "Değişiklik yok"
+          git add data/latest_analysis.json data/prediction_ledger.json index.html public/index.html web/index.html || true
+          git commit -m "Automated Market, News & Portfolio Update (TSİ)" || echo "Değişiklik yok"
           git push
