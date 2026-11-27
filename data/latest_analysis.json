@@ -2,7 +2,7 @@
   "metadata": {
     "last_run": "2026-11-22 23:01:23",
     "last_simulation_run": "2026-11-22 23:01:23",
-    "last_price_update": "2026-11-26 21:56:46",
+    "last_price_update": "2026-11-27 04:00:00",
     "status": "Aktif",
     "total_analyzed": 19,
     "simulations_per_asset": 10000,
@@ -13,7 +13,7 @@
   "kutay_portfolio": {
     "metadata": {
       "owner": "Kutay",
-      "last_evaluated": "2026-11-26 21:56:47",
+      "last_evaluated": "2026-11-27 04:00:02",
       "total_positions": 5,
       "profitable_count": 0,
       "pullback_count": 5,
@@ -759,7 +759,7 @@
   "market_outlook": {
     "bist": {
       "market": "BIST",
-      "last_updated": "2026-11-26 21:56",
+      "last_updated": "2026-11-27 04:00",
       "current_regime": {
         "title": "Sıkı Para Politikası & Seçici Yabancı Girişi",
         "mood": "TEMKİNLİ İYİMSER (BULLISH CONSOLIDATION)",
@@ -813,7 +813,7 @@
     },
     "us": {
       "market": "US",
-      "last_updated": "2026-11-26 21:56",
+      "last_updated": "2026-11-27 04:00",
       "current_regime": {
         "title": "FED Faiz İndirim Döngüsü & AI Yatırım Rallisi",
         "mood": "GÜÇLÜ BOĞA (YUMUŞAK İNİŞ SENARYOSU)",
@@ -866,11 +866,11 @@
       },
       "fed_rate_decision": {
         "status": "active",
-        "last_updated": "2026-11-26 21:56",
+        "last_updated": "2026-11-27 04:00",
         "decision_info": {
           "title": "FED Faiz Kararı & FOMC Toplantısı",
           "target_date_str": "16 Aralık 2026 (Çarşamba) • 22:00 TSİ",
-          "days_remaining": 20,
+          "days_remaining": 19,
           "current_rate_range": "%4.50 - %4.75",
           "expected_rate_range": "%4.25 - %4.50 (-25 bps)",
           "cme_fedwatch_probability": "%74.2 İndirim (25 bps) • %25.8 Sabit"
@@ -1121,11 +1121,11 @@
   },
   "fed_rate_decision": {
     "status": "active",
-    "last_updated": "2026-11-26 21:56",
+    "last_updated": "2026-11-27 04:00",
     "decision_info": {
       "title": "FED Faiz Kararı & FOMC Toplantısı",
       "target_date_str": "16 Aralık 2026 (Çarşamba) • 22:00 TSİ",
-      "days_remaining": 20,
+      "days_remaining": 19,
       "current_rate_range": "%4.50 - %4.75",
       "expected_rate_range": "%4.25 - %4.50 (-25 bps)",
       "cme_fedwatch_probability": "%74.2 İndirim (25 bps) • %25.8 Sabit"
