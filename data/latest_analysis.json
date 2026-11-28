@@ -2,7 +2,7 @@
   "metadata": {
     "last_run": "2026-11-27 17:42:34",
     "last_simulation_run": "2026-11-27 17:42:34",
-    "last_price_update": "2026-11-27 18:01:26",
+    "last_price_update": "2026-11-28 05:04:01",
     "timezone": "TSİ (UTC+3)",
     "status": "Aktif",
     "total_analyzed": 19,
@@ -14,14 +14,14 @@
   "kutay_portfolio": {
     "metadata": {
       "owner": "Kutay",
-      "last_evaluated": "2026-11-27 18:01:27",
+      "last_evaluated": "2026-11-28 05:04:01",
       "total_positions": 4,
       "closed_count": 1,
       "profitable_count": 0,
       "pullback_count": 4,
       "portfolio_health": "0 Kârda • 4 Maliyet Altı",
       "leader_title": "TUPRS En Dayanıklı",
-      "leader_val": "%-0.82 ⚖️",
+      "leader_val": "%-1.35 ⚖️",
       "leader_color": "amber"
     },
     "positions": [
@@ -32,17 +32,17 @@
         "market": "BIST",
         "currency": "₺",
         "entry_cost": 327.0,
-        "current_price": 311.5,
-        "pnl_amount": -15.5,
-        "pnl_percent": -4.74,
+        "current_price": 314.0,
+        "pnl_amount": -13.0,
+        "pnl_percent": -3.98,
         "is_profitable": false,
         "confidence": 84,
         "estimated_accuracy": 81,
         "accuracy_summary": "EMA20 Desteği Üzerinde Tutunma & Güçlü Kargo Geliri",
         "accuracy_details": "Hisse ₺308.50 (EMA20) ve ₺303.90 (EMA200) desteklerinin üzerinde tutunuyor; 20/60 günlük ₺333.50 ve 6 aylık ₺355.50 dirençleri gerçekçi hedef basamaklarıdır.",
-        "status_tag": "MALİYET ALTINDA (-%4.74)",
+        "status_tag": "MALİYET ALTINDA (-%3.98)",
         "status_type": "pullback",
-        "special_analysis": "Anlık fiyat (₺311.50), alış maliyetinizin (₺327.00) -%4.74 (-₺15.50 / hisse) altında. EMA20 (₺308.50) üzerinde dengeleniyor; kargo ve dış hat yolcu hacmi orta-uzun vadeli toparlanmayı destekliyor.",
+        "special_analysis": "Anlık fiyat (₺314.00), alış maliyetinizin (₺327.00) -%3.98 (-₺13.00 / hisse) altında. EMA20 (₺308.50) üzerinde dengeleniyor; kargo ve dış hat yolcu hacmi orta-uzun vadeli toparlanmayı destekliyor.",
         "recommended_key": "long",
         "recommended_vade": "Uzun Vade (2 Ay - 6 Ay)",
         "recommended_reason": "₺327.00 maliyetinizin üzerinde anlamlı net kâr (+%8.56) elde etmek için kış sezonu sonrasında 6 aylık zirve olan ₺355.00 bandının beklenmesi en yüksek isabetli stratejidir.",
@@ -53,7 +53,7 @@
             "price": 324.0,
             "note": "Ara tepki direnci (maliyete yaklaşma)",
             "gain_from_cost_pct": -0.92,
-            "gain_from_current_pct": 4.01,
+            "gain_from_current_pct": 3.18,
             "is_recommended": false
           },
           "medium": {
@@ -61,7 +61,7 @@
             "price": 336.0,
             "note": "Son 20 ve 60 günlük tepe (₺333.50) kırılım bandı",
             "gain_from_cost_pct": 2.75,
-            "gain_from_current_pct": 7.87,
+            "gain_from_current_pct": 7.01,
             "is_recommended": false
           },
           "long": {
@@ -69,7 +69,7 @@
             "price": 355.0,
             "note": "Son 6 aylık zirve (₺355.50) ana direnç hedefi",
             "gain_from_cost_pct": 8.56,
-            "gain_from_current_pct": 13.96,
+            "gain_from_current_pct": 13.06,
             "is_recommended": true
           }
         }
@@ -81,17 +81,17 @@
         "market": "BIST",
         "currency": "₺",
         "entry_cost": 334.5,
-        "current_price": 331.75,
-        "pnl_amount": -2.75,
-        "pnl_percent": -0.82,
+        "current_price": 330.0,
+        "pnl_amount": -4.5,
+        "pnl_percent": -1.35,
         "is_profitable": false,
         "confidence": 88,
         "estimated_accuracy": 85,
         "accuracy_summary": "EMA200 (₺329.50) Ana Tabanı & Yüksek Net Nakit Gücü",
         "accuracy_details": "₺334.50 maliyetiniz EMA200 (₺329.51) ana kurumsal tabanının hemen üzerinde çok sağlıklı konumda; EMA50 (₺350.46) ve 20 günlük tepe (₺364.50) yakın hedeflerdir.",
-        "status_tag": "MALİYET ALTINDA (-%0.82)",
+        "status_tag": "MALİYET ALTINDA (-%1.35)",
         "status_type": "pullback",
-        "special_analysis": "Anlık fiyat (₺331.75), alış maliyetinizin (₺334.50) -%0.82 (-₺2.75 / hisse) altında. EMA200 (₺329.50) kurumsal desteği üzerinde güçlü duruyor; yüksek net nakit pozisyonu faiz ortamında ekstra getiri sağlıyor.",
+        "special_analysis": "Anlık fiyat (₺330.00), alış maliyetinizin (₺334.50) -%1.35 (-₺4.50 / hisse) altında. EMA200 (₺329.50) kurumsal desteği üzerinde güçlü duruyor; yüksek net nakit pozisyonu faiz ortamında ekstra getiri sağlıyor.",
         "recommended_key": "medium",
         "recommended_vade": "Orta Vade (2 Hafta - 2 Ay)",
         "recommended_reason": "Maliyetiniz çok güçlü bir tabanda olduğu için 2 hafta - 2 ay içinde son 20 günlük direnç olan ₺364.00 bölgesinde (+%8.82 net kâr) dengeli ve yüksek olasılıklı getiri sunmaktadır.",
@@ -102,7 +102,7 @@
             "price": 349.0,
             "note": "EMA50 (₺350.46) hareketli ortalama direnci",
             "gain_from_cost_pct": 4.33,
-            "gain_from_current_pct": 5.2,
+            "gain_from_current_pct": 5.76,
             "is_recommended": false
           },
           "medium": {
@@ -110,7 +110,7 @@
             "price": 364.0,
             "note": "Son 20 günlük zirve (₺364.50) test bölgesi",
             "gain_from_cost_pct": 8.82,
-            "gain_from_current_pct": 9.72,
+            "gain_from_current_pct": 10.3,
             "is_recommended": true
           },
           "long": {
@@ -118,7 +118,7 @@
             "price": 388.0,
             "note": "Temettü dönemi ve net nakit faiz geliri hedef bandı",
             "gain_from_cost_pct": 15.99,
-            "gain_from_current_pct": 16.96,
+            "gain_from_current_pct": 17.58,
             "is_recommended": false
           }
         }
@@ -130,17 +130,17 @@
         "market": "US",
         "currency": "$",
         "entry_cost": 353.87,
-        "current_price": 307.37,
-        "pnl_amount": -46.5,
-        "pnl_percent": -13.14,
+        "current_price": 312.34,
+        "pnl_amount": -41.53,
+        "pnl_percent": -11.74,
         "is_profitable": false,
         "confidence": 85,
         "estimated_accuracy": 80,
         "accuracy_summary": "Aşırı Satım Tepkisi (RSI ~40) & Özel AI Çip (ASIC) Bilançosu",
         "accuracy_details": "Sert düzeltme sonrası RSI 40 destek bölgesinde dengeleniyor; yukarıda EMA20 ($327.20), EMA50 ($339.60) ve EMA200 ($369.53) teknik basamakları yer alıyor.",
-        "status_tag": "GERİ ÇEKİLMEDE (-%13.14)",
+        "status_tag": "GERİ ÇEKİLMEDE (-%11.74)",
         "status_type": "loss",
-        "special_analysis": "Anlık fiyat ($307.37), alış maliyetinizin ($353.87) -%13.14 (-$46.50 / hisse) altında. Teknoloji satışlarıyla geri çekilse de Google ve Meta özel AI çip (ASIC) talebi ve VMware nakit akışı uzun vadeli ana katalizördür.",
+        "special_analysis": "Anlık fiyat ($312.34), alış maliyetinizin ($353.87) -%11.74 (-$41.53 / hisse) altında. Teknoloji satışlarıyla geri çekilse de Google ve Meta özel AI çip (ASIC) talebi ve VMware nakit akışı uzun vadeli ana katalizördür.",
         "recommended_key": "long",
         "recommended_vade": "Uzun Vade (2 Ay - 6 Ay)",
         "recommended_reason": "$353.87 maliyetiniz mevcut düzeltme fiyatının üzerinde kaldığı için kısa vadeli tepkiler başabaşa yetmez; Aralık bilançosu ve 2027 AI çip siparişleriyle EMA200 ($372.00, +%5.12 kâr) hedefini beklemek en rasyonel yaklaşımdır.",
@@ -151,7 +151,7 @@
             "price": 322.0,
             "note": "EMA20 ($327.20) öncesi ilk teknik tepki bandı",
             "gain_from_cost_pct": -9.01,
-            "gain_from_current_pct": 4.76,
+            "gain_from_current_pct": 3.09,
             "is_recommended": false
           },
           "medium": {
@@ -159,7 +159,7 @@
             "price": 348.0,
             "note": "Bilanço dönemi EMA50 ($339.60) üstü toparlanma",
             "gain_from_cost_pct": -1.66,
-            "gain_from_current_pct": 13.22,
+            "gain_from_current_pct": 11.42,
             "is_recommended": false
           },
           "long": {
@@ -167,7 +167,7 @@
             "price": 372.0,
             "note": "EMA200 ($369.53) ve son 20g zirve ($369.82) bölgesi",
             "gain_from_cost_pct": 5.12,
-            "gain_from_current_pct": 21.03,
+            "gain_from_current_pct": 19.1,
             "is_recommended": true
           }
         }
@@ -179,17 +179,17 @@
         "market": "US",
         "currency": "$",
         "entry_cost": 288.0,
-        "current_price": 270.95,
-        "pnl_amount": -17.05,
-        "pnl_percent": -5.92,
+        "current_price": 273.79,
+        "pnl_amount": -14.21,
+        "pnl_percent": -4.93,
         "is_profitable": false,
         "confidence": 75,
         "estimated_accuracy": 74,
         "accuracy_summary": "Tahvil Faizi Hassasiyeti & EMA200 ($287.82) Mıknatıs Etkisi",
         "accuracy_details": "Günlük oynaklığı düşük (%2.18 ATR) bir endeks ETF'sidir; sırasıyla EMA50 ($277.54), EMA200 ($287.82) ve 60 günlük tepe ($296.18) seviyeleri gerçekçi hedeflerdir.",
-        "status_tag": "GERİ ÇEKİLMEDE (-%5.92)",
-        "status_type": "loss",
-        "special_analysis": "Anlık fiyat ($270.95), alış maliyetinizin ($288.00) -%5.92 (-$17.05 / hisse) altında. ABD tahvil faizlerindeki hareketlere duyarlı seyrediyor; tahvil getirilerindeki sakinleşmeyle birlikte EMA200 ($287.80) bandına yönelmesi beklenir.",
+        "status_tag": "MALİYET ALTINDA (-%4.93)",
+        "status_type": "pullback",
+        "special_analysis": "Anlık fiyat ($273.79), alış maliyetinizin ($288.00) -%4.93 (-$14.21 / hisse) altında. ABD tahvil faizlerindeki hareketlere duyarlı seyrediyor; tahvil getirilerindeki sakinleşmeyle birlikte EMA200 ($287.80) bandına yönelmesi beklenir.",
         "recommended_key": "long",
         "recommended_vade": "Uzun Vade (2 Ay - 6 Ay)",
         "recommended_reason": "ABD 10Y tahvil faizi (%4.85) baskısı nedeniyle orta vadede $287.50 başabaş bölgesine ulaşması, 2-6 aylık vadede ise $298.00 (+%3.47 net kâr) hedefine geçmesi gerçekçi senaryodur.",
@@ -200,7 +200,7 @@
             "price": 275.5,
             "note": "EMA20 ($272.12) üstü & EMA50 ($277.54) testi",
             "gain_from_cost_pct": -4.34,
-            "gain_from_current_pct": 1.68,
+            "gain_from_current_pct": 0.62,
             "is_recommended": false
           },
           "medium": {
@@ -208,7 +208,7 @@
             "price": 287.5,
             "note": "EMA200 ($287.82) ve başabaş denge bölgesi",
             "gain_from_cost_pct": -0.17,
-            "gain_from_current_pct": 6.11,
+            "gain_from_current_pct": 5.01,
             "is_recommended": false
           },
           "long": {
@@ -216,7 +216,7 @@
             "price": 298.0,
             "note": "60 günlük zirve ($296.18) üstü gerçekçi kanal",
             "gain_from_cost_pct": 3.47,
-            "gain_from_current_pct": 9.98,
+            "gain_from_current_pct": 8.84,
             "is_recommended": true
           }
         }
@@ -241,9 +241,9 @@
   "learning_report": {
     "metadata": {
       "created_at": "2026-11-01",
-      "last_verified": "2026-11-27 18:01:27",
+      "last_verified": "2026-11-28 05:04:01",
       "core_mission": "Piyasa gürültüsünden arındırılmış, güvenilir ve tutarlı tahminler yapmak.",
-      "total_simulation_runs": 271,
+      "total_simulation_runs": 272,
       "min_verification_days": 5
     },
     "stats": {
@@ -966,16 +966,100 @@
         "entry_price": 189.5,
         "target_price": 204.66,
         "stop_price": 181.92
+      },
+      {
+        "date": "2026-11-28 05:04",
+        "symbol": "IBB",
+        "raw_symbol": "IBB",
+        "market": "US",
+        "currency": "$",
+        "vade_type": "Orta Vade",
+        "signal_given": "AL (Düşüşü Bekle)",
+        "entry_price": 210.26,
+        "target_price": 234.1,
+        "stop_price": 201.85
+      },
+      {
+        "date": "2026-11-28 05:04",
+        "symbol": "NVDA",
+        "raw_symbol": "NVDA",
+        "market": "US",
+        "currency": "$",
+        "vade_type": "Kısa Vade",
+        "signal_given": "TUT / KÂR REALİZASYONU",
+        "entry_price": 147.25,
+        "target_price": 165.7,
+        "stop_price": 137.0
+      },
+      {
+        "date": "2026-11-28 05:04",
+        "symbol": "AMD",
+        "raw_symbol": "AMD",
+        "market": "US",
+        "currency": "$",
+        "vade_type": "Kısa Vade",
+        "signal_given": "TUT / KÂR REALİZASYONU",
+        "entry_price": 408.48,
+        "target_price": 472.18,
+        "stop_price": 373.09
+      },
+      {
+        "date": "2026-11-28 05:04",
+        "symbol": "IWM",
+        "raw_symbol": "IWM",
+        "market": "US",
+        "currency": "$",
+        "vade_type": "Orta Vade",
+        "signal_given": "TUT / KÂR REALİZASYONU",
+        "entry_price": 271.27,
+        "target_price": 292.97,
+        "stop_price": 260.42
+      },
+      {
+        "date": "2026-11-28 05:04",
+        "symbol": "THYAO",
+        "raw_symbol": "THYAO.IS",
+        "market": "BIST",
+        "currency": "₺",
+        "vade_type": "Kısa Vade",
+        "signal_given": "AL (Düşüşü Bekle)",
+        "entry_price": 301.67,
+        "target_price": 325.0,
+        "stop_price": 293.95
+      },
+      {
+        "date": "2026-11-28 05:04",
+        "symbol": "KCHOL",
+        "raw_symbol": "KCHOL.IS",
+        "market": "BIST",
+        "currency": "₺",
+        "vade_type": "Orta Vade",
+        "signal_given": "TUT / KÂR REALİZASYONU",
+        "entry_price": 189.5,
+        "target_price": 204.66,
+        "stop_price": 181.92
+      },
+      {
+        "date": "2026-11-28 05:04",
+        "symbol": "HALKB",
+        "raw_symbol": "HALKB.IS",
+        "market": "BIST",
+        "currency": "₺",
+        "vade_type": "Kısa Vade",
+        "signal_given": "TUT / KÂR REALİZASYONU",
+        "entry_price": 37.6,
+        "target_price": 40.01,
+        "stop_price": 36.26
       }
     ]
   },
   "market_outlook": {
     "bist": {
       "market": "BIST",
-      "last_updated": "2026-11-27 18:01 TSİ",
+      "last_updated": "2026-11-28 05:04 TSİ",
       "live_indicators": {
-        "BIST 100": "10,955.99 (%+2.82)",
-        "USD/TRY": "₺50.78",
+        "BIST 100": "10,977.01 (%+3.02)",
+        "USD/TRY": "₺50.74",
         "TCMB Politika Faizi": "%36.00"
       },
       "live_news": [
@@ -986,16 +1070,16 @@
           "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOSlhvYjhJTHBfMDREVVJFOFhZM1loZTZZNUg5amZFS0EyblpLVEVRM0FlV1Roc2oyWlFIN0lrdE16aENQZlBmekNZUWloWnRjanp2SEdldVRkRTBnX0tweW9QNGVDV25kR0NOZ1pfamVTaUhfTmlPdnh4SHZEbUZVYWRzU3VidHNhOFlPUXdiQnVSZEVOblNjTk84b0hXVWdKOEI2b2NWR0VKdm1hdWtxdjBn?oc=5"
         },
         {
-          "title": "Borsa İstanbul'da 10 Bin Puan Uyarısı: Kritik Seviyeler",
-          "source": "Finans Hattı",
-          "published_at": "27.11.2026 12:52 TSİ",
-          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxON2RmTDJrTUp4dFo4MFJENy1aaTcyNFBZQnhpS3EtcWhZeUk5cmdzcTZYRGttbV9fQ21JUXRGS3hINnVSd0dQbTdUWnZWaG53cDdkRWtvOFFsaWlaUmI4eFZ5bGVKY1FiUUZtN1NNeGpXVVNRaFN2bXotY0N3TjhPN3JfcEZtNzg?oc=5"
-        },
-        {
           "title": "Borsa İstanbul için ikili dip senaryosu: Tuncay Turşucu kritik seviyeyi açıkladı",
           "source": "CNBC-e",
           "published_at": "25.11.2026 15:32 TSİ",
           "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPUlpNT0Yza3NPY0w4RnhubEhsckhMYkx4b3hONUlCeFA1SzVYVG5sX1oxVUhid1VoWlhGRkF2THYycmo0TDc2Qmd4Z2VyN1JoUU9TekExeDlQaUlSNi12THhtTkNwTEZoSGpRWk42a2JZdWZvSjVmWDF0SUZETmNRaFAwTktaeW5vT2VuWVQ4SldrTF9NbW5ZaTU2NkRwQTZFRkcta1VSUm1KanktVjMwalVvYUg?oc=5"
+        },
+        {
+          "title": "Borsa İstanbul'da 10 Bin Puan Uyarısı: Kritik Seviyeler",
+          "source": "Finans Hattı",
+          "published_at": "27.11.2026 12:52 TSİ",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxON2RmTDJrTUp4dFo4MFJENy1aaTcyNFBZQnhpS3EtcWhZeUk5cmdzcTZYRGttbV9fQ21JUXRGS3hINnVSd0dQbTdUWnZWaG53cDdkRWtvOFFsaWlaUmI4eFZ5bGVKY1FiUUZtN1NNeGpXVVNRaFN2bXotY0N3TjhPN3JfcEZtNzg?oc=5"
         },
         {
           "title": "TCMB'nin faiz kararına ilişkin beklentiler değişti",
@@ -1005,10 +1089,10 @@
         }
       ],
       "current_regime": {
-        "title": "BIST 100: 10,955.99 (%+2.82) • TCMB %36 Faiz & Seçici Kurumsal Akım",
+        "title": "BIST 100: 10,977.01 (%+3.02) • TCMB %36 Faiz & Seçici Kurumsal Akım",
         "mood": "GÜÇLÜ YÜKSELİŞ MOMENTUMU",
-        "summary": "BIST 100 endeksi anlık olarak 10,955.99 (%+2.82) seviyesinde, USD/TRY kuru ise ₺50.78 düzeyinde işlem görüyor. TCMB'nin Ekim toplantısında politika faizini %36 seviyesine çekmesinin ardından gözler 10 Aralık 2026 Perşembe (14:00 TSİ) yılın son PPK kararına çevrildi. Kasasında güçlü net nakit tutan sanayi ve ulaştırma devleri (TUPRS, THYAO) endeksin ana taşıyıcısı konumunda.",
-        "volatility_index": "BIST 100: 10,955.99 (%+2.82) | USD/TRY: ₺50.78"
+        "summary": "BIST 100 endeksi anlık olarak 10,977.01 (%+3.02) seviyesinde, USD/TRY kuru ise ₺50.74 düzeyinde işlem görüyor. TCMB'nin Ekim toplantısında politika faizini %36 seviyesine çekmesinin ardından gözler 10 Aralık 2026 Perşembe (14:00 TSİ) yılın son PPK kararına çevrildi. Kasasında güçlü net nakit tutan sanayi ve ulaştırma devleri (TUPRS, THYAO) endeksin ana taşıyıcısı konumunda.",
+        "volatility_index": "BIST 100: 10,977.01 (%+3.02) | USD/TRY: ₺50.74"
       },
       "forecast_7d": {
         "period": "Önümüzdeki 7 Gün",
@@ -1051,12 +1135,12 @@
     },
     "us": {
       "market": "US",
-      "last_updated": "2026-11-27 18:01 TSİ",
+      "last_updated": "2026-11-28 05:04 TSİ",
       "live_indicators": {
-        "S&P 500": "7,219.44 (%+0.51)",
-        "NASDAQ": "23,717.86 (%+0.56)",
-        "VIX": "27.09",
-        "ABD 10Y Tahvil": "%4.89"
+        "S&P 500": "7,297.49 (%+1.6)",
+        "NASDAQ": "24,129.50 (%+2.31)",
+        "VIX": "23.81",
+        "ABD 10Y Tahvil": "%4.94"
       },
       "live_news": [
         {
@@ -1066,10 +1150,10 @@
           "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOSUtwVnRpUTNnajNKV2VmWWltN2lxQ1FNV3VBMUFsaFYzRktFRERHTmhvV2k5V21fcldpMnpRc3lMX2NSQ3JpUmhGeDRiQ3FHbEUxa0NacmZfQ3loa29fbERyNEFQUE1GT3VaTkVtdElwRFpSSDJwQVJjU01GaXdZV0NQTnA4TUVKejcwYXBpdHpiNjBmTWp4QTJBT3pYZHRZeTBRdl85SQ?oc=5"
         },
         {
-          "title": "Bitcoin (BTC) haberleri: Yatırımcılar Aralık ayındaki 50 baz puanlık Fed faiz artırımı bahislerini terk ediyor",
-          "source": "CoinDesk",
-          "published_at": "23.11.2026 11:58 TSİ",
-          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQbXBDdEJJQVZKeV9QMEoxVWVBLWswRFUwakxUb2hQOEhPeEstTUtaaERSUGlaenhkZkFhN0V4VHlKb0VEem1uVHhkM0RmWHlRV05LbjZFa3cxRFhUa2JEcVJzRkxYak0xN0psRjF0ajdTTXVGeVVKQkVFcWlxU1hTa29EYllGcXRRMXItWlZSQTZ3V2xVMlRHLVU4SEwwNmRDYjVadU9XaWxTT3lp?oc=5"
+          "title": "YILIN SON FED FAİZ KARARI 2026: FED faiz kararı ne zaman, saat kaçta açıklanacak? FED faiz beklentisi ne yönde?",
+          "source": "Uzmanpara",
+          "published_at": "25.11.2026 09:49 TSİ",
+          "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPRGNHdzhRNTR2Q3FreURob2kwMzQ5VmtaOWJWdFo5dHctSFFLb0h2UmRXNjRfV1RRQlRyaGtfT3o5VzhCZHVpc2lacWlhd1lQOUJsRE1GYVpZN1F2LVdnMXJRNEtzM3dqSjFhTmY0Tjg3ZThPenhoTmpEWG9Vb2VTeVgyeVVxcHIycTF6THNSaldOOFVrLURvWm5RTVRHWFNRSXFWejhZei0zS2JQbUNNU0lIbWJPWk9HOHQyY2FTYnV0WmNnRWt6UlE0aWdOVlpsdDQtc2xlVHdFNG5YUXVYOXc5czZkOFpqQ3A1dA?oc=5"
         },
         {
           "title": "ABD Merkez Bankası'nın (Fed) faiz artırımlarına devam etme olasılığı fiyatlar üzerinde baskı oluşturduğundan, altın fiyatları sert düşüş gösterdi.",
@@ -1078,17 +1162,17 @@
           "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNLW1OVkJ1dUhpcU0xTG5TSWJLOXZfdDMtNG9zTDhtbE9QWk5IcmZRNVlfdDFXN3kwNHAyY1RGT251Yk1LT21BWDhRb2Jkby1ReXhTS3o5UUpONWZtWklfT1FRRk9NUTlyMUxxNzlhXzRFeVNnSkNjaC1iMWRqM2dpekxMRU1pUDI1TVZINVRLb28?oc=5"
         },
         {
-          "title": "FED FAİZ KARARI NE ZAMAN, HANGİ TARİHTE AÇIKLANACAK? 2026 ABD Merkez Bankası FED faiz toplantı tarihi",
-          "source": "Milliyet",
-          "published_at": "26.11.2026 14:37 TSİ",
-          "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNNUNpYkppbUM4eWNxNm0zX1hrVEoyZFZWMm9mLXYxaGZfbjFiUVpBa3I3R0ZMNnM5M2NDLWR4UklSb2M4VWRqbkFvbUFra0R2VVBpR2x1b3RaN3o0SXlUSTF3dHVnTTlDYmR5MlA2WlZuV0oxbWNRTkNhczMxaC03Ti1mYnZZUmEyNkxIelBGaEhlRlFxbzZrc2lHR2h0SU9XaWFUd0VmVEU0MWdqN2VJekxsTVcwbUhCVHlSa3B1WTZoa2R3T21ld3phR25kRHZYWndwTWxIc1ZENk1VOFE?oc=5"
+          "title": "Fed’in tercih edilen enflasyon göstergesi, Aralık ayı faiz artışı fiyatlanmış olarak açıklandı",
+          "source": "CoinDesk",
+          "published_at": "25.11.2026 18:37 TSİ",
+          "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNZmo2QWxrUkw5WWJicUZLRnFCMEcteVlvX0M3MU9rQ3VJdGFQVEQzbWw3WVFzRG9ZYWw3T3hVNm5oR2o5cmw1SEtvekxpV0ptOU9IVnRDR3VkUzk0cHh0V2JIVUJsRzlOb09Qa1A1T1gySmc3ODdPajJSOUxYMjJfWjBHaTRwUHNVTl85Y0RwTk1FU0NkV1FtSXZqaWFOdld1QVA3UzNjdG5Pb3dWWldPNFlxTDdmNmdxUGQ2YjJsek9oQVM1U1FCZjB2MjVEU0xu?oc=5"
         }
       ],
       "current_regime": {
-        "title": "S&P 500: 7,219.44 (%+0.51) • ABD 10Y Tahvil: %4.89",
+        "title": "S&P 500: 7,297.49 (%+1.6) • ABD 10Y Tahvil: %4.94",
         "mood": "YÜKSEK VOLATİLİTE & ŞAHİN FED BASKISI",
-        "summary": "ABD piyasalarında S&P 500 7,219.44 (%+0.51), Nasdaq 23,717.86 (%+0.56) seviyesinde seyrederken, korku endeksi YÜKSEK (VIX: 27.09 • %+1.08) ve ABD 10 Yıllık Tahvil getirisi %4.89 düzeyinde bulunuyor. Tahvil faizlerindeki yüksek seyir ve 9 Aralık FOMC toplantısı öncesi şahin Fed beklentileri teknoloji (AVGO, NVDA) ve küçük ölçekli şirketlerde (IWM) sert dalgalanmalar yaratıyor.",
-        "volatility_index": "YÜKSEK (VIX: 27.09 • %+1.08)"
+        "summary": "ABD piyasalarında S&P 500 7,297.49 (%+1.6), Nasdaq 24,129.50 (%+2.31) seviyesinde seyrederken, korku endeksi YÜKSEK (VIX: 23.81 • %-11.16) ve ABD 10 Yıllık Tahvil getirisi %4.94 düzeyinde bulunuyor. Tahvil faizlerindeki yüksek seyir ve 9 Aralık FOMC toplantısı öncesi şahin Fed beklentileri teknoloji (AVGO, NVDA) ve küçük ölçekli şirketlerde (IWM) sert dalgalanmalar yaratıyor.",
+        "volatility_index": "YÜKSEK (VIX: 23.81 • %-11.16)"
       },
       "forecast_7d": {
         "period": "Önümüzdeki 7 Gün",
@@ -1130,16 +1214,16 @@
       },
       "fed_rate_decision": {
         "status": "active",
-        "last_updated": "2026-11-27 18:01 TSİ",
+        "last_updated": "2026-11-28 05:04 TSİ",
         "decision_info": {
           "title": "FED Faiz Kararı & 25 Kaynaklı Konsensüs Radarı",
           "subtitle": "En Güvenilir 20 Wall Street Ekonomisti • 5 Küresel Finans Medyası (Bloomberg, Reuters, WSJ, FT, CNBC) & CME FedWatch",
           "target_date_str": "9 Aralık 2026 (Çarşamba) • 22:00 TSİ",
-          "days_remaining": 12,
+          "days_remaining": 11,
           "current_rate_range": "%3.75 - %4.00",
           "expected_rate_range": "%4.00 - %4.25 (+25 bps)",
-          "us_3m_tbill": "%4.16",
-          "us_10y_yield": "%4.89"
+          "us_3m_tbill": "%4.15",
+          "us_10y_yield": "%4.94"
         },
         "consensus_percentages": {
           "cut_percent": 0.0,
@@ -1149,7 +1233,7 @@
         "consensus_summary": {
           "dominant_verdict": "FAİZ ARTIRIMI (+25 bps • %88.0)",
           "dominant_color": "rose",
-          "rationale": "20 Wall Street baş ekonomisti, 5 küresel finans medyası ve ABD 3A Bono (%4.16) / 10Y Tahvil (%4.89) fiyatlaması 9 Aralık 2026 FOMC toplantısı için %4.00 - %4.25 (+25 bps) yönünde ağırlık kazanmaktadır."
+          "rationale": "20 Wall Street baş ekonomisti, 5 küresel finans medyası ve ABD 3A Bono (%4.15) / 10Y Tahvil (%4.94) fiyatlaması 9 Aralık 2026 FOMC toplantısı için %4.00 - %4.25 (+25 bps) yönünde ağırlık kazanmaktadır."
         },
         "total_commentators_count": 20,
         "total_media_count": 5,
@@ -1287,16 +1371,16 @@
   },
   "fed_rate_decision": {
     "status": "active",
-    "last_updated": "2026-11-27 18:01 TSİ",
+    "last_updated": "2026-11-28 05:04 TSİ",
     "decision_info": {
       "title": "FED Faiz Kararı & 25 Kaynaklı Konsensüs Radarı",
       "subtitle": "En Güvenilir 20 Wall Street Ekonomisti • 5 Küresel Finans Medyası (Bloomberg, Reuters, WSJ, FT, CNBC) & CME FedWatch",
       "target_date_str": "9 Aralık 2026 (Çarşamba) • 22:00 TSİ",
-      "days_remaining": 12,
+      "days_remaining": 11,
       "current_rate_range": "%3.75 - %4.00",
       "expected_rate_range": "%4.00 - %4.25 (+25 bps)",
-      "us_3m_tbill": "%4.16",
-      "us_10y_yield": "%4.89"
+      "us_3m_tbill": "%4.15",
+      "us_10y_yield": "%4.94"
     },
     "consensus_percentages": {
       "cut_percent": 0.0,
@@ -1306,7 +1390,7 @@
     "consensus_summary": {
       "dominant_verdict": "FAİZ ARTIRIMI (+25 bps • %88.0)",
       "dominant_color": "rose",
-      "rationale": "20 Wall Street baş ekonomisti, 5 küresel finans medyası ve ABD 3A Bono (%4.16) / 10Y Tahvil (%4.89) fiyatlaması 9 Aralık 2026 FOMC toplantısı için %4.00 - %4.25 (+25 bps) yönünde ağırlık kazanmaktadır."
+      "rationale": "20 Wall Street baş ekonomisti, 5 küresel finans medyası ve ABD 3A Bono (%4.15) / 10Y Tahvil (%4.94) fiyatlaması 9 Aralık 2026 FOMC toplantısı için %4.00 - %4.25 (+25 bps) yönünde ağırlık kazanmaktadır."
     },
     "total_commentators_count": 20,
     "total_media_count": 5,
@@ -1450,8 +1534,8 @@
         "type": "Hisse",
         "market": "BIST",
         "currency": "₺",
-        "current_price": 311.5,
-        "change_percent": 0.56,
+        "current_price": 314.0,
+        "change_percent": 1.37,
         "action": "AL (Düşüşü Bekle)",
         "confidence": 75,
         "vade": "Kısa Vade (3 - 7 Gün)",
@@ -1462,7 +1546,7 @@
           "target": 325.0,
           "stop": 293.95,
           "risk_reward": "1:3.02",
-          "profit_margin_percent": 4.33,
+          "profit_margin_percent": 3.5,
           "loss_risk_percent": 2.56,
           "rule": "301.67 seviyesine çekilmesini BEKLE ve AL, 325.0 seviyesinde KÂR AL, 293.95 altına inerse ZARAR KES",
           "is_dip_entry": true,
@@ -1546,7 +1630,7 @@
           }
         },
         "macro_avg_score": 80.0,
-        "updated_at": "2026-11-27 18:01:26"
+        "updated_at": "2026-11-28 05:04:01"
       },
       {
         "symbol": "PLTR",
@@ -1556,8 +1640,8 @@
         "type": "Hisse",
         "market": "US",
         "currency": "$",
-        "current_price": 167.44,
-        "change_percent": 2.35,
+        "current_price": 172.17,
+        "change_percent": 5.24,
         "action": "İZLE / DİP BEKLE",
         "confidence": 63,
         "vade": "Kısa Vade (3 - 7 Gün)",
@@ -1568,7 +1652,7 @@
           "target": 179.15,
           "stop": 149.52,
           "risk_reward": "1:2.88",
-          "profit_margin_percent": 6.99,
+          "profit_margin_percent": 4.05,
           "loss_risk_percent": 4.86,
           "rule": "157.15 güçlü desteğine inmesini İZLE ve BEKLE, 179.15 hedef, 149.52 zarar kes",
           "is_dip_entry": true,
@@ -1652,7 +1736,7 @@
           }
         },
         "macro_avg_score": 82.9,
-        "updated_at": "2026-11-27 18:01:26"
+        "updated_at": "2026-11-28 05:04:01"
       },
       {
         "symbol": "XBI",
@@ -1662,8 +1746,8 @@
         "type": "ETF",
         "market": "US",
         "currency": "$",
-        "current_price": 155.8,
-        "change_percent": -0.51,
+        "current_price": 158.5,
+        "change_percent": 1.21,
         "action": "İZLE / DİP BEKLE",
         "confidence": 63,
         "vade": "Kısa Vade (3 - 7 Gün)",
@@ -1674,7 +1758,7 @@
           "target": 163.92,
           "stop": 144.42,
           "risk_reward": "1:3.68",
-          "profit_margin_percent": 5.21,
+          "profit_margin_percent": 3.42,
           "loss_risk_percent": 2.81,
           "rule": "148.59 güçlü desteğine inmesini İZLE ve BEKLE, 163.92 hedef, 144.42 zarar kes",
           "is_dip_entry": true,
@@ -1758,7 +1842,7 @@
           }
         },
         "macro_avg_score": 73.5,
-        "updated_at": "2026-11-27 18:01:26"
+        "updated_at": "2026-11-28 05:04:01"
       },
       {
         "symbol": "AVGO",
@@ -1768,8 +1852,8 @@
         "type": "Hisse",
         "market": "US",
         "currency": "$",
-        "current_price": 307.37,
-        "change_percent": 2.16,
+        "current_price": 312.34,
+        "change_percent": 3.82,
         "action": "İZLE / DİP BEKLE",
         "confidence": 62,
         "vade": "Kısa Vade (3 - 7 Gün)",
@@ -1780,7 +1864,7 @@
           "target": 334.83,
           "stop": 276.57,
           "risk_reward": "1:2.8",
-          "profit_margin_percent": 8.93,
+          "profit_margin_percent": 7.2,
           "loss_risk_percent": 5.25,
           "rule": "291.89 güçlü desteğine inmesini İZLE ve BEKLE, 334.83 hedef, 276.57 zarar kes",
           "is_dip_entry": true,
@@ -1864,7 +1948,7 @@
           }
         },
         "macro_avg_score": 80.8,
-        "updated_at": "2026-11-27 18:01:26"
+        "updated_at": "2026-11-28 05:04:01"
       },
       {
         "symbol": "GARAN",
@@ -1874,8 +1958,8 @@
         "type": "Hisse",
         "market": "BIST",
         "currency": "₺",
-        "current_price": 137.8,
-        "change_percent": -1.64,
+        "current_price": 138.1,
+        "change_percent": -1.43,
         "action": "İZLE / DİP BEKLE",
         "confidence": 60,
         "vade": "Kısa Vade (3 - 7 Gün)",
@@ -1886,7 +1970,7 @@
           "target": 144.92,
           "stop": 127.1,
           "risk_reward": "1:3.57",
-          "profit_margin_percent": 5.17,
+          "profit_margin_percent": 4.94,
           "loss_risk_percent": 2.98,
           "rule": "131.0 güçlü desteğine inmesini İZLE ve BEKLE, 144.92 hedef, 127.1 zarar kes",
           "is_dip_entry": true,
@@ -1970,7 +2054,7 @@
           }
         },
         "macro_avg_score": 75.5,
-        "updated_at": "2026-11-27 18:01:26"
+        "updated_at": "2026-11-28 05:04:01"
       },
       {
         "symbol": "NVDA",
@@ -1980,8 +2064,8 @@
         "type": "Hisse",
         "market": "US",
         "currency": "$",
-        "current_price": 146.08,
-        "change_percent": -2.16,
+        "current_price": 150.49,
+        "change_percent": 0.8,
         "action": "TUT / KÂR REALİZASYONU",
         "confidence": 59,
         "vade": "Kısa Vade (3 - 7 Gün)",
@@ -1992,7 +2076,7 @@
           "target": 165.7,
           "stop": 137.0,
           "risk_reward": "1:1.8",
-          "profit_margin_percent": 13.43,
+          "profit_margin_percent": 10.11,
           "loss_risk_percent": 6.96,
           "rule": "147.25 seviyesinde kâr realizasyonu yap veya uzak dur",
           "is_dip_entry": false,
@@ -2076,7 +2160,7 @@
           }
         },
         "macro_avg_score": 82.5,
-        "updated_at": "2026-11-27 18:01:26"
+        "updated_at": "2026-11-28 05:04:01"
       },
       {
         "symbol": "AMD",
@@ -2086,8 +2170,8 @@
         "type": "Hisse",
         "market": "US",
         "currency": "$",
-        "current_price": 401.57,
-        "change_percent": -1.1,
+        "current_price": 424.54,
+        "change_percent": 4.56,
         "action": "TUT / KÂR REALİZASYONU",
         "confidence": 58,
         "vade": "Kısa Vade (3 - 7 Gün)",
@@ -2098,7 +2182,7 @@
           "target": 472.18,
           "stop": 373.09,
           "risk_reward": "1:1.8",
-          "profit_margin_percent": 17.58,
+          "profit_margin_percent": 11.22,
           "loss_risk_percent": 8.66,
           "rule": "408.48 seviyesinde kâr realizasyonu yap veya uzak dur",
           "is_dip_entry": false,
@@ -2182,7 +2266,7 @@
           }
         },
         "macro_avg_score": 75.5,
-        "updated_at": "2026-11-27 18:01:26"
+        "updated_at": "2026-11-28 05:04:01"
       },
       {
         "symbol": "HALKB",
@@ -2192,8 +2276,8 @@
         "type": "Hisse",
         "market": "BIST",
         "currency": "₺",
-        "current_price": 37.58,
-        "change_percent": 1.84,
+        "current_price": 37.64,
+        "change_percent": 2.01,
         "action": "TUT / KÂR REALİZASYONU",
         "confidence": 58,
         "vade": "Kısa Vade (3 - 7 Gün)",
@@ -2204,7 +2288,7 @@
           "target": 40.01,
           "stop": 36.26,
           "risk_reward": "1:1.8",
-          "profit_margin_percent": 6.47,
+          "profit_margin_percent": 6.3,
           "loss_risk_percent": 3.56,
           "rule": "37.6 seviyesinde kâr realizasyonu yap veya uzak dur",
           "is_dip_entry": false,
@@ -2288,7 +2372,7 @@
           }
         },
         "macro_avg_score": 73.6,
-        "updated_at": "2026-11-27 18:01:26"
+        "updated_at": "2026-11-28 05:04:01"
       }
     ],
     "orta_vade": [
@@ -2300,8 +2384,8 @@
         "type": "ETF",
         "market": "US",
         "currency": "$",
-        "current_price": 216.22,
-        "change_percent": -0.93,
+        "current_price": 219.6,
+        "change_percent": 0.61,
         "action": "AL (Düşüşü Bekle)",
         "confidence": 72,
         "vade": "Orta Vade (2 - 4 Hafta)",
@@ -2312,7 +2396,7 @@
           "target": 234.1,
           "stop": 201.85,
           "risk_reward": "1:2.83",
-          "profit_margin_percent": 8.27,
+          "profit_margin_percent": 6.6,
           "loss_risk_percent": 4.0,
           "rule": "210.26 seviyesine çekilmesini BEKLE ve AL, 234.1 seviyesinde KÂR AL, 201.85 altına inerse ZARAR KES",
           "is_dip_entry": true,
@@ -2396,7 +2480,7 @@
           }
         },
         "macro_avg_score": 75.5,
-        "updated_at": "2026-11-27 18:01:26"
+        "updated_at": "2026-11-28 05:04:01"
       },
       {
         "symbol": "TUPRS",
@@ -2406,8 +2490,8 @@
         "type": "Hisse",
         "market": "BIST",
         "currency": "₺",
-        "current_price": 331.75,
-        "change_percent": 2.63,
+        "current_price": 330.0,
+        "change_percent": 2.09,
         "action": "İZLE / DİP BEKLE",
         "confidence": 62,
         "vade": "Orta Vade (2 - 4 Hafta)",
@@ -2418,7 +2502,7 @@
           "target": 358.56,
           "stop": 302.78,
           "risk_reward": "1:3.42",
-          "profit_margin_percent": 8.08,
+          "profit_margin_percent": 8.65,
           "loss_risk_percent": 4.0,
           "rule": "315.4 güçlü desteğine inmesini İZLE ve BEKLE, 358.56 hedef, 302.78 zarar kes",
           "is_dip_entry": true,
@@ -2502,7 +2586,7 @@
           }
         },
         "macro_avg_score": 83.6,
-        "updated_at": "2026-11-27 18:01:26"
+        "updated_at": "2026-11-28 05:04:01"
       },
       {
         "symbol": "TSM",
@@ -2512,8 +2596,8 @@
         "type": "ADR",
         "market": "US",
         "currency": "$",
-        "current_price": 345.8,
-        "change_percent": 1.01,
+        "current_price": 353.34,
+        "change_percent": 3.21,
         "action": "İZLE / DİP BEKLE",
         "confidence": 61,
         "vade": "Orta Vade (2 - 4 Hafta)",
@@ -2524,7 +2608,7 @@
           "target": 383.37,
           "stop": 312.55,
           "risk_reward": "1:2.98",
-          "profit_margin_percent": 10.86,
+          "profit_margin_percent": 8.5,
           "loss_risk_percent": 5.39,
           "rule": "330.36 güçlü desteğine inmesini İZLE ve BEKLE, 383.37 hedef, 312.55 zarar kes",
           "is_dip_entry": true,
@@ -2608,7 +2692,7 @@
           }
         },
         "macro_avg_score": 82.1,
-        "updated_at": "2026-11-27 18:01:26"
+        "updated_at": "2026-11-28 05:04:01"
       },
       {
         "symbol": "ASELS",
@@ -2618,8 +2702,8 @@
         "type": "Hisse",
         "market": "BIST",
         "currency": "₺",
-        "current_price": 331.75,
-        "change_percent": 5.32,
+        "current_price": 332.0,
+        "change_percent": 5.4,
         "action": "İZLE / DİP BEKLE",
         "confidence": 61,
         "vade": "Orta Vade (2 - 4 Hafta)",
@@ -2630,7 +2714,7 @@
           "target": 359.1,
           "stop": 303.24,
           "risk_reward": "1:3.42",
-          "profit_margin_percent": 8.24,
+          "profit_margin_percent": 8.16,
           "loss_risk_percent": 4.0,
           "rule": "315.88 güçlü desteğine inmesini İZLE ve BEKLE, 359.1 hedef, 303.24 zarar kes",
           "is_dip_entry": true,
@@ -2714,7 +2798,7 @@
           }
         },
         "macro_avg_score": 82.6,
-        "updated_at": "2026-11-27 18:01:26"
+        "updated_at": "2026-11-28 05:04:01"
       },
       {
         "symbol": "IWM",
@@ -2724,8 +2808,8 @@
         "type": "ETF",
         "market": "US",
         "currency": "$",
-        "current_price": 270.95,
-        "change_percent": 0.77,
+        "current_price": 273.79,
+        "change_percent": 1.83,
         "action": "TUT / KÂR REALİZASYONU",
         "confidence": 58,
         "vade": "Orta Vade (2 - 4 Hafta)",
@@ -2736,7 +2820,7 @@
           "target": 292.97,
           "stop": 260.42,
           "risk_reward": "1:2.0",
-          "profit_margin_percent": 8.13,
+          "profit_margin_percent": 7.01,
           "loss_risk_percent": 4.0,
           "rule": "271.27 seviyesinde kâr realizasyonu yap veya uzak dur",
           "is_dip_entry": false,
@@ -2820,7 +2904,7 @@
           }
         },
         "macro_avg_score": 72.9,
-        "updated_at": "2026-11-27 18:01:26"
+        "updated_at": "2026-11-28 05:04:01"
       },
       {
         "symbol": "KCHOL",
@@ -2830,8 +2914,8 @@
         "type": "Hisse",
         "market": "BIST",
         "currency": "₺",
-        "current_price": 189.5,
-        "change_percent": 1.88,
+        "current_price": 189.4,
+        "change_percent": 1.83,
         "action": "TUT / KÂR REALİZASYONU",
         "confidence": 58,
         "vade": "Orta Vade (2 - 4 Hafta)",
@@ -2842,7 +2926,7 @@
           "target": 204.66,
           "stop": 181.92,
           "risk_reward": "1:2.0",
-          "profit_margin_percent": 8.0,
+          "profit_margin_percent": 8.06,
           "loss_risk_percent": 4.0,
           "rule": "189.5 seviyesinde kâr realizasyonu yap veya uzak dur",
           "is_dip_entry": false,
@@ -2926,7 +3010,7 @@
           }
         },
         "macro_avg_score": 75.5,
-        "updated_at": "2026-11-27 18:01:26"
+        "updated_at": "2026-11-28 05:04:01"
       }
     ],
     "uzun_vade": [
@@ -2938,8 +3022,8 @@
         "type": "Hisse",
         "market": "US",
         "currency": "$",
-        "current_price": 356.59,
-        "change_percent": 0.28,
+        "current_price": 358.54,
+        "change_percent": 0.83,
         "action": "AL (Düşüşü Bekle)",
         "confidence": 74,
         "vade": "Uzun Vade (1 - 6 Ay)",
@@ -2950,7 +3034,7 @@
           "target": 411.76,
           "stop": 323.05,
           "risk_reward": "1:2.95",
-          "profit_margin_percent": 15.47,
+          "profit_margin_percent": 14.84,
           "loss_risk_percent": 6.5,
           "rule": "345.51 seviyesine çekilmesini BEKLE ve AL, 411.76 seviyesinde KÂR AL, 323.05 altına inerse ZARAR KES",
           "is_dip_entry": true,
@@ -3034,7 +3118,7 @@
           }
         },
         "macro_avg_score": 75.5,
-        "updated_at": "2026-11-27 18:01:26"
+        "updated_at": "2026-11-28 05:04:01"
       },
       {
         "symbol": "ENJSA",
@@ -3044,8 +3128,8 @@
         "type": "Hisse",
         "market": "BIST",
         "currency": "₺",
-        "current_price": 108.3,
-        "change_percent": 2.17,
+        "current_price": 108.7,
+        "change_percent": 2.55,
         "action": "İZLE / DİP BEKLE",
         "confidence": 62,
         "vade": "Uzun Vade (1 - 6 Ay)",
@@ -3056,7 +3140,7 @@
           "target": 125.42,
           "stop": 96.37,
           "risk_reward": "1:3.34",
-          "profit_margin_percent": 15.81,
+          "profit_margin_percent": 15.38,
           "loss_risk_percent": 6.5,
           "rule": "103.07 güçlü desteğine inmesini İZLE ve BEKLE, 125.42 hedef, 96.37 zarar kes",
           "is_dip_entry": true,
@@ -3140,7 +3224,7 @@
           }
         },
         "macro_avg_score": 81.8,
-        "updated_at": "2026-11-27 18:01:26"
+        "updated_at": "2026-11-28 05:04:01"
       },
       {
         "symbol": "MSFT",
@@ -3150,8 +3234,8 @@
         "type": "Hisse",
         "market": "US",
         "currency": "$",
-        "current_price": 489.56,
-        "change_percent": -0.08,
+        "current_price": 492.85,
+        "change_percent": 0.6,
         "action": "TUT / KÂR REALİZASYONU",
         "confidence": 59,
         "vade": "Uzun Vade (1 - 6 Ay)",
@@ -3162,7 +3246,7 @@
           "target": 571.43,
           "stop": 462.19,
           "risk_reward": "1:2.4",
-          "profit_margin_percent": 16.72,
+          "profit_margin_percent": 15.94,
           "loss_risk_percent": 6.5,
           "rule": "494.32 seviyesinde kâr realizasyonu yap veya uzak dur",
           "is_dip_entry": false,
@@ -3246,7 +3330,7 @@
           }
         },
         "macro_avg_score": 75.5,
-        "updated_at": "2026-11-27 18:01:26"
+        "updated_at": "2026-11-28 05:04:01"
       },
       {
         "symbol": "GRID",
@@ -3256,8 +3340,8 @@
         "type": "ETF",
         "market": "US",
         "currency": "$",
-        "current_price": 152.12,
-        "change_percent": 1.4,
+        "current_price": 153.65,
+        "change_percent": 2.42,
         "action": "TUT / KÂR REALİZASYONU",
         "confidence": 59,
         "vade": "Uzun Vade (1 - 6 Ay)",
@@ -3268,7 +3352,7 @@
           "target": 176.29,
           "stop": 142.6,
           "risk_reward": "1:2.4",
-          "profit_margin_percent": 15.89,
+          "profit_margin_percent": 14.73,
           "loss_risk_percent": 6.5,
           "rule": "152.51 seviyesinde kâr realizasyonu yap veya uzak dur",
           "is_dip_entry": false,
@@ -3352,7 +3436,7 @@
           }
         },
         "macro_avg_score": 80.3,
-        "updated_at": "2026-11-27 18:01:26"
+        "updated_at": "2026-11-28 05:04:01"
       },
       {
         "symbol": "BIMAS",
@@ -3362,8 +3446,8 @@
         "type": "Hisse",
         "market": "BIST",
         "currency": "₺",
-        "current_price": 370.5,
-        "change_percent": 2.92,
+        "current_price": 370.75,
+        "change_percent": 2.99,
         "action": "TUT / KÂR REALİZASYONU",
         "confidence": 58,
         "vade": "Uzun Vade (1 - 6 Ay)",
@@ -3374,7 +3458,7 @@
           "target": 428.29,
           "stop": 346.42,
           "risk_reward": "1:2.4",
-          "profit_margin_percent": 15.6,
+          "profit_margin_percent": 15.52,
           "loss_risk_percent": 6.5,
           "rule": "370.5 seviyesinde kâr realizasyonu yap veya uzak dur",
           "is_dip_entry": false,
@@ -3458,7 +3542,7 @@
           }
         },
         "macro_avg_score": 75.5,
-        "updated_at": "2026-11-27 18:01:26"
+        "updated_at": "2026-11-28 05:04:01"
       }
     ]
   },
@@ -3471,8 +3555,8 @@
       "type": "Hisse",
       "market": "US",
       "currency": "$",
-      "current_price": 356.59,
-      "change_percent": 0.28,
+      "current_price": 358.54,
+      "change_percent": 0.83,
       "action": "AL (Düşüşü Bekle)",
       "confidence": 74,
       "vade": "Uzun Vade (1 - 6 Ay)",
@@ -3483,7 +3567,7 @@
         "target": 411.76,
         "stop": 323.05,
         "risk_reward": "1:2.95",
-        "profit_margin_percent": 15.47,
+        "profit_margin_percent": 14.84,
         "loss_risk_percent": 6.5,
         "rule": "345.51 seviyesine çekilmesini BEKLE ve AL, 411.76 seviyesinde KÂR AL, 323.05 altına inerse ZARAR KES",
         "is_dip_entry": true,
@@ -3567,7 +3651,7 @@
         }
       },
       "macro_avg_score": 75.5,
-      "updated_at": "2026-11-27 18:01:26"
+      "updated_at": "2026-11-28 05:04:01"
     },
     {
       "symbol": "IBB",
@@ -3577,8 +3661,8 @@
       "type": "ETF",
       "market": "US",
       "currency": "$",
-      "current_price": 216.22,
-      "change_percent": -0.93,
+      "current_price": 219.6,
+      "change_percent": 0.61,
       "action": "AL (Düşüşü Bekle)",
       "confidence": 72,
       "vade": "Orta Vade (2 - 4 Hafta)",
@@ -3589,7 +3673,7 @@
         "target": 234.1,
         "stop": 201.85,
         "risk_reward": "1:2.83",
-        "profit_margin_percent": 8.27,
+        "profit_margin_percent": 6.6,
         "loss_risk_percent": 4.0,
         "rule": "210.26 seviyesine çekilmesini BEKLE ve AL, 234.1 seviyesinde KÂR AL, 201.85 altına inerse ZARAR KES",
         "is_dip_entry": true,
@@ -3673,7 +3757,7 @@
         }
       },
       "macro_avg_score": 75.5,
-      "updated_at": "2026-11-27 18:01:26"
+      "updated_at": "2026-11-28 05:04:01"
     },
     {
       "symbol": "PLTR",
@@ -3683,8 +3767,8 @@
       "type": "Hisse",
       "market": "US",
       "currency": "$",
-      "current_price": 167.44,
-      "change_percent": 2.35,
+      "current_price": 172.17,
+      "change_percent": 5.24,
       "action": "İZLE / DİP BEKLE",
       "confidence": 63,
       "vade": "Kısa Vade (3 - 7 Gün)",
@@ -3695,7 +3779,7 @@
         "target": 179.15,
         "stop": 149.52,
         "risk_reward": "1:2.88",
-        "profit_margin_percent": 6.99,
+        "profit_margin_percent": 4.05,
         "loss_risk_percent": 4.86,
         "rule": "157.15 güçlü desteğine inmesini İZLE ve BEKLE, 179.15 hedef, 149.52 zarar kes",
         "is_dip_entry": true,
@@ -3779,7 +3863,7 @@
         }
       },
       "macro_avg_score": 82.9,
-      "updated_at": "2026-11-27 18:01:26"
+      "updated_at": "2026-11-28 05:04:01"
     },
     {
       "symbol": "XBI",
@@ -3789,8 +3873,8 @@
       "type": "ETF",
       "market": "US",
       "currency": "$",
-      "current_price": 155.8,
-      "change_percent": -0.51,
+      "current_price": 158.5,
+      "change_percent": 1.21,
       "action": "İZLE / DİP BEKLE",
       "confidence": 63,
       "vade": "Kısa Vade (3 - 7 Gün)",
@@ -3801,7 +3885,7 @@
         "target": 163.92,
         "stop": 144.42,
         "risk_reward": "1:3.68",
-        "profit_margin_percent": 5.21,
+        "profit_margin_percent": 3.42,
         "loss_risk_percent": 2.81,
         "rule": "148.59 güçlü desteğine inmesini İZLE ve BEKLE, 163.92 hedef, 144.42 zarar kes",
         "is_dip_entry": true,
@@ -3885,7 +3969,7 @@
         }
       },
       "macro_avg_score": 73.5,
-      "updated_at": "2026-11-27 18:01:26"
+      "updated_at": "2026-11-28 05:04:01"
     },
     {
       "symbol": "AVGO",
@@ -3895,8 +3979,8 @@
       "type": "Hisse",
       "market": "US",
       "currency": "$",
-      "current_price": 307.37,
-      "change_percent": 2.16,
+      "current_price": 312.34,
+      "change_percent": 3.82,
       "action": "İZLE / DİP BEKLE",
       "confidence": 62,
       "vade": "Kısa Vade (3 - 7 Gün)",
@@ -3907,7 +3991,7 @@
         "target": 334.83,
         "stop": 276.57,
         "risk_reward": "1:2.8",
-        "profit_margin_percent": 8.93,
+        "profit_margin_percent": 7.2,
         "loss_risk_percent": 5.25,
         "rule": "291.89 güçlü desteğine inmesini İZLE ve BEKLE, 334.83 hedef, 276.57 zarar kes",
         "is_dip_entry": true,
@@ -3991,7 +4075,7 @@
         }
       },
       "macro_avg_score": 80.8,
-      "updated_at": "2026-11-27 18:01:26"
+      "updated_at": "2026-11-28 05:04:01"
     },
     {
       "symbol": "TSM",
@@ -4001,8 +4085,8 @@
       "type": "ADR",
       "market": "US",
       "currency": "$",
-      "current_price": 345.8,
-      "change_percent": 1.01,
+      "current_price": 353.34,
+      "change_percent": 3.21,
       "action": "İZLE / DİP BEKLE",
       "confidence": 61,
       "vade": "Orta Vade (2 - 4 Hafta)",
@@ -4013,7 +4097,7 @@
         "target": 383.37,
         "stop": 312.55,
         "risk_reward": "1:2.98",
-        "profit_margin_percent": 10.86,
+        "profit_margin_percent": 8.5,
         "loss_risk_percent": 5.39,
         "rule": "330.36 güçlü desteğine inmesini İZLE ve BEKLE, 383.37 hedef, 312.55 zarar kes",
         "is_dip_entry": true,
@@ -4097,7 +4181,7 @@
         }
       },
       "macro_avg_score": 82.1,
-      "updated_at": "2026-11-27 18:01:26"
+      "updated_at": "2026-11-28 05:04:01"
     },
     {
       "symbol": "MSFT",
@@ -4107,8 +4191,8 @@
       "type": "Hisse",
       "market": "US",
       "currency": "$",
-      "current_price": 489.56,
-      "change_percent": -0.08,
+      "current_price": 492.85,
+      "change_percent": 0.6,
       "action": "TUT / KÂR REALİZASYONU",
       "confidence": 59,
       "vade": "Uzun Vade (1 - 6 Ay)",
@@ -4119,7 +4203,7 @@
         "target": 571.43,
         "stop": 462.19,
         "risk_reward": "1:2.4",
-        "profit_margin_percent": 16.72,
+        "profit_margin_percent": 15.94,
         "loss_risk_percent": 6.5,
         "rule": "494.32 seviyesinde kâr realizasyonu yap veya uzak dur",
         "is_dip_entry": false,
@@ -4203,7 +4287,7 @@
         }
       },
       "macro_avg_score": 75.5,
-      "updated_at": "2026-11-27 18:01:26"
+      "updated_at": "2026-11-28 05:04:01"
     },
     {
       "symbol": "GRID",
@@ -4213,8 +4297,8 @@
       "type": "ETF",
       "market": "US",
       "currency": "$",
-      "current_price": 152.12,
-      "change_percent": 1.4,
+      "current_price": 153.65,
+      "change_percent": 2.42,
       "action": "TUT / KÂR REALİZASYONU",
       "confidence": 59,
       "vade": "Uzun Vade (1 - 6 Ay)",
@@ -4225,7 +4309,7 @@
         "target": 176.29,
         "stop": 142.6,
         "risk_reward": "1:2.4",
-        "profit_margin_percent": 15.89,
+        "profit_margin_percent": 14.73,
         "loss_risk_percent": 6.5,
         "rule": "152.51 seviyesinde kâr realizasyonu yap veya uzak dur",
         "is_dip_entry": false,
@@ -4309,7 +4393,7 @@
         }
       },
       "macro_avg_score": 80.3,
-      "updated_at": "2026-11-27 18:01:26"
+      "updated_at": "2026-11-28 05:04:01"
     },
     {
       "symbol": "NVDA",
@@ -4319,8 +4403,8 @@
       "type": "Hisse",
       "market": "US",
       "currency": "$",
-      "current_price": 146.08,
-      "change_percent": -2.16,
+      "current_price": 150.49,
+      "change_percent": 0.8,
       "action": "TUT / KÂR REALİZASYONU",
       "confidence": 59,
       "vade": "Kısa Vade (3 - 7 Gün)",
@@ -4331,7 +4415,7 @@
         "target": 165.7,
         "stop": 137.0,
         "risk_reward": "1:1.8",
-        "profit_margin_percent": 13.43,
+        "profit_margin_percent": 10.11,
         "loss_risk_percent": 6.96,
         "rule": "147.25 seviyesinde kâr realizasyonu yap veya uzak dur",
         "is_dip_entry": false,
@@ -4415,7 +4499,7 @@
         }
       },
       "macro_avg_score": 82.5,
-      "updated_at": "2026-11-27 18:01:26"
+      "updated_at": "2026-11-28 05:04:01"
     },
     {
       "symbol": "AMD",
@@ -4425,8 +4509,8 @@
       "type": "Hisse",
       "market": "US",
       "currency": "$",
-      "current_price": 401.57,
-      "change_percent": -1.1,
+      "current_price": 424.54,
+      "change_percent": 4.56,
       "action": "TUT / KÂR REALİZASYONU",
       "confidence": 58,
       "vade": "Kısa Vade (3 - 7 Gün)",
@@ -4437,7 +4521,7 @@
         "target": 472.18,
         "stop": 373.09,
         "risk_reward": "1:1.8",
-        "profit_margin_percent": 17.58,
+        "profit_margin_percent": 11.22,
         "loss_risk_percent": 8.66,
         "rule": "408.48 seviyesinde kâr realizasyonu yap veya uzak dur",
         "is_dip_entry": false,
@@ -4521,7 +4605,7 @@
         }
       },
       "macro_avg_score": 75.5,
-      "updated_at": "2026-11-27 18:01:26"
+      "updated_at": "2026-11-28 05:04:01"
     },
     {
       "symbol": "IWM",
@@ -4531,8 +4615,8 @@
       "type": "ETF",
       "market": "US",
       "currency": "$",
-      "current_price": 270.95,
-      "change_percent": 0.77,
+      "current_price": 273.79,
+      "change_percent": 1.83,
       "action": "TUT / KÂR REALİZASYONU",
       "confidence": 58,
       "vade": "Orta Vade (2 - 4 Hafta)",
@@ -4543,7 +4627,7 @@
         "target": 292.97,
         "stop": 260.42,
         "risk_reward": "1:2.0",
-        "profit_margin_percent": 8.13,
+        "profit_margin_percent": 7.01,
         "loss_risk_percent": 4.0,
         "rule": "271.27 seviyesinde kâr realizasyonu yap veya uzak dur",
         "is_dip_entry": false,
@@ -4627,7 +4711,7 @@
         }
       },
       "macro_avg_score": 72.9,
-      "updated_at": "2026-11-27 18:01:26"
+      "updated_at": "2026-11-28 05:04:01"
     }
   ],
   "bist_market": [
@@ -4639,8 +4723,8 @@
       "type": "Hisse",
       "market": "BIST",
       "currency": "₺",
-      "current_price": 311.5,
-      "change_percent": 0.56,
+      "current_price": 314.0,
+      "change_percent": 1.37,
       "action": "AL (Düşüşü Bekle)",
       "confidence": 75,
       "vade": "Kısa Vade (3 - 7 Gün)",
@@ -4651,7 +4735,7 @@
         "target": 325.0,
         "stop": 293.95,
         "risk_reward": "1:3.02",
-        "profit_margin_percent": 4.33,
+        "profit_margin_percent": 3.5,
         "loss_risk_percent": 2.56,
         "rule": "301.67 seviyesine çekilmesini BEKLE ve AL, 325.0 seviyesinde KÂR AL, 293.95 altına inerse ZARAR KES",
         "is_dip_entry": true,
@@ -4735,7 +4819,7 @@
         }
       },
       "macro_avg_score": 80.0,
-      "updated_at": "2026-11-27 18:01:26"
+      "updated_at": "2026-11-28 05:04:01"
     },
     {
       "symbol": "ENJSA",
@@ -4745,8 +4829,8 @@
       "type": "Hisse",
       "market": "BIST",
       "currency": "₺",
-      "current_price": 108.3,
-      "change_percent": 2.17,
+      "current_price": 108.7,
+      "change_percent": 2.55,
       "action": "İZLE / DİP BEKLE",
       "confidence": 62,
       "vade": "Uzun Vade (1 - 6 Ay)",
@@ -4757,7 +4841,7 @@
         "target": 125.42,
         "stop": 96.37,
         "risk_reward": "1:3.34",
-        "profit_margin_percent": 15.81,
+        "profit_margin_percent": 15.38,
         "loss_risk_percent": 6.5,
         "rule": "103.07 güçlü desteğine inmesini İZLE ve BEKLE, 125.42 hedef, 96.37 zarar kes",
         "is_dip_entry": true,
@@ -4841,7 +4925,7 @@
         }
       },
       "macro_avg_score": 81.8,
-      "updated_at": "2026-11-27 18:01:26"
+      "updated_at": "2026-11-28 05:04:01"
     },
     {
       "symbol": "TUPRS",
@@ -4851,8 +4935,8 @@
       "type": "Hisse",
       "market": "BIST",
       "currency": "₺",
-      "current_price": 331.75,
-      "change_percent": 2.63,
+      "current_price": 330.0,
+      "change_percent": 2.09,
       "action": "İZLE / DİP BEKLE",
       "confidence": 62,
       "vade": "Orta Vade (2 - 4 Hafta)",
@@ -4863,7 +4947,7 @@
         "target": 358.56,
         "stop": 302.78,
         "risk_reward": "1:3.42",
-        "profit_margin_percent": 8.08,
+        "profit_margin_percent": 8.65,
         "loss_risk_percent": 4.0,
         "rule": "315.4 güçlü desteğine inmesini İZLE ve BEKLE, 358.56 hedef, 302.78 zarar kes",
         "is_dip_entry": true,
@@ -4947,7 +5031,7 @@
         }
       },
       "macro_avg_score": 83.6,
-      "updated_at": "2026-11-27 18:01:26"
+      "updated_at": "2026-11-28 05:04:01"
     },
     {
       "symbol": "ASELS",
@@ -4957,8 +5041,8 @@
       "type": "Hisse",
       "market": "BIST",
       "currency": "₺",
-      "current_price": 331.75,
-      "change_percent": 5.32,
+      "current_price": 332.0,
+      "change_percent": 5.4,
       "action": "İZLE / DİP BEKLE",
       "confidence": 61,
       "vade": "Orta Vade (2 - 4 Hafta)",
@@ -4969,7 +5053,7 @@
         "target": 359.1,
         "stop": 303.24,
         "risk_reward": "1:3.42",
-        "profit_margin_percent": 8.24,
+        "profit_margin_percent": 8.16,
         "loss_risk_percent": 4.0,
         "rule": "315.88 güçlü desteğine inmesini İZLE ve BEKLE, 359.1 hedef, 303.24 zarar kes",
         "is_dip_entry": true,
@@ -5053,7 +5137,7 @@
         }
       },
       "macro_avg_score": 82.6,
-      "updated_at": "2026-11-27 18:01:26"
+      "updated_at": "2026-11-28 05:04:01"
     },
     {
       "symbol": "GARAN",
@@ -5063,8 +5147,8 @@
       "type": "Hisse",
       "market": "BIST",
       "currency": "₺",
-      "current_price": 137.8,
-      "change_percent": -1.64,
+      "current_price": 138.1,
+      "change_percent": -1.43,
       "action": "İZLE / DİP BEKLE",
       "confidence": 60,
       "vade": "Kısa Vade (3 - 7 Gün)",
@@ -5075,7 +5159,7 @@
         "target": 144.92,
         "stop": 127.1,
         "risk_reward": "1:3.57",
-        "profit_margin_percent": 5.17,
+        "profit_margin_percent": 4.94,
         "loss_risk_percent": 2.98,
         "rule": "131.0 güçlü desteğine inmesini İZLE ve BEKLE, 144.92 hedef, 127.1 zarar kes",
         "is_dip_entry": true,
@@ -5159,7 +5243,7 @@
         }
       },
       "macro_avg_score": 75.5,
-      "updated_at": "2026-11-27 18:01:26"
+      "updated_at": "2026-11-28 05:04:01"
     },
     {
       "symbol": "BIMAS",
@@ -5169,8 +5253,8 @@
       "type": "Hisse",
       "market": "BIST",
       "currency": "₺",
-      "current_price": 370.5,
-      "change_percent": 2.92,
+      "current_price": 370.75,
+      "change_percent": 2.99,
       "action": "TUT / KÂR REALİZASYONU",
       "confidence": 58,
       "vade": "Uzun Vade (1 - 6 Ay)",
@@ -5181,7 +5265,7 @@
         "target": 428.29,
         "stop": 346.42,
         "risk_reward": "1:2.4",
-        "profit_margin_percent": 15.6,
+        "profit_margin_percent": 15.52,
         "loss_risk_percent": 6.5,
         "rule": "370.5 seviyesinde kâr realizasyonu yap veya uzak dur",
         "is_dip_entry": false,
@@ -5265,7 +5349,7 @@
         }
       },
       "macro_avg_score": 75.5,
-      "updated_at": "2026-11-27 18:01:26"
+      "updated_at": "2026-11-28 05:04:01"
     },
     {
       "symbol": "KCHOL",
@@ -5275,8 +5359,8 @@
       "type": "Hisse",
       "market": "BIST",
       "currency": "₺",
-      "current_price": 189.5,
-      "change_percent": 1.88,
+      "current_price": 189.4,
+      "change_percent": 1.83,
       "action": "TUT / KÂR REALİZASYONU",
       "confidence": 58,
       "vade": "Orta Vade (2 - 4 Hafta)",
@@ -5287,7 +5371,7 @@
         "target": 204.66,
         "stop": 181.92,
         "risk_reward": "1:2.0",
-        "profit_margin_percent": 8.0,
+        "profit_margin_percent": 8.06,
         "loss_risk_percent": 4.0,
         "rule": "189.5 seviyesinde kâr realizasyonu yap veya uzak dur",
         "is_dip_entry": false,
@@ -5371,7 +5455,7 @@
         }
       },
       "macro_avg_score": 75.5,
-      "updated_at": "2026-11-27 18:01:26"
+      "updated_at": "2026-11-28 05:04:01"
     },
     {
       "symbol": "HALKB",
@@ -5381,8 +5465,8 @@
       "type": "Hisse",
       "market": "BIST",
       "currency": "₺",
-      "current_price": 37.58,
-      "change_percent": 1.84,
+      "current_price": 37.64,
+      "change_percent": 2.01,
       "action": "TUT / KÂR REALİZASYONU",
       "confidence": 58,
       "vade": "Kısa Vade (3 - 7 Gün)",
@@ -5393,7 +5477,7 @@
         "target": 40.01,
         "stop": 36.26,
         "risk_reward": "1:1.8",
-        "profit_margin_percent": 6.47,
+        "profit_margin_percent": 6.3,
         "loss_risk_percent": 3.56,
         "rule": "37.6 seviyesinde kâr realizasyonu yap veya uzak dur",
         "is_dip_entry": false,
@@ -5477,7 +5561,7 @@
         }
       },
       "macro_avg_score": 73.6,
-      "updated_at": "2026-11-27 18:01:26"
+      "updated_at": "2026-11-28 05:04:01"
     }
   ]
 }
